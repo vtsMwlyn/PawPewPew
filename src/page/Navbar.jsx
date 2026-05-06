@@ -1,15 +1,15 @@
-import Button from "./components/Button"
+import Button from "../components/Button"
 
 export default function Navbar() {
   return (
-    <div className="w-full flex justify-between items-center px-4 py-2">
-      <img src="/logo.png" className="w-30 lg:w-40" />
+    <div className="w-full flex justify-between items-center px-6 py-4 fixed top-0 left-0 z-10">
+      <img src="/logo.png" className="w-20 lg:w-30" />
 
       <div className="gap-2 hidden lg:flex">
         <Button selected={true}>Characters</Button>
         <Button>Features</Button>
         <Button>Gallery</Button>
-        <Button>Wishlist</Button>
+        <Button>Wishlist on Steam</Button>
       </div>
 
       <div className="block lg:hidden">

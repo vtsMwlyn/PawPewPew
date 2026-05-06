@@ -5,6 +5,19 @@
   src: url('./fonts/ChunkParty.ttf');
 }
 
+@theme{
+  --blue: #0F1B24;
+  --pink-p3: #D31164;
+  --purple-dark-p3: #4A1B4E;
+  --green-dark-p3: #428166;
+  --green-light-p3: #49B888;
+  --purple-light-p3: #695670;
+}
+
 body {
   font-family: 'ChunkParty', sans-serif;
+}
+
+a, button{
+  @apply cursor-pointer;
 }

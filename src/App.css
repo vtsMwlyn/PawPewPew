@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'ChunkParty';
+  src: url('./fonts/ChunkParty.ttf');
+}
+
+body {
+  font-family: 'ChunkParty', sans-serif;
+}

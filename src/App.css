@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'ChunkParty';
-  src: url('./fonts/ChunkParty.ttf');
+  src: url('./fonts/ChunkParty.ttf') format('opentype');
 }
 
 .comic-relief-regular {
@@ -24,6 +24,9 @@
 
 @utility bg-hijaubaru{
   background: linear-gradient(to bottom, #428166, #49B888)
+}
+@utility bg-hijaubaru-reverse{
+  background: linear-gradient(to bottom, #49B888, #428166)
 }
 
 @theme {

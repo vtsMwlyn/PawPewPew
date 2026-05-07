@@ -5,13 +5,29 @@
   src: url('./fonts/ChunkParty.ttf');
 }
 
-@theme{
-  --blue: #0F1B24;
-  --pink-p3: #D31164;
-  --purple-dark-p3: #4A1B4E;
-  --green-dark-p3: #428166;
-  --green-light-p3: #49B888;
-  --purple-light-p3: #695670;
+.comic-relief-regular {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comic-relief-bold {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@utility bg-ungupink{
+  background: linear-gradient(to bottom, #d31164 40%, #4a1b4e);
+}
+
+@utility bg-hijaubaru{
+  background: linear-gradient(to bottom, #428166, #49B888)
+}
+
+@theme {
+  --color-blueblack: #0F1B24;
 }
 
 body {

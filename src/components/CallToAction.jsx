@@ -3,16 +3,17 @@ export default function CallToAction({children, image}) {
     <button
       href="www.youtube.com"
       className={`
-        h-20
-        border-5 border-[#0F1B24]
-        rounded-full py-1 px-6 text-white uppercase
-        bg-[linear-gradient(to_bottom,#49B888_40%,#428166)]
-        hover:bg-[linear-gradient(to_bottom,#d31164_40%,#4a1b4e)]
+        border-5 border-blueblack
+        rounded-full px-6 py-1
+        text-white uppercase
+        bg-hijaubaru
+        hover:bg-ungupink
+        
       `}
     >
-      <div className="flex items-center gap-2">
-        <img src={image} alt="Logo" className="w-10" />
-        <p className="text-shadow-2xs text-lg w-30">{children}</p>
+      <div className="flex items-center gap-4">
+        <img src={image} alt="Logo" className="h-8 drop-shadow-[-1px_3px_0px_#0F1B24]" />
+        <p className="text-2xl text-left text-shadow-[-2px_3px_0px_#0F1B24] leading-tight">{children}</p>
       </div>
     </button>
   )

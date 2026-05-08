@@ -5,7 +5,7 @@ export default function Button({ selected, children }) {
         rounded-full py-1 px-4 text-white uppercase
         border-4  border-black
         hover: ${selected ? 'shadow-[-1px_4px_0px_black]' : ''}
-        bg-hijaubaru
+        bg-hijaubaru 
         hover:bg-ungupink
       `}
     >

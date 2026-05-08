@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react"
 export default function Navbar() {
   return (
     <div className="w-full flex justify-between items-center px-6 py-4 fixed top-0 left-0 z-10 backdrop-blur-xs">
-      <img src="/logo.png" className="w-20 lg:w-30" />
+      <img src="/logo-pawpewpew.png" className="w-20 lg:w-30" />
 
       <div className="gap-2 hidden lg:flex">
         <Button selected={true}>Characters</Button>

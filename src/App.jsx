@@ -6,6 +6,9 @@ import Hero from './page/Hero'
 import Footer from './page/Footer'
 import WorldMeadow from './page/WorldMeadow'
 import CharacterPage from './page/CharacterPage'
+import Map from './page/Map'
+import CTAPage from './page/CTAPage'
+import Features from './page/Features'
 
 export default function App() {
   return (
@@ -15,6 +18,9 @@ export default function App() {
       <Hero />
       <WorldMeadow />
       <CharacterPage />
+      <Map />
+      <Features />
+      <CTAPage />
       <Footer />
     </>
   )

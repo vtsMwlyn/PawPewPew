@@ -6,7 +6,7 @@ export default function CallToAction({children, image}) {
         border-5 border-blueblack
         rounded-full px-6 py-1
         text-white uppercase
-        bg-hijaubaru
+        bg-hijaubaru 
         hover:bg-ungupink
       `}
     >

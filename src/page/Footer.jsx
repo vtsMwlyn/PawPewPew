@@ -5,7 +5,7 @@ export default function Footer() {
       <div className="flex justify-between">
         <div className="flex flex-col gap-8">
           <h1 className="text-2xl uppercase text-shadow-[-2px_3px_0px_#0F1B24]">SANGNILA INDONESIA — Developer & Publisher</h1>
-          <img src="/logoSangnila.webp" alt="logo sangnila" className="w-75 drop-shadow-[-1px_3px_0px_#0F1B24]" />
+          <img src="/logo-sangnila.webp" alt="logo sangnila" className="w-75 drop-shadow-[-1px_3px_0px_#0F1B24]" />
         </div>
         <div className="flex flex-col gap-8">
           <h1 className="text-2xl uppercase text-shadow-[-2px_3px_0px_#0F1B24]">paw pew pew</h1>

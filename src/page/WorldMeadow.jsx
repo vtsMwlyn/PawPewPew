@@ -9,7 +9,7 @@ export default function WorldMeadow() {
             Home to the Alcove, a hidden refuge where scattered survivors are brought together and given a chance to rebuild.
           </p>
         </div>
-        <img src="/AImap.png" alt="AI Map" />
+        <img src="/bg-map-world.png" alt="AI Map" />
       </div>
       <div className="flex flex-col w-full bg-hijaubaru items-center justify-center py-10 gap-10">
         <h1 className="text-4xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24] w-4xl text-center">Life in the village of Meadow was peaceful, whimsical, and perfectly happy </h1>

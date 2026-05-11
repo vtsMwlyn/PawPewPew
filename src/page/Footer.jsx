@@ -1,7 +1,7 @@
 
 export default function Footer() {
   return (
-    <div className="flex flex-col justify-content gap-25 bg-hijaubaru py-20 px-10 text-white">
+    <div className="flex flex-col justify-content gap-25 bg-green py-20 px-10 text-white">
       <div className="flex justify-between">
         <div className="flex flex-col gap-8">
           <h1 className="text-2xl uppercase text-shadow-[-2px_3px_0px_#0F1B24]">SANGNILA INDONESIA — Developer & Publisher</h1>

@@ -1,11 +1,12 @@
 import FeaturesCard from '../components/FeaturesCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import featuresItem from '../json/features.json';
+import galleryItem from '../json/gallery.json';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 const Features = () => {
   return (
@@ -19,7 +20,7 @@ const Features = () => {
           slidesPerView={4}
           spaceBetween={100}
           centeredSlides={true}
-          className="w-full h-180 "
+          className="w-full h-180 cursor-grab active:cursor-grabbing"
         >
           {featuresItem.map((item, index) => (
             <SwiperSlide key={index} className="flex justify-center">
@@ -33,7 +34,7 @@ const Features = () => {
           ))}
         </Swiper>
       </div>
-      <div className="flex flex-col gap-10 px-10">
+      <div className="flex flex-col gap-10">
         <div className="flex flex-col w-full">
           <h1 className="flex justify-center text-6xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24]">see it in action</h1>
           <h2 className="flex justify-center text-2xl comic-relief-bold text-white text-shadow-[-2px_4px_0px_#0F1B24]">chaos gameplay</h2>
@@ -47,18 +48,16 @@ const Features = () => {
             disableOnInteraction: false,
           }}
           loop={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Autoplay, Pagination]}
-          className="max-w-300 h-180 flex justify-center"
+          modules={[Autoplay]}
+          className="w-full h-180 cursor-grab active:cursor-grabbing"
         >
-          <SwiperSlide ><img src="/steam-img-1.jpg" alt="image 1" className="border-blueblack border-5 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-3xl" /></SwiperSlide>
-          <SwiperSlide ><img src="/steam-img-2.jpg" alt="image 2" className="border-blueblack border-5 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-3xl" /></SwiperSlide>
-          <SwiperSlide ><img src="/steam-img-3.jpg" alt="image 3" className="border-blueblack border-5 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-3xl" /></SwiperSlide>
-          <SwiperSlide ><img src="/steam-img-4.jpg" alt="image 4" className="border-blueblack border-5 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-3xl" /></SwiperSlide>
-          <SwiperSlide ><img src="/steam-img-5.jpg" alt="image 5" className="border-blueblack border-5 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-3xl" /></SwiperSlide>
-          <SwiperSlide ><img src="/steam-img-6.jpg" alt="image 6" className="border-blueblack border-5 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-3xl" /></SwiperSlide>
+          {galleryItem.map((galer, index) => (
+            <SwiperSlide key={index} >
+              <div className="flex justify-center items-center h-full w-full">
+                <img src={galer.src} className="border-blueblack border-5 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-3xl w-300" />
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>

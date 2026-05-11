@@ -33,6 +33,10 @@
 }
 
 @theme {
+  --color-green: #428166;
+}
+
+@theme {
   --color-blueblack: #0F1B24;
 }
 

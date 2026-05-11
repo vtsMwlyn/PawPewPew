@@ -5,8 +5,8 @@ export default function CallToAction({children, image}) {
       className={`
         border-5 border-blueblack
         rounded-full px-6 py-1
-        text-white uppercase
-        bg-hijaubaru 
+        text-white uppercase bg-hijaubaru 
+        active:shadow-[-1px_4px_0px_#0F1B24]
         hover:bg-ungupink
       `}
     >

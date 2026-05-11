@@ -11,9 +11,9 @@ export default function WorldMeadow() {
         </div>
         <img src="/bg-map-world.png" alt="AI Map" />
       </div>
-      <div className="flex flex-col w-full bg-hijaubaru items-center justify-center py-10 gap-10">
+      <div className="flex flex-col w-full bg-hijaubaru-light items-center justify-center py-10 gap-10">
         <h1 className="text-4xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24] w-4xl text-center">Life in the village of Meadow was peaceful, whimsical, and perfectly happy </h1>
-        <video className="w-full max-w-6xl h-150 rounded-4xl border-10 border-bs-blueblack" controls>
+        <video className="w-full max-w-6xl h-150 rounded-4xl border-6 border-bs-blueblack shadow-[-10px_10px_10px_#000000]" controls>
           <source src="/video.mp4" type="video/mp4"/>
         </video>
         <p className="text-white comic-relief-bold text-2xl w-4xl text-center text-shadow-[-2px_4px_0px_#0F1B24]">

@@ -36,6 +36,10 @@
   --color-blueblack: #0F1B24;
 }
 
+@theme {
+  --color-bluedark: #131E28;
+}
+
 body {
   font-family: 'ChunkParty', sans-serif;
 }

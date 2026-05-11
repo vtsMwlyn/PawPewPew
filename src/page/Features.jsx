@@ -1,5 +1,6 @@
-import FeaturesCard from '../components/FeaturesCard'
+import FeaturesCard from '../components/FeaturesCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import featuresItem from '../json/features.json';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -20,12 +21,16 @@ const Features = () => {
           centeredSlides={true}
           className="w-full h-180 "
         >
-          <SwiperSlide><FeaturesCard /></SwiperSlide>
-          <SwiperSlide><FeaturesCard /></SwiperSlide>
-          <SwiperSlide><FeaturesCard /></SwiperSlide>
-          <SwiperSlide><FeaturesCard /></SwiperSlide>
-          <SwiperSlide><FeaturesCard /></SwiperSlide>
-          <SwiperSlide><FeaturesCard /></SwiperSlide>
+          {featuresItem.map((item, index) => (
+            <SwiperSlide key={index} className="flex justify-center">
+              <FeaturesCard
+                title={item.title}
+                subtitle={item.subtitle}
+                description={item.description}
+                image={item.image}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
       <div className="flex flex-col gap-10 px-10">
@@ -46,7 +51,7 @@ const Features = () => {
             clickable: true,
           }}
           modules={[Autoplay, Pagination]}
-          className="max-w-300"
+          className="max-w-300 h-180 flex justify-center"
         >
           <SwiperSlide ><img src="/steam-img-1.jpg" alt="image 1" className="border-blueblack border-5 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-3xl" /></SwiperSlide>
           <SwiperSlide ><img src="/steam-img-2.jpg" alt="image 2" className="border-blueblack border-5 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-3xl" /></SwiperSlide>

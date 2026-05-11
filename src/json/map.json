@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "alaska",
+    "image":"/map-alaska.png"
+  },
+  {
+    "id": 2,
+    "name": "amazon",
+    "image":"/map-amazon.png"
+  },
+  {
+    "id": 3,
+    "name": "bali",
+    "image":"/map-bali.png"
+  },
+  {
+    "id": 4,
+    "name": "sahara",
+    "image":"/map-sahara.png"
+  }
+]

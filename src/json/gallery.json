@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nama":"image 1",
+    "src":"/steam-img-1.jpg"
+  },
+  {
+    "id": 2,
+    "nama":"image 2",
+    "src":"/steam-img-2.jpg"
+  },
+  {
+    "id": 3,
+    "nama":"image 3",
+    "src":"/steam-img-3.jpg"
+  },
+  {
+    "id": 4,
+    "nama":"image 4",
+    "src":"/steam-img-4.jpg"
+  },
+  {
+    "id": 5,
+    "nama":"image 5",
+    "src":"/steam-img-5.jpg"
+  },
+  {
+    "id": 6,
+    "nama":"image 6",
+    "src":"/steam-img-6.jpg"
+  }
+]

@@ -1,22 +1,17 @@
 [
   {
     "id": 1,
-    "name": "alaska",
-    "image":"/map-alaska.png"
+    "name": "ruins",
+    "image":"/map-ruins.webp"
   },
   {
     "id": 2,
-    "name": "amazon",
-    "image":"/map-amazon.png"
+    "name": "temple",
+    "image":"/map-temple.webp"
   },
   {
     "id": 3,
-    "name": "bali",
-    "image":"/map-bali.png"
-  },
-  {
-    "id": 4,
-    "name": "sahara",
-    "image":"/map-sahara.png"
+    "name": "sanctum",
+    "image":"/map-sanctum.webp"
   }
 ]

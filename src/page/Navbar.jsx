@@ -1,22 +1,27 @@
 import Button from "../components/Button"
-import ScreenInfo from "../components/ScreenInfo"
 
 export default function Navbar() {
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    el?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
     <div className="w-full flex justify-between items-center px-6 py-4 fixed top-0 left-0 z-10 ">
       <div className="flex">
-        <ScreenInfo />
-        <img src="/logo-pawpewpew.png" className="w-20 lg:w-30" />
+        <button onClick={() => scrollToSection("hero-page")}>
+          <img src="/logo-pawpewpew.webp" className="w-20 lg:w-30" />
+        </button>
       </div>
 
       <div className="gap-2 hidden lg:flex">
         <Button selected={true}>Characters</Button>
         <Button>Features</Button>
         <Button>Gallery</Button>
-        <Button>
-          <div className="flex items-center gap-2">
-            <p>Wishlist on Steam</p>
+        <Button link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/">
+          <div className="flex items-center justify-center gap-2">
+            <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
+            <p className="text-lg leading-tight text-left">Wishlist on <br /> Steam</p>
           </div>
         </Button>
       </div>

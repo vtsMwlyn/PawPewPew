@@ -17,6 +17,12 @@
   font-style: normal;
 }
 
+#features-page, #gallery-page {
+  scroll-margin-top: 100px; /* tinggi navbar lo */
+}
+#character-page {
+  scroll-margin-top: -160px; /* tinggi navbar lo */
+}
 
 @utility bg-ungupink{
   background: linear-gradient(to bottom, #d31164 40%, #4a1b4e);

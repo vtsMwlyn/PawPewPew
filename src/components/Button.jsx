@@ -1,16 +1,22 @@
-export default function Button({ selected, children }) {
+export default function Button({ selected, children, link }) {
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    el?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
-    <button type="button"
+    <a type="button"
+      href={link} target="_blank"
+      onClick={children === "Characters" ? () => scrollToSection("character-page") : children === "Features" ? () => scrollToSection("features-page") : children === "Gallery" ? () => scrollToSection("gallery-page") : null}
       className={`
         rounded-full py-1 px-4 text-white uppercase
-        border-4  border-blueblack
-        hover: ${selected ? 'shadow-[-1px_4px_0px_#0F1B24]' : ''}
+        border-4  border-blueblack w-50
+        hover: ${selected ? 'shadow-[-1px_4px_0px_#0F1B24] bg-ungupink' : ''}
         active:shadow-[-1px_4px_0px_#0F1B24]
-        bg-hijaubaru 
-        hover:bg-ungupink
+        bg-hijaubaru hover:bg-ungupink
+        justify-center flex items-center
       `}
     >
-      <p className="text-shadow-[-0.5px_2px_0px_#0F1B24] text-2xl">{children}</p>
-      </button>
+      <p className="text-shadow-[-1px_4px_0px_#0F1B24] text-2xl">{children}</p>
+      </a>
   )
 }

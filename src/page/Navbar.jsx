@@ -21,7 +21,7 @@ export default function Navbar() {
         <Button link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/">
           <div className="flex items-center justify-center gap-2">
             <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
-            <p className="text-lg leading-tight text-left">Wishlist on <br /> Steam</p>
+            <p className="text-lg leading-tight text-left">Wishlist <br /> on Steam</p>
           </div>
         </Button>
       </div>

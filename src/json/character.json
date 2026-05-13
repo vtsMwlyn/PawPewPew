@@ -5,7 +5,8 @@
   "subname": "The Dependable Vanguard",
   "quotes": "Threat detected in proximity. Initiating knockback protocols. Please stand clear of the hammer",
   "description":"The fiercely loyal and deeply literal guard dog trying to keep this chaotic rescue operation from falling apart. Pito treats enemy swarms as workplace safety hazards that must be physically pushed away from his team. With strikes designed for maximum knockback, his entire combat philosophy is about creating safe zones by force.",
-  "image": "/splashart-toto.webp"
+  "image": "/splashart-toto.webp",
+  "icon": "/icon-toto.webp"
 },
 {
   "id": 2,
@@ -13,7 +14,8 @@
   "subname": "The Chaotic Trigger",
   "quotes": "Why run around the swarm when you can dash through them and shoot them in the back",
   "description":"A hyperactive rabbit with zero volume control who views this rescue mission as a fantastic excuse to test her marksmanship. Pipi doesn't understand the concept of a tactical retreat; her idea of defense is just vaulting over the enemy's head and firing a shotgun mid-air. She operates on two settings: sprinting and reloading.",
-  "image": "/splashart-pipi.webp"
+  "image": "/splashart-pipi.webp",
+  "icon": "/icon-pipi.webp"
 },
 {
   "id": 3,
@@ -21,6 +23,7 @@
   "subname": "The Arcanist of The Void",
   "quotes": "“I do not 'run.' I teleport. There is a profound difference, though I doubt you possess the intellect to grasp it",
   "description":"An ancient, profoundly exhausted feline mage who is only participating in this rescue mission because the noise is disrupting his naps. Pito's true power lies in his intellect; as he levels up, he can weave distinct spells together to create entirely new, devastating magical combinations. He refuses to break a sweat, preferring to blink out of existence when enemies get too close.",
-  "image": "/splashart-pito.webp"
+  "image": "/splashart-pito.webp",
+  "icon": "/icon-pito.webp"
 }
 ]

@@ -2,16 +2,19 @@
   {
     "id": 1,
     "name": "ruins",
-    "image":"/map-ruins.webp"
+    "image":"/map-ruins.webp",
+    "background":"/bg-map-ruins.webp"
   },
   {
     "id": 2,
     "name": "temple",
-    "image":"/map-temple.webp"
+    "image":"/map-temple.webp",
+    "background":"/bg-map-temple.webp"
   },
   {
     "id": 3,
     "name": "sanctum",
-    "image":"/map-sanctum.webp"
+    "image":"/map-sanctum.webp",
+    "background":"/bg-map-sanctum.webp"
   }
 ]

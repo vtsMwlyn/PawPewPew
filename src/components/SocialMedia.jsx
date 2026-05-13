@@ -6,7 +6,7 @@ export default function SocialMedia({link, image, text}) {
       <img 
         src={image} 
         alt={text} 
-        className="w-10 h-10 drop-shadow-[-2px_6px_0px_#0F1B24]" 
+        className="h-10 drop-shadow-[-2px_6px_0px_#0F1B24]" 
       />
     </a>
     <span

@@ -10,12 +10,13 @@ export default function Button({ selected, children, link }) {
         children === "Features" ? () => scrollToSection("features-page") : 
         children === "Gallery" ? () => scrollToSection("gallery-page") : null}
       className={`
-        rounded-full py-1 px-4 text-white uppercase
-        border-4  border-blueblack w-45
-        hover: ${selected ? 'shadow-[-1px_4px_0px_#0F1B24] bg-ungupink' : ''}
+        justify-center flex items-center w-45 rounded-full py-1 px-4 text-white uppercase 
+        border-4 border-blueblack transition-colors duration-200
+        ${selected 
+          ? 'bg-ungupink shadow-[-1px_4px_0px_#0F1B24]' // Kalau selected, warna statis ungu dan berbayang
+          : 'bg-hijaubaru hover:bg-ungupink'             // Kalau nggak selected, hijau dan berubah ungu SAAT di-hover
+        }
         active:shadow-[-1px_4px_0px_#0F1B24]
-        bg-hijaubaru hover:bg-ungupink
-        justify-center flex items-center
       `}
     >
       <p className="text-shadow-[-1px_4px_0px_#0F1B24] text-2xl">{children}</p>

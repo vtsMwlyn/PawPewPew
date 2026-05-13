@@ -12,7 +12,7 @@ export default function CharacterPage() {
         src="/bg-character.webp" alt="bg-characterpage" 
         className="absolute top-0 left-0 w-full object-cover -z-10"
       />
-      <div className="flex flex-col justify-center items-center w-full gap-20 h-220">
+      <div className="flex flex-col justify-center items-center w-full gap-30">
         <h1 className="flex justify-center text-6xl text-white 
           uppercase text-shadow-[-2px_6px_0px_#0F1B24]">
             choose your survivor

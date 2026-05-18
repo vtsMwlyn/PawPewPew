@@ -8,6 +8,7 @@ import CharacterPage from './page/CharacterPage'
 import Map from './page/Map'
 import CTAPage from './page/CTAPage'
 import Features from './page/Features'
+import SeeItInAction from './page/SeeItInAction'
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       <CharacterPage />
       <Map />
       <Features />
+      <SeeItInAction />
       <CTAPage />
       <Footer />
     </>

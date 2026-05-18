@@ -3,18 +3,21 @@ import { useState, useRef } from "react";
 // You can pass this as a prop, but here's a placeholder array of plain images
 const slides = [
   "/steam-img-1.webp",
-	"/steam-img-2.webp",
-	"/steam-img-3.webp",
-	"/steam-img-4.webp",
-	"/steam-img-5.webp",
-	"/steam-img-6.webp",
+  "/steam-img-2.webp",
+  "/steam-img-3.webp",
+  "/steam-img-4.webp",
+  "/steam-img-5.webp",
+  "/steam-img-6.webp",
 ];
 
 export default function FlexibleSlider({ visibleCount = 5 }) {
   // visibleCount controls how many cards render on screen (e.g., set to 3 or 5)
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
-  const touchStartX = useRef(null);
+  
+  // Single ref to handle both touch and mouse starting positions
+  const dragStartX = useRef(null);
+  const isDragging = useRef(false);
   const total = slides.length;
 
   const goTo = (newIndex) => {
@@ -26,15 +29,37 @@ export default function FlexibleSlider({ visibleCount = 5 }) {
     setTimeout(() => setAnimating(false), 580);
   };
 
+  // --- Touch Handlers ---
   const handleTouchStart = (e) => {
-    touchStartX.current = e.touches[0].clientX;
+    dragStartX.current = e.touches[0].clientX;
   };
 
   const handleTouchEnd = (e) => {
-    if (touchStartX.current === null) return;
-    const dx = e.changedTouches[0].clientX - touchStartX.current;
+    if (dragStartX.current === null) return;
+    const dx = e.changedTouches[0].clientX - dragStartX.current;
     if (Math.abs(dx) > 40) dx < 0 ? goTo(activeIndex + 1) : goTo(activeIndex - 1);
-    touchStartX.current = null;
+    dragStartX.current = null;
+  };
+
+  // --- Mouse Handlers ---
+  const handleMouseDown = (e) => {
+    dragStartX.current = e.clientX;
+    isDragging.current = true;
+  };
+
+  const handleMouseUp = (e) => {
+    if (!isDragging.current || dragStartX.current === null) return;
+    const dx = e.clientX - dragStartX.current;
+    if (Math.abs(dx) > 40) dx < 0 ? goTo(activeIndex + 1) : goTo(activeIndex - 1);
+    isDragging.current = false;
+    dragStartX.current = null;
+  };
+
+  const handleMouseLeave = (e) => {
+    // If the user drags their mouse outside the slider area, trigger the swipe
+    if (isDragging.current) {
+      handleMouseUp(e);
+    }
   };
 
   // Math magic: automatically calculates layout based on your visibleCount variable
@@ -82,19 +107,26 @@ export default function FlexibleSlider({ visibleCount = 5 }) {
   };
 
   return (
-		<div className="min-h-screen bg-hijaubaru-light flex flex-col items-center justify-center relative overflow-hidden pb-40">
-			<div className="flex flex-col w-full">
-          <h1 className="flex justify-center text-6xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24]">See it in action</h1>
-          <h2 className="flex justify-center text-2xl comic-relief-bold text-white text-shadow-[-2px_4px_0px_#0F1B24]">gameplay chaos</h2>
-        </div>
+    <div className="min-h-screen bg-hijaubaru-light flex flex-col items-center justify-center relative overflow-hidden pb-40">
+      <div className="flex flex-col w-full">
+        <h1 className="flex justify-center text-6xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24]">
+          See it in action
+        </h1>
+        <h2 className="flex justify-center text-2xl comic-relief-bold text-white text-shadow-[-2px_4px_0px_#0F1B24]">
+          gameplay chaos
+        </h2>
+      </div>
 
       <div className="mt-40 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.16)_0%,transparent_60%)] pointer-events-none" />
 
       {/* Slider Track */}
       <div
-        className="relative w-full 2xl:w-1/2 h-[400px]"
+        className="relative w-full 2xl:w-1/2 h-[400px] cursor-grab active:cursor-grabbing"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
       >
         {slides.map((slide, i) => {
           const isActive = i === activeIndex;
@@ -106,11 +138,12 @@ export default function FlexibleSlider({ visibleCount = 5 }) {
               onClick={() => !isActive && goTo(i)}
             >
               {/* Plain Image Card Wrapper */}
-              <div className={`relative w-200 h-120 overflow-hidden border-blueblack border-10 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-[75px] transition-all duration-500 cursor-pointer`}>
+              <div className={`relative w-200 h-120 overflow-hidden border-blueblack border-10 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-[75px] transition-all duration-500`}>
                 <img
                   src={slide}
                   alt={`Slide ${i}`}
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500`}
+                  draggable={false} // Crucial: Prevents browser from intercepting the drag
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 select-none`}
                 />
               </div>
             </div>

@@ -9,7 +9,7 @@ export default function CallToAction({children, image, link}) {
         text-white uppercase bg-hijaubaru 
         active:shadow-[-1px_4px_0px_#0F1B24]
         hover:bg-ungupink
-        w-full lg:w-fit
+        w-full lg:w-100 2xl:w-fit
       `}
     >
       <div className="flex items-center gap-4">

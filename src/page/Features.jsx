@@ -27,12 +27,12 @@ const Features = () => {
             },
             1280: {
               slidesPerView: 4,
-              spaceBetween: 100,
+              spaceBetween: 60,
             }
           }}
         >
           {featuresItem.map((item, index) => (
-            <SwiperSlide key={index} className="flex justify-center px-10 2xl:px-0">
+            <SwiperSlide key={index} className="flex justify-center px-10 lg:px-0">
               <FeaturesCard
                 title={item.title}
                 subtitle={item.subtitle}

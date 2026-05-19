@@ -9,11 +9,13 @@ import Map from './page/Map'
 import CTAPage from './page/CTAPage'
 import Features from './page/Features'
 import SeeItInAction from './page/SeeItInAction'
+import ScreenInfo from "./components/ScreenInfo"
 
 export default function App() {
   return (
     <main className="w-full flex flex-col items-stretch">
       {/* Navbar */}
+      <ScreenInfo />
       <Navbar />
 
       {/* Content */}
@@ -24,7 +26,7 @@ export default function App() {
       <Features />
       <SeeItInAction />
       <CTAPage />
-      
+
       {/* Footer */}
       <Footer />
     </main>

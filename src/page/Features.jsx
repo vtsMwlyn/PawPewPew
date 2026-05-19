@@ -17,22 +17,23 @@ const Features = () => {
 
         <Swiper
           slidesPerView={1}
-          spaceBetween={0}
+          loop={true}
           centeredSlides={true}
+          spaceBetween={0}
           className="w-full h-130 2xl:h-180 cursor-grab active:cursor-grabbing"
           breakpoints={{
             768: {
               slidesPerView: 3,
               spaceBetween: 0,
             },
-            1280: {
+            1536: {
               slidesPerView: 4,
-              spaceBetween: 60,
-            }
+              spaceBetween: 0,
+            },
           }}
         >
           {featuresItem.map((item, index) => (
-            <SwiperSlide key={index} className="flex justify-center px-10 lg:px-0">
+            <SwiperSlide key={index} className="flex justify-center px-10">
               <FeaturesCard
                 title={item.title}
                 subtitle={item.subtitle}

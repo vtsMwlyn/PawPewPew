@@ -33,5 +33,41 @@
     "subtitle":"A Hexagon map Called Tile with Themes",
     "description":"Fight through ruined cities, abandoned laboratories, and overgrown wastelands where nature reclaims technology.",
     "image":"/map-ruins.webp"
+  },
+
+  {
+    "id": 1,
+    "title":"fast pace combat",
+    "subtitle":"Chaotic 3D Rougelite battle",
+    "description":"Experience fast-paced combat with a variety of weapons and abilities. Engage in intense battles against hordes of enemies and powerful bosses.",
+    "image":"/steam-img-2.webp"
+  },
+  {
+    "id": 2,
+    "title":"Evolve Animal",
+    "subtitle":"Evolve as Evolve Animals",
+    "description":"Pick your survivor — swift Cats, powerful Dogs, or unpredictable Rabbits. Each plays completely differently.",
+    "image":"/steam-img-4.webp"
+  },
+  {
+    "id": 3,
+    "title":"Build Midrun",
+    "subtitle":"Adapt and Evolve",
+    "description":"Collect upgrades, mutations, and weapons as you progress. Stack them to create a build no one else has run.",
+    "image":"/steam-img-6.webp"
+  },
+  {
+    "id": 4,
+    "title":"Robotic Enemies",
+    "subtitle":"Face Relentless Machines",
+    "description":"Battle mechanical creatures with unique attack patterns — from swarming units to screen-filling bosses.",
+    "image":"/steam-img-5.webp"
+  },
+  {
+    "id": 5,
+    "title":"Explore The World",
+    "subtitle":"A Hexagon map Called Tile with Themes",
+    "description":"Fight through ruined cities, abandoned laboratories, and overgrown wastelands where nature reclaims technology.",
+    "image":"/map-ruins.webp"
   }
 ]

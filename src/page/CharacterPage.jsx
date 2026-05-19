@@ -7,7 +7,7 @@ export default function CharacterPage() {
   const [selectedCharacter, setSelectedCharacter] = useState(character[0]);
 
   return (
-    <section className="relative flex py-10 2xl:py-65" id="character-page">
+    <section className="relative flex py-10 lg:py-65" id="character-page">
       {/* Background Image */}
       <img 
         src="/bg-character.webp" alt="bg-characterpage" 
@@ -22,7 +22,7 @@ export default function CharacterPage() {
             choose your survivor
         </h1>
 
-        <div className="w-full flex flex-col-reverse 2xl:flex-row justify-between px-0 2xl:px-40 items-start">
+        <div className="w-full flex flex-col-reverse lg:flex-row justify-between px-0 2xl:px-40 items-start gap-0 lg:gap-10 2xl:gap-0">
           {/* Character Info */}
           <CharacterCard 
             name={selectedCharacter.name} 
@@ -33,7 +33,7 @@ export default function CharacterPage() {
           </CharacterCard>
 
           {/* Character Selector */}
-          <div className="flex flex-col items-center gap-10 relative">
+          <div className="w-full lg:w-1/2 lg:flex flex-col items-center gap-10 relative">
             <CharacterButton 
               characters={character} 
               selectedCharacter={selectedCharacter} 
@@ -41,7 +41,7 @@ export default function CharacterPage() {
             />
             <img 
               src={selectedCharacter.image} alt={selectedCharacter.name} 
-              className={`w-full 2xl:w-150 relative -top-30 2xl:top-0 2xl:absolute -z-5`}
+              className={`w-full lg:w-100 2xl:w-150 relative -top-30 lg:top-0 lg:absolute -z-5`}
             />
           </div>
         </div>

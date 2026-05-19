@@ -10,7 +10,7 @@ const slides = [
   "/steam-img-6.webp",
 ];
 
-export default function FlexibleSlider({ visibleCount = window.innerWidth > 1280 ? 5 : 3 }) {
+export default function FlexibleSlider({ visibleCount = window.innerWidth > 768 ? 5 : 3 }) {
   // visibleCount controls how many cards render on screen (e.g., set to 3 or 5)
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
@@ -119,7 +119,7 @@ export default function FlexibleSlider({ visibleCount = window.innerWidth > 1280
 
       {/* Slider Track */}
       <div
-        className="mt-40 relative w-full 2xl:w-1/2 h-auto 2xl:h-100 cursor-grab active:cursor-grabbing"
+        className="mt-40 relative w-full lg:w-1/2 h-auto lg:h-60 2xl:h-100 cursor-grab active:cursor-grabbing"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onMouseDown={handleMouseDown}
@@ -136,7 +136,7 @@ export default function FlexibleSlider({ visibleCount = window.innerWidth > 1280
               onClick={() => !isActive && goTo(i)}
             >
               {/* Plain Image Card Wrapper */}
-              <div className={`relative w-80 2xl:w-200 h-60 2xl:h-120 overflow-hidden border-blueblack border-10 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-4xl 2xl:rounded-[75px] transition-all duration-500`}>
+              <div className={`relative w-80 lg:w-160 2xl:w-200 h-60 lg:h-100 2xl:h-120 overflow-hidden border-blueblack border-10 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-4xl 2xl:rounded-[75px] transition-all duration-500`}>
                 <img
                   src={slide}
                   alt={`Slide ${i}`}

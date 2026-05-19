@@ -1,6 +1,6 @@
 export default function MapCard({MapJson, selectedMap, setSelectedMap}) {
   return (
-    <div className="w-full flex gap-5 2xl:gap-10 justify-center items-end py-30 2xl:py-60 h-200 2xl:h-400">
+    <div className="w-full flex gap-5 2xl:gap-10 justify-center items-end py-30 2xl:py-60 h-200 lg:h-300 2xl:h-400">
       {MapJson.map((location) => {
         const isSelected = selectedMap?.name === location.name;
         return (
@@ -8,7 +8,7 @@ export default function MapCard({MapJson, selectedMap, setSelectedMap}) {
             key={location.id} 
             className={`flex rounded-xl relative 
               ${isSelected ? 'scale-110 origin-bottom' : ''}
-              group w-25 2xl:w-65 h-21 2xl:h-35 :origin-bottom 
+              group w-25 lg:w-65 h-21 lg:h-35 :origin-bottom 
               transition-transform duration-500`}
           >
             
@@ -16,7 +16,7 @@ export default function MapCard({MapJson, selectedMap, setSelectedMap}) {
               src={location.image} 
               alt={location.name} 
               className={`absolute inset-0 -z-5 w-full 
-                rounded-2xl border-4 2xl:border-8 border-bluedark`} 
+                rounded-2xl border-4 lg:border-8 border-bluedark`} 
             />
             <button 
               type="button"
@@ -24,9 +24,9 @@ export default function MapCard({MapJson, selectedMap, setSelectedMap}) {
               onClick={() => setSelectedMap(location)}
             >
               <h2 className={`
-                gap-4 bg-hijaubaru border-4 2xl:border-8 border-bluedark 
+                gap-4 bg-hijaubaru border-4 lg:border-8 border-bluedark 
                 ${isSelected ? 'bg-ungupink' : 'group-hover:bg-ungupink'}
-                rounded-full text-base px-5 2xl:px-10 py-1 2xl:py-2 
+                rounded-full text-base px-5 lg:px-10 py-1 lg:py-2 
                 text-shadow-[-2px_3px_0px_#0F1B24] text-white
               `}>
                 {/* Ganti selectedMap jadi location */}

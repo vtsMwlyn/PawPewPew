@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 
 const Features = () => {
   return (
-    <div className="flex flex-col w-full py-10 2xl:py-25 gap-25 bg-hijaubaru-light">
+    <div className="flex flex-col w-full py-10 lg:py-25 gap-25 bg-hijaubaru-light">
       <div className="flex flex-col gap-10" id="features-page">
         <div className="flex flex-col w-full">
           <h1 className="flex justify-center text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24]">game features</h1>
@@ -17,10 +17,14 @@ const Features = () => {
 
         <Swiper
           slidesPerView={1}
-          spaceBetween={20}
+          spaceBetween={0}
           centeredSlides={true}
           className="w-full h-130 2xl:h-180 cursor-grab active:cursor-grabbing"
           breakpoints={{
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 0,
+            },
             1280: {
               slidesPerView: 4,
               spaceBetween: 100,

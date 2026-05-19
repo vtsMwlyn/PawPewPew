@@ -49,7 +49,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        <div className="gap-2 hidden 2xl:flex">
+        <div className="gap-2 hidden lg:flex">
           <Button selected={activeSection === "character-page"}>Characters</Button>
           <Button selected={activeSection === "features-page"}>Features</Button>
           <Button selected={activeSection === "gallery-page"}>Gallery</Button>

@@ -1,4 +1,4 @@
-export default function Button({ selected, children, link }) {
+export default function Button({ selected, children, link, className, ...rest }) {
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
     el?.scrollIntoView({ behavior: "smooth" });
@@ -17,7 +17,9 @@ export default function Button({ selected, children, link }) {
           : 'bg-hijaubaru hover:bg-ungupink'             // Kalau nggak selected, hijau dan berubah ungu SAAT di-hover
         }
         active:shadow-[-1px_4px_0px_#0F1B24]
+        ${className}
       `}
+      {...rest}
     >
       <p className="text-shadow-[-1px_4px_0px_#0F1B24] text-2xl">{children}</p>
     </a>

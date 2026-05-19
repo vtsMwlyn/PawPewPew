@@ -12,8 +12,11 @@ import SeeItInAction from './page/SeeItInAction'
 
 export default function App() {
   return (
-    <>
+    <main className="w-full flex flex-col items-stretch">
+      {/* Navbar */}
       <Navbar />
+
+      {/* Content */}
       <Hero />
       <WorldMeadow />
       <CharacterPage />
@@ -21,7 +24,9 @@ export default function App() {
       <Features />
       <SeeItInAction />
       <CTAPage />
+      
+      {/* Footer */}
       <Footer />
-    </>
+    </main>
   )
 }

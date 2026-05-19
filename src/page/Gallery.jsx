@@ -4,9 +4,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay } from 'swiper/modules';
+
 export default function Gallery() {
   return (
-    <div className="flex flex-col gap-10 w-full py-25 bg-hijaubaru-light" id="gallery-page">
+    <div className="flex flex-col gap-10 w-full py-25 bg-hijaubaru-light">
       <div className="flex flex-col w-full">
           <h1 className="flex justify-center text-6xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24]">game features</h1>
           <h2 className="flex justify-center text-2xl comic-relief-bold text-white text-shadow-[-2px_4px_0px_#0F1B24]">what makes our game unique</h2>

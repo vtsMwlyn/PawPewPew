@@ -10,7 +10,7 @@ const slides = [
   "/steam-img-6.webp",
 ];
 
-export default function FlexibleSlider({ visibleCount = 5 }) {
+export default function FlexibleSlider({ visibleCount = window.innerWidth > 1280 ? 5 : 3 }) {
   // visibleCount controls how many cards render on screen (e.g., set to 3 or 5)
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
@@ -107,21 +107,19 @@ export default function FlexibleSlider({ visibleCount = 5 }) {
   };
 
   return (
-    <div className="min-h-screen bg-hijaubaru-light flex flex-col items-center justify-center relative overflow-hidden pb-40">
+    <div className="pt-20 bg-hijaubaru-light flex flex-col items-center justify-center relative overflow-hidden pb-60 2xl:pb-40" id="gallery-page">
       <div className="flex flex-col w-full">
-        <h1 className="flex justify-center text-6xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24]">
+        <h1 className="flex justify-center text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24]">
           See it in action
         </h1>
-        <h2 className="flex justify-center text-2xl comic-relief-bold text-white text-shadow-[-2px_4px_0px_#0F1B24]">
+        <h2 className="flex justify-center text-lg 2xl:text-2xl comic-relief-bold text-white text-shadow-[-2px_4px_0px_#0F1B24]">
           gameplay chaos
         </h2>
       </div>
 
-      <div className="mt-40 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.16)_0%,transparent_60%)] pointer-events-none" />
-
       {/* Slider Track */}
       <div
-        className="relative w-full 2xl:w-1/2 h-[400px] cursor-grab active:cursor-grabbing"
+        className="mt-40 relative w-full 2xl:w-1/2 h-auto 2xl:h-100 cursor-grab active:cursor-grabbing"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onMouseDown={handleMouseDown}
@@ -138,7 +136,7 @@ export default function FlexibleSlider({ visibleCount = 5 }) {
               onClick={() => !isActive && goTo(i)}
             >
               {/* Plain Image Card Wrapper */}
-              <div className={`relative w-200 h-120 overflow-hidden border-blueblack border-10 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-[75px] transition-all duration-500`}>
+              <div className={`relative w-80 2xl:w-200 h-60 2xl:h-120 overflow-hidden border-blueblack border-10 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-4xl 2xl:rounded-[75px] transition-all duration-500`}>
                 <img
                   src={slide}
                   alt={`Slide ${i}`}

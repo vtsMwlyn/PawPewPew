@@ -2,12 +2,12 @@
 export default function Footer() {
   return (
     <div className="flex flex-col justify-content gap-25 bg-green py-20 px-10 text-white">
-      <div className="flex justify-between">
+      <div className="flex flex-col 2xl:flex-row justify-between">
         <div className="flex flex-col gap-8">
           <h1 className="text-2xl uppercase text-shadow-[-2px_3px_0px_#0F1B24]">SANGNILA INDONESIA — Developer & Publisher</h1>
-          <img src="/logo-sangnila.webp" alt="logo sangnila" className="w-65 drop-shadow-[-1px_3px_0px_#0F1B24]" />
+          <img src="/logo-sangnila.webp" alt="logo sangnila" className="w-30 2xl:w-65 drop-shadow-[-1px_3px_0px_#0F1B24]" />
         </div>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 mt-8 2xl:mt-0">
           <h1 className="text-2xl uppercase text-shadow-[-2px_3px_0px_#0F1B24]">paw pew pew</h1>
           <div className="flex flex-col gap-3 comic-relief-bold">
             <p className="hover:text-shadow-[-2px_2px_0px_#0F1B24] cursor-pointer">Character</p>
@@ -25,7 +25,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 mt-8 2xl:mt-0">
           <h1 className="text-2xl uppercase text-shadow-[-2px_3px_0px_#0F1B24]">contact</h1>
           <div className="flex flex-col gap-3 comic-relief-bold">
             <a href="mailto:admin@pawpewpew.com"

@@ -12,8 +12,8 @@ export default function FeaturesCard({ title, subtitle, description, image }) {
         h-65 object-cover"
         />
       <div>
-        <h1 className="text-xl text-center">{title}</h1>
-        <h2 className="text-sm text-center comic-relief-bold"> {subtitle} </h2>
+        <h1 className="text-xl 2xl:text-2xl text-center">{title}</h1>
+        <h2 className="text-sm 2xl:text-base text-center comic-relief-bold"> {subtitle} </h2>
       </div>
       <div dangerouslySetInnerHTML={{ __html: description }} className="text-base text-justify comic-relief-bold"/>
     </div>

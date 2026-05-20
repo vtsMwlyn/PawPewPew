@@ -10,13 +10,13 @@ export default function Footer() {
 
         <div className="w-full 2xl:w-1/2 flex flex-col lg:flex-row">
           {/* Page list */}
-          <div className="w-1/2 flex flex-col gap-8 mt-8 2xl:mt-0">
+          <div className="w-full lg:w-1/2 flex flex-col gap-8 mt-8 2xl:mt-0">
             <h1 className="text-2xl uppercase text-shadow-[-2px_3px_0px_#0F1B24]">paw pew pew</h1>
             <div className="flex flex-col gap-3 comic-relief-bold">
               <p className="hover:text-shadow-[-2px_2px_0px_#0F1B24] cursor-pointer">Character</p>
               <p className="hover:text-shadow-[-2px_2px_0px_#0F1B24] cursor-pointer">Features</p>
               <p className="hover:text-shadow-[-2px_2px_0px_#0F1B24] cursor-pointer">Gallery</p>
-              <a href="https://store.steampowered.com/app/1848040/Paw_Pew_Pew/" target="_blank" rel="noopener noreferrer">
+              <a href="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" target="_blank" rel="noopener noreferrer">
                 <p className="cursor-pointer hover:underline hover:text-shadow-[-2px_2px_0px_#0F1B24]">
                   Wishlist on Steam↗
                 </p>
@@ -30,7 +30,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div className="w-1/2 flex flex-col gap-8 mt-8 2xl:mt-0">
+          <div className="w-full lg:w-1/2 flex flex-col gap-8 mt-8 2xl:mt-0">
             <h1 className="text-2xl uppercase text-shadow-[-2px_3px_0px_#0F1B24]">contact</h1>
             <div className="flex flex-col gap-3 comic-relief-bold">
               <a href="mailto:admin@pawpewpew.com"
@@ -53,7 +53,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <p className="text-xs comic-relief-bold uppercase">©2026 SANGNILA INDONESIA. All rights reserved.</p>
+      <p className="text-xs comic-relief-bold uppercase">©2026 SANGNILA INDONESIA. <br className="block 2xl:hidden"/> All rights reserved.</p>
     </div>
   )
 }

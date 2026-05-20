@@ -1,6 +1,7 @@
 import FeaturesCard from '../components/FeaturesCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import featuresItem from '../json/features.json';
+import { Autoplay} from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -19,8 +20,10 @@ const Features = () => {
           slidesPerView={1}
           loop={true}
           centeredSlides={true}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          modules={[Autoplay]}
           spaceBetween={0}
-          className="w-full h-130 2xl:h-180 cursor-grab active:cursor-grabbing"
+          className="w-full h-140 2xl:h-180 cursor-grab active:cursor-grabbing"
           breakpoints={{
             768: {
               slidesPerView: 3,
@@ -33,7 +36,7 @@ const Features = () => {
           }}
         >
           {featuresItem.map((item, index) => (
-            <SwiperSlide key={index} className="flex justify-center px-10">
+            <SwiperSlide key={index} className="flex justify-center px-5">
               <FeaturesCard
                 title={item.title}
                 subtitle={item.subtitle}

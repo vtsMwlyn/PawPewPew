@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 // You can pass this as a prop, but here's a placeholder array of plain images
 const slides = [
@@ -62,6 +62,14 @@ export default function FlexibleSlider({ visibleCount = window.innerWidth > 768 
     }
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      goTo(activeIndex + 1);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [activeIndex, goTo]);
+
   // Math magic: automatically calculates layout based on your visibleCount variable
   const getDynamicStyle = (index) => {
     // 1. Calculate shortest distance from active index (e.g., -2, -1, 0, 1, 2)
@@ -109,7 +117,7 @@ export default function FlexibleSlider({ visibleCount = window.innerWidth > 768 
   return (
     <div className="pt-20 bg-hijaubaru-light flex flex-col items-center justify-center relative overflow-hidden pb-60 2xl:pb-40" id="gallery-page">
       <div className="flex flex-col w-full">
-        <h1 className="flex justify-center text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24]">
+        <h1 className="flex justify-center text-5xl text-center 2xl:text-6xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24]">
           See it in action
         </h1>
         <h2 className="flex justify-center text-lg 2xl:text-2xl comic-relief-bold text-white text-shadow-[-2px_4px_0px_#0F1B24]">
@@ -119,7 +127,7 @@ export default function FlexibleSlider({ visibleCount = window.innerWidth > 768 
 
       {/* Slider Track */}
       <div
-        className="mt-40 relative w-full lg:w-1/2 h-auto lg:h-60 2xl:h-100 cursor-grab active:cursor-grabbing"
+        className="mt-40 2xl:mt-30 relative w-full lg:w-1/2 h-auto lg:h-60 2xl:h-100 cursor-grab active:cursor-grabbing"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onMouseDown={handleMouseDown}
@@ -131,12 +139,12 @@ export default function FlexibleSlider({ visibleCount = window.innerWidth > 768 
           return (
             <div
               key={i}
-              className="absolute transition-all duration-[550ms] ease-[cubic-bezier(0.4,0,0.2,1)] will-change-[transform,opacity,left]"
+              className="absolute transition-all duration-550 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-[transform,opacity,left]"
               style={getDynamicStyle(i)}
               onClick={() => !isActive && goTo(i)}
             >
               {/* Plain Image Card Wrapper */}
-              <div className={`relative w-80 lg:w-160 2xl:w-200 h-60 lg:h-100 2xl:h-120 overflow-hidden border-blueblack border-10 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-4xl 2xl:rounded-[75px] transition-all duration-500`}>
+              <div className={`relative w-80 lg:w-160 2xl:w-240 h-60 lg:h-100 2xl:h-140 overflow-hidden border-blueblack border-10 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-4xl 2xl:rounded-[75px] transition-all duration-500`}>
                 <img
                   src={slide}
                   alt={`Slide ${i}`}

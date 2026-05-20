@@ -1,73 +1,73 @@
 [
   {
     "id": 1,
-    "title":"fast pace combat",
-    "subtitle":"Chaotic 3D Rougelite battle",
-    "description":"Experience fast-paced combat with a variety of weapons and abilities. Engage in intense battles against hordes of enemies and powerful bosses.",
+    "title":"CHOOSE YOUR PATH",
+    "subtitle":"A New Route Every Run",
+    "description":"Plot your course across a shifting, procedurally generated hex map. Weigh the risks and rewards of every tile as you battle through a dense <u>forest</u>, a forgotten <u>temple</u>, and a <u>ruined</u> wasteland.",
     "image":"/steam-img-2.webp"
   },
   {
     "id": 2,
-    "title":"Evolve Animal",
-    "subtitle":"Evolve as Evolve Animals",
-    "description":"Pick your survivor — swift Cats, powerful Dogs, or unpredictable Rabbits. Each plays completely differently.",
+    "title":"Adapat and Survive",
+    "subtitle":"Master Every Playstyle",
+    "description":"Dive into fast-paced combat against overwhelming enemy numbers. Discover new weapons every time you leave the Haven, allowing you to experiment with unique playstyles and destructive builds on every single run.",
     "image":"/steam-img-4.webp"
   },
   {
     "id": 3,
-    "title":"Build Midrun",
-    "subtitle":"Adapt and Evolve",
-    "description":"Collect upgrades, mutations, and weapons as you progress. Stack them to create a build no one else has run.",
+    "title":"CHOOSE YOUR Class",
+    "subtitle":"Master Every Role",
+    "description":"Define your playstyle by choosing your character’s Class. Each Class completely changes your abilities and how you approach the battlefield on every run.",
     "image":"/steam-img-6.webp"
   },
   {
     "id": 4,
-    "title":"Robotic Enemies",
-    "subtitle":"Face Relentless Machines",
-    "description":"Battle mechanical creatures with unique attack patterns — from swarming units to screen-filling bosses.",
+    "title":"FORGE YOUR BUILD",
+    "subtitle":"Seek True Mastery",
+    "description":"Your Class is just the beginning. Push further outward run after run, seeking hidden locations where you can truly master your class.",
     "image":"/steam-img-5.webp"
   },
   {
     "id": 5,
-    "title":"Explore The World",
-    "subtitle":"A Hexagon map Called Tile with Themes",
-    "description":"Fight through ruined cities, abandoned laboratories, and overgrown wastelands where nature reclaims technology.",
+    "title":"RELENTLESS ENEMIES",
+    "subtitle":"Face the Robo-Beasts",
+    "description":"Battle a terrifying mechanical threat. Adapt your strategy to the unique attack patterns of the Robo-Beasts as you hold the line against overwhelming swarms and towering, screen-filling bosses.",
     "image":"/map-ruins.webp"
   },
 
   {
     "id": 1,
-    "title":"fast pace combat",
-    "subtitle":"Chaotic 3D Rougelite battle",
-    "description":"Experience fast-paced combat with a variety of weapons and abilities. Engage in intense battles against hordes of enemies and powerful bosses.",
+    "title":"CHOOSE YOUR PATH",
+    "subtitle":"A New Route Every Run",
+    "description":"Plot your course across a shifting, procedurally generated hex map. Weigh the risks and rewards of every tile as you battle through a dense <u>forest</u>, a forgotten <u>temple</u>, and a <u>ruined</u> wasteland.",
     "image":"/steam-img-2.webp"
   },
   {
     "id": 2,
-    "title":"Evolve Animal",
-    "subtitle":"Evolve as Evolve Animals",
-    "description":"Pick your survivor — swift Cats, powerful Dogs, or unpredictable Rabbits. Each plays completely differently.",
+    "title":"Adapat and Survive",
+    "subtitle":"Master Every Playstyle",
+    "description":"Dive into fast-paced combat against overwhelming enemy numbers. Discover new weapons every time you leave the Haven, allowing you to experiment with unique playstyles and destructive builds on every single run.",
     "image":"/steam-img-4.webp"
   },
   {
     "id": 3,
-    "title":"Build Midrun",
-    "subtitle":"Adapt and Evolve",
-    "description":"Collect upgrades, mutations, and weapons as you progress. Stack them to create a build no one else has run.",
+    "title":"CHOOSE YOUR Class",
+    "subtitle":"Master Every Role",
+    "description":"Define your playstyle by choosing your character’s Class. Each Class completely changes your abilities and how you approach the battlefield on every run.",
     "image":"/steam-img-6.webp"
   },
   {
     "id": 4,
-    "title":"Robotic Enemies",
-    "subtitle":"Face Relentless Machines",
-    "description":"Battle mechanical creatures with unique attack patterns — from swarming units to screen-filling bosses.",
+    "title":"FORGE YOUR BUILD",
+    "subtitle":"Seek True Mastery",
+    "description":"Your Class is just the beginning. Push further outward run after run, seeking hidden locations where you can truly master your class.",
     "image":"/steam-img-5.webp"
   },
   {
     "id": 5,
-    "title":"Explore The World",
-    "subtitle":"A Hexagon map Called Tile with Themes",
-    "description":"Fight through ruined cities, abandoned laboratories, and overgrown wastelands where nature reclaims technology.",
+    "title":"RELENTLESS ENEMIES",
+    "subtitle":"Face the Robo-Beasts",
+    "description":"Battle a terrifying mechanical threat. Adapt your strategy to the unique attack patterns of the Robo-Beasts as you hold the line against overwhelming swarms and towering, screen-filling bosses.",
     "image":"/map-ruins.webp"
   }
 ]

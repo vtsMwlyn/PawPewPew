@@ -1,18 +1,18 @@
 export default function WorldMeadow() {
   return (
     <section className="w-full">
-      {/* Animal Utopia */}
+      {/* A peaceful sanctuary for all. */}
       <div className="w-full flex flex-col pt-10 lg:pt-50 bg-hijaubaru-reverse items-center justify-center">
-        <div className="w-full flex flex-col items-center gap-2 px-8 2xl:p-0">
+        <div className="w-full flex flex-col items-center gap-5 px-8 2xl:p-0">
           <h3 className="text-xl lg:text-3xl text-white 
           comic-relief-bold text-shadow-[-2px_4px_0px_#0F1B24]">
-            Welcome to The Meadow</h3>
+            Welcome to Starlit Haven</h3>
           <h1 className="text-5xl lg:text-7xl text-white 
           uppercase text-shadow-[-2px_6px_0px_#0F1B24] text-center">
-            animal utopia</h1>
+            A peaceful sanctuary for all.</h1>
           <p className="text-white comic-relief-bold text-lg lg:text-2xl w-full lg:w-4xl 
               text-center text-shadow-[-2px_4px_0px_#0F1B24]">
-            Home to the Alcove, a hidden refuge where scattered survivors are brought together and given a chance to rebuild.
+            Step into our hidden refuge, a safe space to gather scattered survivors. Together, you'll rebuild Starlit Haven, gathering the strength and resources needed for whatever comes next. 
           </p>
         </div>
         <img src="/bg-map-world.webp" alt="AI Map" />

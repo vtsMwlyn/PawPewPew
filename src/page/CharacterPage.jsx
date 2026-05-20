@@ -29,7 +29,7 @@ export default function CharacterPage() {
             subname={selectedCharacter.subname} 
             quote={selectedCharacter.quotes}
           >
-            {selectedCharacter.description}
+            {selectedCharacter.traits}
           </CharacterCard>
 
           {/* Character Selector */}

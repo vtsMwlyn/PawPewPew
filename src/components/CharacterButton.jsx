@@ -18,7 +18,7 @@ export default function CharacterButton({ characters, selectedCharacter, setSele
             <img
               src={char.icon}
               alt={char.name}
-              className="w-20 lg:w-30 m-2 shadow-[0_4px_8px_rgba(0,0,0,0)]"
+              className="w-18 lg:w-30 m-1 2xl:m-2 shadow-[0_4px_8px_rgba(0,0,0,0)]"
             />
           </button>
         );

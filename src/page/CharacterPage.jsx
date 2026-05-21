@@ -22,7 +22,7 @@ export default function CharacterPage() {
             choose your survivor
         </h1>
 
-        <div className="w-full flex flex-col-reverse lg:flex-row justify-between px-0 2xl:px-40 items-start gap-0 lg:gap-10 2xl:gap-0">
+        <div className="w-full flex flex-col-reverse lg:flex-row justify-between px-0 2xl:px-20 items-start gap-0 lg:gap-10 2xl:gap-0">
           {/* Character Info */}
           <CharacterCard 
             name={selectedCharacter.name} 

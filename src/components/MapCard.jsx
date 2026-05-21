@@ -26,7 +26,7 @@ export default function MapCard({MapJson, selectedMap, setSelectedMap}) {
               <h2 className={`
                 gap-4 bg-hijaubaru border-4 lg:border-8 border-bluedark 
                 ${isSelected ? 'bg-ungupink' : 'group-hover:bg-ungupink'}
-                rounded-full text-base px-5 lg:px-10 py-1 lg:py-2 
+                rounded-full text-xs lg:text-base px-5 lg:px-10 py-1 lg:py-2 
                 text-shadow-[-2px_3px_0px_#0F1B24] text-white
               `}>
                 {/* Ganti selectedMap jadi location */}

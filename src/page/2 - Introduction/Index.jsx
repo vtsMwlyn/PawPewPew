@@ -36,7 +36,7 @@ export default function Introduction() {
 
       {/* Village of Meadow */}
       <div className="w-full flex flex-col bg-hijaubaru-light items-center justify-center py-10 gap-6 px-8">
-        <h1 className="text-2xl lg:text-4xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24] 
+        <h1 className="text-2xl lg:text-4xl text-white uppercase text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_6px_0px_#0F1B24] 
         w-full lg:w-4xl text-center">Life in the village of Meadow was peaceful, whimsical, and perfectly happy </h1>
         <div className="relative w-full max-w-7xl lg:h-165 rounded-xl lg:rounded-4xl overflow-hidden bg-black">
           <video
@@ -63,7 +63,7 @@ export default function Introduction() {
             <img src="/play-button.webp" className="w-10 lg:w-16" />
           </button>
         </div>
-        <p className="text-white comic-relief-bold text-lg lg:text-2xl w-full lg:w-4xl text-center text-shadow-[-2px_4px_0px_#0F1B24]">
+        <p className="text-white comic-relief-bold text-lg lg:text-2xl w-full lg:w-4xl text-center text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_4px_0px_#0F1B24]">
           But when a relentless Robo-Beast army crashes in and kidnaps the villagers, playtime is officially over.
         </p>
       </div>

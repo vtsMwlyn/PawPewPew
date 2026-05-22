@@ -2,7 +2,7 @@ export default function WorldMeadow() {
   return (
     <section className="w-full">
       {/* A peaceful sanctuary for all. */}
-      <div className="w-full flex flex-col pt-10 lg:pt-50 bg-hijaubaru-reverse items-center justify-center">
+      <div className="w-full flex flex-col pt-10 lg:pt-30 bg-hijaubaru-reverse items-center justify-center">
         <div className="w-full flex flex-col items-center gap-5 px-8 2xl:p-0">
           <h3 className="text-xl lg:text-3xl text-white 
           comic-relief-bold text-shadow-[-2px_4px_0px_#0F1B24]">

@@ -17,7 +17,7 @@ export default function Characters() {
       {/* Section Content */}
       <div className="w-full flex flex-col justify-center items-center gap-15 2xl:gap-30 px-8 2xl:p-0">
         {/* Section Title */}
-        <h1 className="flex justify-center text-5xl 2xl:text-6xl text-white 
+        <h1 className="flex justify-center text-4xl lg:text-5xl 2xl:text-6xl text-white 
           uppercase text-shadow-[-2px_6px_0px_#0F1B24]">
           choose your survivor
         </h1>

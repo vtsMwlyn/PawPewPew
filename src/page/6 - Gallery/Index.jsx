@@ -115,9 +115,9 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
   };
 
   return (
-    <div className="pt-20 bg-hijaubaru-light flex flex-col items-center justify-center relative overflow-hidden pb-60 2xl:pb-40" id="gallery-page">
+    <div className="pt-20 bg-hijaubaru-light flex flex-col items-center justify-center relative overflow-hidden pb-40 2xl:pb-40" id="gallery-page">
       <div className="flex flex-col w-full">
-        <h1 className="flex justify-center text-5xl text-center 2xl:text-6xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24]">
+        <h1 className="flex justify-center text-4xl lg:text-5xl text-center 2xl:text-6xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24]">
           See it in action
         </h1>
         <h2 className="flex justify-center text-lg 2xl:text-2xl comic-relief-bold text-white text-shadow-[-2px_4px_0px_#0F1B24]">
@@ -144,7 +144,7 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
               onClick={() => !isActive && goTo(i)}
             >
               {/* Plain Image Card Wrapper */}
-              <div className={`relative w-80 lg:w-160 2xl:w-240 h-60 lg:h-100 2xl:h-140 overflow-hidden border-blueblack border-10 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-4xl 2xl:rounded-[75px] transition-all duration-500`}>
+              <div className={`relative w-70 lg:w-160 2xl:w-240 h-40 lg:h-100 2xl:h-140 overflow-hidden border-blueblack border-5 lg:border-10 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-2xl lg:rounded-4xl 2xl:rounded-[75px] transition-all duration-500`}>
                 <img
                   src={slide}
                   alt={`Slide ${i}`}

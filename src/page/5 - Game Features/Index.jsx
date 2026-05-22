@@ -12,7 +12,7 @@ export default function GameFeatures() {
     <div className="flex flex-col w-full py-10 lg:py-25 gap-25 bg-hijaubaru-light">
       <div className="flex flex-col gap-10" id="features-page">
         <div className="flex flex-col w-full">
-          <h1 className="flex justify-center text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24]">game features</h1>
+          <h1 className="flex justify-center text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24]">game features</h1>
           <h2 className="flex justify-center text-lg 2xl:text-2xl comic-relief-bold text-white text-shadow-[-2px_4px_0px_#0F1B24]">what makes our game unique</h2>
         </div>
 

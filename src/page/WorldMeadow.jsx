@@ -6,16 +6,14 @@ export default function WorldMeadow() {
   const videoRef = useRef(null);
 
   const handlePlayButtonClick = () => {
-    if (!isPlaying) {
-      videoRef.current.play();
-      setIsPlaying(true);
+    const video = videoRef.current;
+  
+    if (video.paused || video.ended) {
+      video.play();
+    } else {
+      video.pause();
     }
-    else {
-      videoRef.current.pause();
-      setIsPlaying(false);
-    }
-    
-  }
+  };
 
   return (
     <section className="w-full">
@@ -41,10 +39,27 @@ export default function WorldMeadow() {
         <h1 className="text-2xl lg:text-4xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24] 
         w-full lg:w-4xl text-center">Life in the village of Meadow was peaceful, whimsical, and perfectly happy </h1>
         <div className="relative w-full max-w-7xl h-165 rounded-2xl overflow-hidden bg-black">
-          <video ref={videoRef} className="w-full h-full lg:rounded-4xl border-6 border-bs-blueblack shadow-[-10px_10px_25px_#000000] object-fit">
+          <video
+            ref={videoRef}
+            className="w-full h-full lg:rounded-4xl border-6 border-bs-blueblack shadow-[-10px_10px_25px_#000000] object-cover"
+            onPlay={() => setIsPlaying(true)}
+            onPause={() => setIsPlaying(false)}
+            onEnded={() => {
+              videoRef.current.currentTime = 0;
+              setIsPlaying(false);
+            }}
+          >
             <source src="/sample.mp4" type="video/mp4" />
           </video>
-          <button type="button" onClick={handlePlayButtonClick} className={`w-full h-full flex justify-center items-center bg-[rgba(0,0,0,0.8)] absolute top-0 transition ease-in-out duration-200 ${isPlaying && 'opacity-0'}`}>
+          <button
+            type="button"
+            onClick={handlePlayButtonClick}
+            className={`w-full h-full flex justify-center items-center bg-[rgba(0,0,0,0.8)] absolute top-0 transition ease-in-out duration-200 ${
+              isPlaying
+                ? 'opacity-0 pointer-events-none'
+                : 'opacity-100'
+            }`}
+          >
             <img src="/play-button.webp" />
           </button>
         </div>

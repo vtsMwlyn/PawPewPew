@@ -1,4 +1,3 @@
-
 export default function Footer() {
   return (
     <div className="w-full flex flex-col justify-content gap-25 bg-green py-20 px-10 text-white relative z-50">

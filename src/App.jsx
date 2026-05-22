@@ -1,14 +1,14 @@
 import './App.css'
 
-import Navbar from './page/Navbar'
-import Hero from './page/Hero'
-import Footer from './page/Footer'
-import WorldMeadow from './page/WorldMeadow'
-import CharacterPage from './page/CharacterPage'
-import Map from './page/Map'
-import CTAPage from './page/CTAPage'
-import Features from './page/Features'
-import SeeItInAction from './page/SeeItInAction'
+import Navbar from './components/Navbar'
+import Hero from './page/1 - Hero/Index'
+import Footer from './components/Footer'
+import WorldMeadow from './page/2 - Introduction/Index'
+import CharacterPage from './page/3 - Characters/Index'
+import Map from './page/4 - Map/Index'
+import CTAPage from './page/7 - Call to Action/Index'
+import Features from './page/5 - Game Features/Index'
+import SeeItInAction from './page/6 - Gallery/Index'
 import ScreenInfo from "./components/ScreenInfo"
 
 export default function App() {

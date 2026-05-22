@@ -10,7 +10,7 @@ const slides = [
   "/steam-img-6.webp",
 ];
 
-export default function FlexibleSlider({ visibleCount = window.innerWidth > 768 ? 5 : 3 }) {
+export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3 }) {
   // visibleCount controls how many cards render on screen (e.g., set to 3 or 5)
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);

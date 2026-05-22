@@ -31,11 +31,21 @@
 @utility bg-hijaubaru{
   background: linear-gradient(to bottom, #428166, #49B888)
 }
+
 @utility bg-hijaubaru-light{
   background: linear-gradient(to bottom, #4AB787, #49B888)
 }
+
 @utility bg-hijaubaru-reverse{
   background: linear-gradient(to bottom, #49B888, #428166)
+}
+
+@utility bg-ungukuning{
+  background: linear-gradient(to bottom, #eacc19 40%, #431f4c)
+}
+
+@utility bg-ungubiru{
+  background: linear-gradient(to bottom, #2B9CBE 40%, #431f4c)
 }
 
 @theme {

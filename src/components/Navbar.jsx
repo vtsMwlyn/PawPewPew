@@ -1,4 +1,4 @@
-import Button from "../components/Button"
+import Button from "./Button"
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
@@ -10,39 +10,39 @@ export default function Navbar() {
     el?.scrollIntoView({ behavior: "smooth" });
   };
 
- useEffect(() => {
-  const handleIntersect = (entries) => {
-    entries.forEach((entry) => {
-      // Tambahkan console.log ini buat ngebuktiin observer-nya beneran nyala
-      if (entry.isIntersecting) {
-        console.log("Section aktif:", entry.target.id); 
-        setActiveSection(entry.target.id);
-      }
+  useEffect(() => {
+    const handleIntersect = (entries) => {
+      entries.forEach((entry) => {
+        // Tambahkan console.log ini buat ngebuktiin observer-nya beneran nyala
+        if (entry.isIntersecting) {
+          console.log("Section aktif:", entry.target.id);
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersect, {
+      threshold: 0,
+      rootMargin: "-40% 0px -40% 0px",
     });
-  };
 
-  const observer = new IntersectionObserver(handleIntersect, {
-    threshold: 0,
-    rootMargin: "-40% 0px -40% 0px",
-  });
+    // Jangan kaku cuma cari 'section'. Tembak langsung ID-nya buat ngehindarin salah tag HTML.
+    const sections = document.querySelectorAll('#character-page, #features-page, #gallery-page');
 
-  // Jangan kaku cuma cari 'section'. Tembak langsung ID-nya buat ngehindarin salah tag HTML.
-  const sections = document.querySelectorAll('#character-page, #features-page, #gallery-page');
-  
-  // Guard clause: Pastikan elemennya beneran ketemu sebelum di-observe
-  if (sections.length > 0) {
-    sections.forEach((section) => observer.observe(section));
-  } else {
-    console.warn("Elemen section tidak ditemukan di DOM!");
-  }
+    // Guard clause: Pastikan elemennya beneran ketemu sebelum di-observe
+    if (sections.length > 0) {
+      sections.forEach((section) => observer.observe(section));
+    } else {
+      console.warn("Elemen section tidak ditemukan di DOM!");
+    }
 
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <nav className="w-full flex flex-col px-6 py-4 fixed top-0 left-0 z-999 backdrop-blur-xs">
       {/* Desktop mode */}
-      <div className="w-full flex justify-between items-center"> 
+      <div className="w-full flex justify-between items-center">
         <div className="flex">
           <button onClick={() => scrollToSection("hero-page")}>
             <img src="/logo-pawpewpew.webp" className="w-20 lg:w-30" />

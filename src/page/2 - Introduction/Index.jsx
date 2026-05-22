@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useRef } from "react"
 
-export default function WorldMeadow() {
+export default function Introduction() {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
 

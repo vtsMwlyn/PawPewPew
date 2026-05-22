@@ -1,13 +1,13 @@
-import FeaturesCard from '../components/FeaturesCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import featuresItem from '../json/features.json';
-import { Autoplay} from 'swiper/modules';
+import featuresItem from '../../json/features.json';
+import { Autoplay } from 'swiper/modules';
+import FeaturesCard from './FeaturesCard';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-const Features = () => {
+export default function GameFeatures() {
   return (
     <div className="flex flex-col w-full py-10 lg:py-25 gap-25 bg-hijaubaru-light">
       <div className="flex flex-col gap-10" id="features-page">
@@ -37,12 +37,7 @@ const Features = () => {
         >
           {featuresItem.map((item, index) => (
             <SwiperSlide key={index} className="flex justify-center px-5">
-              <FeaturesCard
-                title={item.title}
-                subtitle={item.subtitle}
-                description={item.description}
-                image={item.image}
-              />
+              <FeaturesCard item={item} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -50,5 +45,3 @@ const Features = () => {
     </div>
   )
 }
-
-export default Features

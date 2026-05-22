@@ -1,4 +1,4 @@
-export default function CallToAction({children, image, link}) {
+export default function Link({children, image, link}) {
   return(
     <a
       href={link}

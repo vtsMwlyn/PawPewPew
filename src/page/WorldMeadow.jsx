@@ -38,7 +38,7 @@ export default function WorldMeadow() {
       <div className="w-full flex flex-col bg-hijaubaru-light items-center justify-center py-10 gap-6 px-8">
         <h1 className="text-2xl lg:text-4xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24] 
         w-full lg:w-4xl text-center">Life in the village of Meadow was peaceful, whimsical, and perfectly happy </h1>
-        <div className="relative w-full max-w-7xl h-165 rounded-2xl overflow-hidden bg-black">
+        <div className="relative w-full max-w-7xl h-165 rounded-4xl overflow-hidden bg-black">
           <video
             ref={videoRef}
             className="w-full h-full lg:rounded-4xl border-6 border-bs-blueblack shadow-[-10px_10px_25px_#000000] object-cover"
@@ -54,9 +54,9 @@ export default function WorldMeadow() {
           <button
             type="button"
             onClick={handlePlayButtonClick}
-            className={`w-full h-full flex justify-center items-center bg-[rgba(0,0,0,0.8)] absolute top-0 transition ease-in-out duration-200 ${
+            className={`w-full h-full lg:rounded-4xl flex justify-center items-center bg-[rgba(0,0,0,0.8)] absolute top-0 transition ease-in-out duration-200 ${
               isPlaying
-                ? 'opacity-0 pointer-events-none'
+                ? 'opacity-0'
                 : 'opacity-100'
             }`}
           >

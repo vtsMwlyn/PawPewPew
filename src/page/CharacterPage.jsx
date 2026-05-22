@@ -33,7 +33,7 @@ export default function CharacterPage() {
           </CharacterCard>
 
           {/* Character Selector */}
-          <div className="w-full lg:w-1/2 lg:flex flex-col items-center gap-10 lg:sticky lg:top-27">
+          <div className="w-full lg:w-1/2 lg:flex flex-col items-center gap-10 relative lg:sticky lg:top-27 2xl:relative 2xl:top-0">
             <CharacterButton 
               characters={character} 
               selectedCharacter={selectedCharacter} 

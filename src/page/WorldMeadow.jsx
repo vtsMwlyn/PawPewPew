@@ -31,11 +31,11 @@ export default function WorldMeadow() {
             Step into our hidden refuge, a safe space to gather scattered survivors. Together, you'll rebuild Starlit Haven, gathering the strength and resources needed for whatever comes next. 
           </p>
         </div>
-        <img src="/bg-map-world.webp" alt="AI Map" />
+        <img src="/bg-world-map.webp" alt="AI Map" />
       </div>
 
       {/* Village of Meadow */}
-      <div className="w-full flex flex-col bg-hijaubaru-light items-center justify-center py-10 gap-6 px-8 lg:p-0">
+      <div className="w-full flex flex-col bg-hijaubaru-light items-center justify-center py-10 gap-6 px-8">
         <h1 className="text-2xl lg:text-4xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24] 
         w-full lg:w-4xl text-center">Life in the village of Meadow was peaceful, whimsical, and perfectly happy </h1>
         <div className="relative w-full max-w-7xl h-165 rounded-2xl overflow-hidden bg-black">

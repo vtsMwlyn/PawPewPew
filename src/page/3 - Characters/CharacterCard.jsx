@@ -16,7 +16,7 @@ export default function CharacterCard({ name, subname, quote, children }) {
       <div className="flex flex-col 2xl:flex-row h-auto">
         {children.map((trait, index) => (
           <div key={index} className={`flex flex-col gap-2 
-          2xl:w-1/3 p-8 ${index == children.length - 1 ? '' : 'border-b-5 2xl:border-r-5 border-blueblack '}`}>
+          2xl:w-1/3 p-8 ${index == children.length - 1 ? '' : 'border-b-5 2xl:border-b-0 2xl:border-r-5 border-blueblack '}`}>
             <h3 className="text-xl 2xl:text-3xl uppercase tracking-wider text-shadow-[-1px_4px_0px_#0F1B24]">{trait.title}</h3>
             <p className="text-sm lg:text-base 2xl:text-xl comic-relief-bold text-shadow-[-1px_4px_0px_#0F1B24] ">{trait.description}</p>
           </div>

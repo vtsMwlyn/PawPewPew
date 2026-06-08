@@ -64,5 +64,27 @@
     ],
     "image": "/splashart-pito.webp",
     "icon": "/icon-pito.webp"
+  },
+  {
+    "id": 4,
+    "name": "Coming Soon",
+    "subname": "???",
+    "quotes": "???",
+    "traits": [
+      {
+        "title": "Unknown",
+        "description": "???"
+      },
+      {
+        "title": "Unknown",
+        "description": "???"
+      },
+      {
+        "title": "Unknown",
+        "description": "???"
+      }
+    ],
+    "image": "/splashart-pipi.webp",
+    "icon": "/icon-coming-soon.webp"
   }
 ]

@@ -1,7 +1,7 @@
 export default function CharacterCard({ name, subname, quote, children }) {
   return (
     <div className='flex flex-col w-full
-      lg:w-1/2 2xl:w-3/5 
+      xl:w-1/2
       h-auto text-white drop-shadow-[-12px_15px_25px_#0F1B24]
       bg-hijaubaru-reverse rounded-4xl border-5 lg:border-10 border-blueblack'>
       <div

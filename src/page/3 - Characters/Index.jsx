@@ -22,7 +22,7 @@ export default function Characters() {
           choose your survivor
         </h1>
 
-        <div className="w-full flex flex-col-reverse lg:flex-row justify-between px-0 2xl:px-20 items-start gap-0 lg:gap-10 2xl:gap-0">
+        <div className="w-full flex flex-col-reverse xl:flex-row justify-between px-0 2xl:px-20 items-start gap-0 lg:gap-10 2xl:gap-0">
           {/* Character Info */}
           <CharacterCard
             name={selectedCharacter.name}
@@ -33,7 +33,7 @@ export default function Characters() {
           </CharacterCard>
 
           {/* Character Selector */}
-          <div className="w-full lg:w-1/2 lg:flex flex-col items-center gap-10 relative lg:sticky lg:top-27 2xl:relative 2xl:top-0">
+          <div className="w-full xl:w-1/2 lg:flex flex-col items-center gap-10 relative xl:sticky xl:top-27 2xl:relative 2xl:top-0">
             <CharacterButton
               characters={character}
               selectedCharacter={selectedCharacter}
@@ -41,7 +41,7 @@ export default function Characters() {
             />
             <img
               src={selectedCharacter.image} alt={selectedCharacter.name}
-              className={`w-full 2xl:w-150`}
+              className={`w-full lg:w-150 ${selectedCharacter.name === 'Coming Soon' && '-z-20 brightness-0'}`}
             />
           </div>
         </div>

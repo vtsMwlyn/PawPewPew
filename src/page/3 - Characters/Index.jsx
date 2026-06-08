@@ -24,13 +24,7 @@ export default function Characters() {
 
         <div className="w-full flex flex-col-reverse xl:flex-row justify-between px-0 2xl:px-20 items-start gap-0 lg:gap-10 2xl:gap-0">
           {/* Character Info */}
-          <CharacterCard
-            name={selectedCharacter.name}
-            subname={selectedCharacter.subname}
-            quote={selectedCharacter.quotes}
-          >
-            {selectedCharacter.traits}
-          </CharacterCard>
+          <CharacterCard selectedCharacter={selectedCharacter} />
 
           {/* Character Selector */}
           <div className="w-full xl:w-1/2 lg:flex flex-col items-center gap-10 relative xl:sticky xl:top-27 2xl:relative 2xl:top-0">
@@ -41,7 +35,7 @@ export default function Characters() {
             />
             <img
               src={selectedCharacter.image} alt={selectedCharacter.name}
-              className={`w-full lg:w-150 ${selectedCharacter.name === 'Coming Soon' && '-z-20 brightness-0'}`}
+              className={`w-full lg:w-150 ${selectedCharacter.name === 'Coming Soon' && 'brightness-0'}`}
             />
           </div>
         </div>

@@ -95,3 +95,23 @@ a, button{
     --offset-l: 10px;
   }
 }
+
+@keyframes float-right-left {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(var(--offset-r));
+  }
+}
+
+@keyframes float-left-right {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(var(--offset-l));
+  }
+}

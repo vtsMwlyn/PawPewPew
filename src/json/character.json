@@ -7,7 +7,7 @@
     "traits": [
       {
         "title": "Frontline Duty",
-        "description": "A swarm of enemies is a safety violation. Built for the front line, he moves in without delay, treating any threat as something to be immediately eliminated."
+        "description": "Built for the front line, he moves in without delay, treating any threat as something to be immediately eliminated."
       },
       {
         "title": "Creating Safe Zones",
@@ -19,7 +19,8 @@
       }
     ],
     "image": "/splashart-toto.webp",
-    "icon": "/icon-toto.webp"
+    "icon": "/icon-toto.webp",
+    "weaponIcon": "/weapon-icon-toto.webp"
   },
   {
     "id": 2,
@@ -41,7 +42,8 @@
       }
     ],
     "image": "/splashart-pipi.webp",
-    "icon": "/icon-pipi.webp"
+    "icon": "/icon-pipi.webp",
+    "weaponIcon": "/weapon-icon-pipi.webp"
   },
   {
     "id": 3,
@@ -63,6 +65,30 @@
       }
     ],
     "image": "/splashart-pito.webp",
-    "icon": "/icon-pito.webp"
+    "icon": "/icon-pito.webp",
+    "weaponIcon": "/weapon-icon-pito.webp"
+  },
+  {
+    "id": 4,
+    "name": "Coming Soon",
+    "subname": "???",
+    "quotes": "???",
+    "traits": [
+      {
+        "title": "Unknown",
+        "description": "???"
+      },
+      {
+        "title": "Unknown",
+        "description": "???"
+      },
+      {
+        "title": "Unknown",
+        "description": "???"
+      }
+    ],
+    "image": "/splashart-pipi.webp",
+    "icon": "/icon-coming-soon.webp",
+    "weaponIcon": "/weapon-icon-coming-soon.webp"
   }
 ]

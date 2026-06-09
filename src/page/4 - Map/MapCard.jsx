@@ -1,6 +1,6 @@
 export default function MapCard({ MapJson, selectedMap, setSelectedMap }) {
   return (
-    <div className="w-full flex px-5 gap-2 2xl:gap-10 justify-center absolute bottom-80">
+    <div className="w-full flex px-5 gap-5 2xl:gap-10 justify-center absolute bottom-15 lg:bottom-40 2xl:bottom-80">
       {MapJson.map((location) => {
         const isSelected = selectedMap?.name === location.name;
         return (
@@ -8,7 +8,7 @@ export default function MapCard({ MapJson, selectedMap, setSelectedMap }) {
             key={location.id}
             className={`flex rounded-xl relative 
               ${isSelected ? 'scale-110 origin-bottom' : ''}
-              group w-24 lg:w-65 h-19 lg:h-35 
+              group w-40 lg:w-65 h-21 lg:h-35 
               transition-transform ease-out duration-400 hover:scale-120`}
           >
 

@@ -50,7 +50,7 @@ export default function Introduction() {
       </div>
 
       {/* Village of Meadow */}
-      <div className="w-full flex flex-col bg-hijaubaru-light items-center justify-center py-10 gap-6 px-8">
+      <div className="w-full flex flex-col bg-hijaubaru-light items-center justify-center pb-10 gap-6 px-8 -mt-80">
         <h1 className="text-2xl lg:text-4xl text-white uppercase text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_6px_0px_#0F1B24] w-full lg:w-4xl text-center">
           Life in the village of Meadow was peaceful, whimsical, and perfectly happy
         </h1>

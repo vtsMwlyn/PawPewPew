@@ -7,7 +7,7 @@ export default function Characters() {
   const [selectedCharacter, setSelectedCharacter] = useState(character[0]);
 
   return (
-    <section className="relative flex py-10 lg:py-65" id="heroes-page">
+    <section className="relative flex" id="character-page">
       {/* Background Image */}
       <img
         src="/bg-character.webp" alt="bg-characterpage"
@@ -18,11 +18,11 @@ export default function Characters() {
       <div className="w-full flex flex-col justify-center items-center gap-15 2xl:gap-30 px-8 2xl:p-0">
         {/* Section Title */}
         <h1 className="flex justify-center text-center text-4xl lg:text-5xl 2xl:text-6xl text-white 
-          uppercase text-shadow-[-2px_6px_0px_#0F1B24]">
+          uppercase text-shadow-[-2px_6px_0px_#0F1B24] mt-60">
           choose your survivor
         </h1>
 
-        <div className="w-full flex flex-col-reverse xl:flex-row justify-between px-0 2xl:px-20 items-start gap-0 lg:gap-10 2xl:gap-0">
+        <div className="w-full flex flex-col-reverse xl:flex-row justify-between px-0 2xl:px-20 items-start gap-0 lg:gap-10 2xl:gap-0 mb-20">
           {/* Character Info */}
           <CharacterCard selectedCharacter={selectedCharacter} />
 

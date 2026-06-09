@@ -1,20 +1,81 @@
 [
   {
     "id": 1,
-    "name": "ruins",
-    "image":"/map-ruins.webp",
-    "background":"/bg-map-ruins.webp"
+    "name": "Forest",
+    "image":"/map-forest.webp",
+    "background":"/bg-map-forest.webp",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam amet doloribus repudiandae. Quibusdam asperiores laborum in, fuga nulla quam officiis nemo necessitatibus tenetur voluptas quidem voluptatibus, labore voluptate! Eveniet, doloribus quam natus quibusdam, ratione fugiat accusamus amet dolor.",
+    "enemies": [
+      {
+        "image": "/rhino.webp",
+        "name": "Rhino"
+      },
+      {
+        "image": "/chicken.webp",
+        "name": "Chicken"
+      },
+      {
+        "image": "/bird.webp",
+        "name": "Bird"
+      },
+      {
+        "image": "/unknown.webp",
+        "name": "Unknown"
+      }
+    ]
   },
   {
     "id": 2,
-    "name": "temple",
-    "image":"/map-temple.webp",
-    "background":"/bg-map-temple.webp"
+    "name": "ruins",
+    "image":"/map-ruins.webp",
+    "background":"/bg-map-ruins.webp",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam nobis nisi, omnis modi quia odit facilis laboriosam dolore maiores sed sint, quibusdam sunt voluptatum cupiditate tempora dicta sapiente quaerat expedita, amet doloribus repudiandae. Quibusdam asperiores laborum in, fuga nulla quam officiis nemo necessitatibus tenetur voluptas quidem voluptatibus.",
+    "enemies": [
+      {
+        "image": "/unknown.webp",
+        "name": "Unknown"
+      },
+      {
+        "image": "/unknown.webp",
+        "name": "Unknown"
+      },
+      {
+        "image": "/unknown.webp",
+        "name": "Unknown"
+      },
+      {
+        "image": "/unknown.webp",
+        "name": "Unknown"
+      },
+      {
+        "image": "/unknown.webp",
+        "name": "Unknown"
+      }
+    ]
   },
   {
     "id": 3,
-    "name": "sanctum",
-    "image":"/map-sanctum.webp",
-    "background":"/bg-map-sanctum.webp"
+    "name": "temple",
+    "image":"/map-temple.webp",
+    "background":"/bg-map-temple.webp",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam nobis nisi, omnis modi quia odit facilis laboriosam dolore maiores sed sint,  in aliquid, deleniti ipsum placeat molestias tempora ipsam reprehenderit. Doloremque, blanditiis facilis autem eum vitae nihil voluptates commodi amet dolor.",
+    "enemies": [
+      {
+        "image": "/unknown.webp",
+        "name": "Unknown"
+      },
+      {
+        "image": "/unknown.webp",
+        "name": "Unknown"
+      },
+      {
+        "image": "/unknown.webp",
+        "name": "Unknown"
+      },
+      {
+        "image": "/unknown.webp",
+        "name": "Unknown"
+      }
+    ]
   }
 ]

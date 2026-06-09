@@ -115,7 +115,7 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
   };
 
   return (
-    <div className="pt-20 bg-hijaubaru-light flex flex-col items-center justify-center relative overflow-hidden pb-40 2xl:pb-40" id="gallery-page">
+    <div className="bg-hijaubaru-light flex flex-col items-center justify-center relative overflow-hidden py-40" id="gallery-page">
       <div className="flex flex-col w-full">
         <h1 className="flex justify-center text-4xl lg:text-5xl text-center 2xl:text-6xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24]">
           See it in action

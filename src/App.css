@@ -68,3 +68,30 @@ a, button{
   @apply cursor-pointer;
 }
 
+
+/* ANIMATIONS */
+@keyframes pop-up {
+  0%   { opacity: 0; transform: scale(0.8) translateY(20px); }
+  50% { opacity: 0.5; transform: scale(1.1) translateY(0); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@utility animate-pop-up {
+  animation: pop-up 0.3s ease-in forwards;
+}
+
+.animate-arrow-right {
+  --offset-r: 3px;
+  animation: float-right-left 1.5s ease-in-out infinite;
+  @media (min-width: 640px) {
+    --offset-r: 10px;
+  }
+}
+
+.animate-arrow-left {
+  --offset-l: 3px;
+  animation: float-left-right 1.5s ease-in-out infinite;
+  @media (min-width: 640px) {
+    --offset-l: 10px;
+  }
+}

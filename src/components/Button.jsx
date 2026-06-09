@@ -1,14 +1,9 @@
-export default function Button({ selected, children, link, className, ...rest }) {
-  const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    el?.scrollIntoView({ behavior: "smooth" });
-  };
+export default function Button({ selected, children, link,onClick, className, ...rest }) {
+  
   return (
     <a type="button"
       href={link} target="_blank" rel="noopener noreferrer"
-      onClick={children === "Characters" ? () => scrollToSection("character-page") : 
-        children === "Features" ? () => scrollToSection("features-page") : 
-        children === "Gallery" ? () => scrollToSection("gallery-page") : null}
+      onClick={onClick}
       className={`
         justify-center flex items-center w-50 rounded-full py-1 px-4 text-white uppercase 
         border-4 border-blueblack transition-colors duration-200 h-16

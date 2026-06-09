@@ -32,12 +32,12 @@ export default function Introduction() {
   const handleNext = () => swiperRef.current?.slideNext();
 
   return (
-    <section className="w-full">
+    <section className="w-full" id="introduction-page">
       {/* A peaceful sanctuary for all. */}
       <div className="w-full flex flex-col pt-10 lg:pt-30 bg-hijaubaru-reverse items-center justify-center">
         <div className="w-full flex flex-col items-center gap-5 px-8 2xl:p-0">
           <h3 className="text-xl lg:text-3xl text-white comic-relief-bold text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_4px_0px_#0F1B24]">
-            Welcome to Starlit Haven
+            Welcome to STARLIT HAVEN
           </h3>
           <h1 className="text-5xl lg:text-7xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24] text-center">
             A peaceful sanctuary for all.
@@ -107,7 +107,7 @@ export default function Introduction() {
           <button
             type="button"
             onClick={handlePrev}
-            className="absolute -left-20 2xl:-left-40 top-1/2 -translate-y-1/2 z-10 w-10 h-10 lg:w-14 lg:h-14 flex items-center justify-center"
+            className="absolute -left-20 2xl:-left-40 top-1/2 -translate-y-1/2 z-10 w-10 h-10 lg:w-14 lg:h-14 flex items-center justify-center active:scale-70 hover:scale-115 transition-transform duration-200"
           >
             <img src="/arrow-triangle.webp" className="w-full h-full"/>
           </button>
@@ -115,7 +115,7 @@ export default function Introduction() {
           <button
             type="button"
             onClick={handleNext}
-            className="absolute -right-20 2xl:-right-40 top-1/2 -translate-y-1/2 z-10 w-10 h-10 lg:w-14 lg:h-14 flex items-center justify-center"
+            className="absolute -right-20 2xl:-right-40 top-1/2 -translate-y-1/2 z-10 w-10 h-10 lg:w-14 lg:h-14 flex items-center justify-center active:scale-70 hover:scale-115 transition-transform duration-200"
           >
             <img src="/arrow-triangle.webp" className="w-full h-full -scale-x-100"/>
           </button>

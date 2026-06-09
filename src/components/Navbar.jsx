@@ -12,11 +12,8 @@ export default function Navbar() {
         const scrollY = window.scrollY;
         setPassed100vh(scrollY >= window.innerHeight);
       };
-
       handleScroll();
-
       window.addEventListener("scroll", handleScroll);
-
       return () => {
         window.removeEventListener("scroll", handleScroll);
       };
@@ -44,7 +41,7 @@ export default function Navbar() {
     });
 
     // Jangan kaku cuma cari 'section'. Tembak langsung ID-nya buat ngehindarin salah tag HTML.
-    const sections = document.querySelectorAll('#character-page, #features-page, #gallery-page');
+    const sections = document.querySelectorAll('#heroes-page, #features-page, #gallery-page, #introduction-page, #hero-page');
 
     // Guard clause: Pastikan elemennya beneran ketemu sebelum di-observe
     if (sections.length > 0) {
@@ -68,31 +65,45 @@ export default function Navbar() {
 
         <div className="gap-2 hidden lg:flex">
           <div 
-            className="relative" 
+            className="relative cursor-pointer" 
             onMouseEnter={() => setShowCharDropdown(true)}
             onMouseLeave={() => setShowCharDropdown(false)}
           >
-            <Button selected={activeSection === "character-page"}>
-              {activeSection === "character-page" ? "Heroes" : "Characters"}
+            <Button selected={activeSection === "heroes-page"}>
+              {activeSection === "heroes-page" ? "Heroes" : "Characters"}
             </Button>
 
             {/* Dropdown Menu Desktop */}
             {showCharDropdown && (
-              <div className="absolute top-full left-0 mt-5 bg-blueblack/75 backdrop-blur-sm rounded-xl flex flex-col p-2 gap-2">
-                <Button> Heroes </Button>
-                <Button> Enemies </Button>
-                <Button> Bosses </Button>
+              <div className="absolute top-full rounded-xl flex flex-col p-2 gap-2">
+                <Button onClick={() => scrollToSection("heroes-page")}>Heroes</Button>
+                <Button onClick={() => scrollToSection("enemies-page")}>Enemies</Button>
+                <Button>Bosses</Button>
               </div>
             )}
           </div>
-          <Button selected={activeSection === "features-page"}>Features</Button>
-          <Button selected={activeSection === "gallery-page"}>Gallery</Button>
-          <Button link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" className={` ${passed100vh ? 'block' : 'hidden'}`}>
-            <div className="flex items-center justify-center gap-2">
-              <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
-              <p className="text-lg leading-tight text-left">Wishlist <br /> on Steam</p>
-            </div>
+          <Button 
+            selected={activeSection === "features-page"} 
+            onClick={() => scrollToSection("features-page")}>
+            Features
           </Button>
+          <Button 
+            selected={activeSection === "gallery-page"} 
+            onClick={() => scrollToSection("gallery-page")}>
+            Gallery
+          </Button>
+          <div className={`transition-all duration-500 ease-out ${passed100vh 
+                ? 'w-50 opacity-100 translate-x-0 ml-2' 
+                : 'w-0 opacity-0 -translate-x-8 ml-0'
+            }`}
+          >
+            <Button link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" className="w-full">
+              <div className="flex items-center justify-center gap-2 whitespace-nowrap">
+                <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
+                <p className="text-lg leading-tight text-left">Wishlist <br /> on Steam</p>
+              </div>
+            </Button>
+          </div>
         </div>
 
         {/* Mobile toggler */}
@@ -105,34 +116,37 @@ export default function Navbar() {
 
       {/* Mobile navbar list */}
       <div className={`w-full flex-col items-stretch mt-8 gap-4 ${showMobileList ? 'flex' : 'hidden'}`}>
-        {/* Mobile navbar list - Replace the old Button characters with this */}
-      <div className="w-full flex flex-col gap-2">
-        <Button 
-          className="w-full! flex justify-between items-center" 
-          selected={activeSection === "character-page"}
-          onClick={() => setShowCharDropdown(!showCharDropdown)}
-        >
-          <span>Characters</span>
+        <div className="w-full flex flex-col gap-2">
+          <Button 
+            className="w-full! flex justify-between items-center" 
+            selected={activeSection === "heroes-page"}
+            onClick={() => setShowCharDropdown(!showCharDropdown)}
+          >
+            {activeSection === "heroes-page" ? "Heroes" : "Characters"}
+          </Button>
+          
+          {/* Dropdown Menu Mobile */}
+          {showCharDropdown && (
+            <div className="flex gap-10">
+              <Button className="w-full!" >
+                Heroes
+              </Button >
+              <Button className="w-full!" >
+                Enemies
+              </Button>
+              <Button className="w-full!" >
+                Bosses
+              </Button>
+            </div>
+          )}
+        </div>
+        <Button className="w-full!" selected={activeSection === "features-page"} onClick={() => scrollToSection("features-page")}>
+          Features
         </Button>
-        
-        {/* Dropdown Menu Mobile */}
-        {showCharDropdown && (
-          <div className="flex gap-10">
-            <Button className="w-full!" >
-              Heroes
-            </Button >
-            <Button className="w-full!" >
-              Enemies
-            </Button>
-            <Button className="w-full!" >
-              Bosses
-            </Button>
-          </div>
-        )}
-      </div>
-        <Button className="w-full!" selected={activeSection === "features-page"}>Features</Button>
-        <Button className="w-full!" selected={activeSection === "gallery-page"}>Gallery</Button>
-        <Button className="w-full!" link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/">
+        <Button className="w-full!" selected={activeSection === "gallery-page"} onClick={() => scrollToSection("gallery-page")}>
+          Gallery
+        </Button>
+        <Button className={`w-full! ${passed100vh ? 'opacity-100' : 'opacity-0'}`} link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/">
           <div className="flex items-center justify-center gap-2">
             <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
             <p className="text-2xl 2xl:text-lg leading-tight text-left">Wishlist <br className="hidden 2xl:block" /> on Steam</p>

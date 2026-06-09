@@ -6,7 +6,8 @@ export default function Navbar() {
   const [showMobileList, setShowMobileList] = useState(false);
   const [passed100vh, setPassed100vh] = useState(false);
   const [showCharDropdown, setShowCharDropdown] = useState(false);
-    
+
+
   useEffect(() => {
       const handleScroll = () => {
         const scrollY = window.scrollY;
@@ -65,7 +66,7 @@ export default function Navbar() {
 
         <div className="gap-2 hidden lg:flex">
           <div 
-            className="relative cursor-pointer" 
+            className="relative cursor-pointer flex justify-center" 
             onMouseEnter={() => setShowCharDropdown(true)}
             onMouseLeave={() => setShowCharDropdown(false)}
           >
@@ -75,10 +76,17 @@ export default function Navbar() {
 
             {/* Dropdown Menu Desktop */}
             {showCharDropdown && (
-              <div className="absolute top-full rounded-xl flex flex-col p-2 gap-2">
-                <Button onClick={() => scrollToSection("heroes-page")}>Heroes</Button>
-                <Button onClick={() => scrollToSection("enemies-page")}>Enemies</Button>
-                <Button>Bosses</Button>
+              <div className="absolute top-full rounded-xl flex flex-col items-center pt-4 gap-2">
+                <Button onClick={() => scrollToSection("heroes-page")} 
+                className={`overflow-hidden animate-pop-up opacity-0`}
+                style={{ animationDelay: `${1 * 150}ms` }}>Heroes</Button>
+                <Button onClick={() => scrollToSection("enemies-page")} 
+                className={`overflow-hidden animate-pop-up opacity-0`}
+                style={{ animationDelay: `${2 * 150}ms` }}>Enemies</Button>
+                <Button onClick={() => scrollToSection("bosses-page")} 
+                className={`overflow-hidden animate-pop-up opacity-0`}
+                style={{ animationDelay: `${3 * 150}ms` }}>
+                  Bosses</Button>
               </div>
             )}
           </div>

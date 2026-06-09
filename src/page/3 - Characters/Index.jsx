@@ -7,7 +7,7 @@ export default function Characters() {
   const [selectedCharacter, setSelectedCharacter] = useState(character[0]);
 
   return (
-    <section className="relative flex" id="character-page">
+    <section className="relative flex" id="heroes-page">
       {/* Background Image */}
       <img
         src="/bg-character.webp" alt="bg-characterpage"

@@ -4,6 +4,23 @@ import { useState, useEffect } from "react";
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState('');
   const [showMobileList, setShowMobileList] = useState(false);
+  const [passed100vh, setPassed100vh] = useState(false);
+  const [showCharDropdown, setShowCharDropdown] = useState(false);
+    
+  useEffect(() => {
+      const handleScroll = () => {
+        const scrollY = window.scrollY;
+        setPassed100vh(scrollY >= window.innerHeight);
+      };
+
+      handleScroll();
+
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
 
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
@@ -40,7 +57,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="w-full flex flex-col px-6 py-4 fixed top-0 left-0 z-999 backdrop-blur-xs">
+    <nav className={`w-full flex flex-col px-6 py-4 fixed top-0 left-0 z-999 ${passed100vh ? 'bg-blueblack/75' : 'bg-transparent'}`}>
       {/* Desktop mode */}
       <div className="w-full flex justify-between items-center">
         <div className="flex">
@@ -50,10 +67,27 @@ export default function Navbar() {
         </div>
 
         <div className="gap-2 hidden lg:flex">
-          <Button selected={activeSection === "character-page"}>Characters</Button>
+          <div 
+            className="relative" 
+            onMouseEnter={() => setShowCharDropdown(true)}
+            onMouseLeave={() => setShowCharDropdown(false)}
+          >
+            <Button selected={activeSection === "character-page"}>
+              {activeSection === "character-page" ? "Heroes" : "Characters"}
+            </Button>
+
+            {/* Dropdown Menu Desktop */}
+            {showCharDropdown && (
+              <div className="absolute top-full left-0 mt-5 bg-blueblack/75 backdrop-blur-sm rounded-xl flex flex-col p-2 gap-2">
+                <Button> Heroes </Button>
+                <Button> Enemies </Button>
+                <Button> Bosses </Button>
+              </div>
+            )}
+          </div>
           <Button selected={activeSection === "features-page"}>Features</Button>
           <Button selected={activeSection === "gallery-page"}>Gallery</Button>
-          <Button link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/">
+          <Button link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" className={` ${passed100vh ? 'block' : 'hidden'}`}>
             <div className="flex items-center justify-center gap-2">
               <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
               <p className="text-lg leading-tight text-left">Wishlist <br /> on Steam</p>
@@ -71,7 +105,31 @@ export default function Navbar() {
 
       {/* Mobile navbar list */}
       <div className={`w-full flex-col items-stretch mt-8 gap-4 ${showMobileList ? 'flex' : 'hidden'}`}>
-        <Button className="w-full!" selected={activeSection === "character-page"}>Characters</Button>
+        {/* Mobile navbar list - Replace the old Button characters with this */}
+      <div className="w-full flex flex-col gap-2">
+        <Button 
+          className="w-full! flex justify-between items-center" 
+          selected={activeSection === "character-page"}
+          onClick={() => setShowCharDropdown(!showCharDropdown)}
+        >
+          <span>Characters</span>
+        </Button>
+        
+        {/* Dropdown Menu Mobile */}
+        {showCharDropdown && (
+          <div className="flex gap-10">
+            <Button className="w-full!" >
+              Heroes
+            </Button >
+            <Button className="w-full!" >
+              Enemies
+            </Button>
+            <Button className="w-full!" >
+              Bosses
+            </Button>
+          </div>
+        )}
+      </div>
         <Button className="w-full!" selected={activeSection === "features-page"}>Features</Button>
         <Button className="w-full!" selected={activeSection === "gallery-page"}>Gallery</Button>
         <Button className="w-full!" link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/">

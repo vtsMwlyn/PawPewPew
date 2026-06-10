@@ -1,7 +1,6 @@
 import { useState, useRef } from "react"
 import FrameEdge from "../../components/FrameEdge";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";

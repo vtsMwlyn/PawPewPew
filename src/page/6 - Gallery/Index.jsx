@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import features from '../../json/features.json';
+import FrameEdge from "../../components/FrameEdge";
 
 export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3 }) {
   // visibleCount controls how many cards render on screen (e.g., set to 3 or 5)
@@ -134,6 +135,17 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
               style={getDynamicStyle(i)}
               onClick={() => !isActive && goTo(i)}
             >
+              <FrameEdge position="topLeft" className={`
+                w-20 md:w-30 2xl:w-40
+                -top-8 md:-top-12 2xl:-top-15
+                -left-7 md:-left-10 2xl:-left-14
+              `} />
+              <FrameEdge position="bottomRight" className={`
+                w-20 md:w-30 2xl:w-40
+                -bottom-8 md:-bottom-12 2xl:-bottom-15
+                -right-7 md:-right-10 2xl:-right-14
+              `} />
+              
               {/* Plain Image Card Wrapper */}
               <div className={`relative w-70 lg:w-160 2xl:w-240 h-40 lg:h-100 2xl:h-140 overflow-hidden border-blueblack border-6 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-2xl lg:rounded-4xl transition-all duration-500`}>
                 <img

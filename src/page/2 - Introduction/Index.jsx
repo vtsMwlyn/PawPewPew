@@ -88,7 +88,7 @@ export default function Introduction() {
                       setPlayingIndex(null);
                     }}
                   >
-                    <source src="/sample.mp4" type="video/mp4" />
+                    <source src="/gameplay-forest.mp4" type="video/mp4" />
                   </video>
 
                   <button

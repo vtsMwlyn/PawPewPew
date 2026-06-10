@@ -7,7 +7,7 @@ import WorldMeadow from './page/2 - Introduction/Index'
 import CharacterPage from './page/3 - Characters/Index'
 import Map from './page/4 - Map/Index'
 import CTAPage from './page/7 - Call to Action/Index'
-import Features from './page/5 - Game Features/Index'
+// import Features from './page/5 - Game Features/Index'
 import SeeItInAction from './page/6 - Gallery/Index'
 // import ScreenInfo from "./components/ScreenInfo"
 
@@ -23,7 +23,7 @@ export default function App() {
       <WorldMeadow />
       <CharacterPage />
       <Map />
-      <Features />
+      {/* <Features /> */}
       <SeeItInAction />
       <CTAPage />
 

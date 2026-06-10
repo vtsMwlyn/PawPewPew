@@ -1,14 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-
-// You can pass this as a prop, but here's a placeholder array of plain images
-const slides = [
-  "/steam-img-1.webp",
-  "/steam-img-2.webp",
-  "/steam-img-3.webp",
-  "/steam-img-4.webp",
-  "/steam-img-5.webp",
-  "/steam-img-6.webp",
-];
+import features from '../../json/features.json';
 
 export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3 }) {
   // visibleCount controls how many cards render on screen (e.g., set to 3 or 5)
@@ -18,7 +9,7 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
   // Single ref to handle both touch and mouse starting positions
   const dragStartX = useRef(null);
   const isDragging = useRef(false);
-  const total = slides.length;
+  const total = features.length;
 
   const goTo = (newIndex) => {
     if (animating) return;
@@ -115,13 +106,13 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
   };
 
   return (
-    <div className="bg-hijaubaru-light flex flex-col items-center justify-center relative overflow-hidden py-40" id="gallery-page">
+    <div className="bg-hijaubaru-light flex flex-col items-center justify-center relative overflow-hidden pb-40" id="gallery-page">
       <div className="flex flex-col w-full">
         <h1 className="flex justify-center text-4xl lg:text-5xl text-center 2xl:text-6xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24]">
           See it in action
         </h1>
-        <h2 className="flex justify-center text-lg 2xl:text-2xl comic-relief-bold text-white text-shadow-[-2px_4px_0px_#0F1B24]">
-          gameplay chaos
+        <h2 className="flex justify-center text-lg 2xl:text-2xl comic-relief-bold text-white text-shadow-[-2px_4px_0px_#0F1B24] mt-4">
+          Gameplay chaos
         </h2>
       </div>
 
@@ -134,7 +125,7 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseLeave}
       >
-        {slides.map((slide, i) => {
+        {features.map((feature, i) => {
           const isActive = i === activeIndex;
           return (
             <div
@@ -144,13 +135,17 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
               onClick={() => !isActive && goTo(i)}
             >
               {/* Plain Image Card Wrapper */}
-              <div className={`relative w-70 lg:w-160 2xl:w-240 h-40 lg:h-100 2xl:h-140 overflow-hidden border-blueblack border-5 lg:border-10 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-2xl lg:rounded-4xl 2xl:rounded-[75px] transition-all duration-500`}>
+              <div className={`relative w-70 lg:w-160 2xl:w-240 h-40 lg:h-100 2xl:h-140 overflow-hidden border-blueblack border-6 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-2xl lg:rounded-4xl transition-all duration-500`}>
                 <img
-                  src={slide}
+                  src={feature.image}
                   alt={`Slide ${i}`}
                   draggable={false} // Crucial: Prevents browser from intercepting the drag
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 select-none`}
+                  className={`w-full h-full object-cover transition-opacity duration-500 select-none`}
                 />
+                <div className="absolute z-5 inset-0 flex flex-col justify-end p-8 bg-linear-to-t from-black/50 to-transparent">
+                  <h2 className="text-xl 2xl:text-3xl uppercase tracking-wider text-shadow-[-1px_4px_0px_#0F1B24] text-white">{feature.title}</h2>
+                  <p className="text-sm lg:text-base 2xl:text-xl comic-relief-bold text-shadow-[-1px_4px_0px_#0F1B24] text-white mt-2">{feature.description}</p>
+                </div>
               </div>
             </div>
           );

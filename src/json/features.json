@@ -3,71 +3,42 @@
     "id": 1,
     "title":"CHOOSE YOUR PATH",
     "subtitle":"A New Route Every Run",
-    "description":"Plot your course across a shifting, procedurally generated hex map. Weigh the risks and rewards of every tile as you battle through a dense <u>forest</u>, a forgotten <u>temple</u>, and a <u>ruined</u> wasteland.",
-    "image":"/steam-img-2.webp"
+    "description":"Plot your course across a shifting, procedurally generated hex map. Weigh the risks and rewards of every tile as you battle through a dense forest, a forgotten temple, and a ruined wasteland.",
+    "image":"/choose-your-path.webp"
   },
   {
     "id": 2,
     "title":"Adapt and Survive",
     "subtitle":"Master Every Playstyle",
     "description":"Dive into fast-paced combat against overwhelming enemy numbers. Discover new weapons every time you leave the Haven, allowing you to experiment with unique playstyles and destructive builds on every single run.",
-    "image":"/steam-img-4.webp"
+    "image":"/adapt-and-survive.webp"
   },
   {
     "id": 3,
     "title":"CHOOSE YOUR Class",
     "subtitle":"Master Every Role",
     "description":"Define your playstyle by choosing your character’s Class. Each Class completely changes your abilities and how you approach the battlefield on every run.",
-    "image":"/steam-img-6.webp"
+    "image":"/choose-your-class.webp"
   },
   {
     "id": 4,
     "title":"FORGE YOUR BUILD",
     "subtitle":"Seek True Mastery",
     "description":"Your Class is just the beginning. Push further outward run after run, seeking hidden locations where you can truly master your class.",
-    "image":"/steam-img-5.webp"
+    "image":"/forge-your-build.webp"
   },
   {
     "id": 5,
     "title":"RELENTLESS ENEMIES",
     "subtitle":"Face the Robo-Beasts",
     "description":"Battle a terrifying mechanical threat. Adapt your strategy to the unique attack patterns of the Robo-Beasts as you hold the line against overwhelming swarms and towering, screen-filling bosses.",
-    "image":"/map-ruins.webp"
-  },
-
-  {
-    "id": 1,
-    "title":"CHOOSE YOUR PATH",
-    "subtitle":"A New Route Every Run",
-    "description":"Plot your course across a shifting, procedurally generated hex map. Weigh the risks and rewards of every tile as you battle through a dense <u>forest</u>, a forgotten <u>temple</u>, and a <u>ruined</u> wasteland.",
-    "image":"/steam-img-2.webp"
+    "image":"/relentless-enemies.webp"
   },
   {
-    "id": 2,
-    "title":"Adapt and Survive",
-    "subtitle":"Master Every Playstyle",
-    "description":"Dive into fast-paced combat against overwhelming enemy numbers. Discover new weapons every time you leave the Haven, allowing you to experiment with unique playstyles and destructive builds on every single run.",
-    "image":"/steam-img-4.webp"
-  },
-  {
-    "id": 3,
-    "title":"CHOOSE YOUR Class",
-    "subtitle":"Master Every Role",
-    "description":"Define your playstyle by choosing your character’s Class. Each Class completely changes your abilities and how you approach the battlefield on every run.",
-    "image":"/steam-img-6.webp"
-  },
-  {
-    "id": 4,
-    "title":"FORGE YOUR BUILD",
-    "subtitle":"Seek True Mastery",
-    "description":"Your Class is just the beginning. Push further outward run after run, seeking hidden locations where you can truly master your class.",
-    "image":"/steam-img-5.webp"
-  },
-  {
-    "id": 5,
-    "title":"RELENTLESS ENEMIES",
-    "subtitle":"Face the Robo-Beasts",
-    "description":"Battle a terrifying mechanical threat. Adapt your strategy to the unique attack patterns of the Robo-Beasts as you hold the line against overwhelming swarms and towering, screen-filling bosses.",
-    "image":"/map-ruins.webp"
+    "id": 6,
+    "title":"EXPLORE BIOMES",
+    "subtitle":"Adventure is awaiting!",
+    "description":"Journey through diverse biomes, each with its own challenges, secrets, and rewards. From lush forests to ancient ruins and desolate wastelands, every region offers new discoveries and dangers to overcome.",
+    "image":"/explore-biomes.webp"
   }
 ]

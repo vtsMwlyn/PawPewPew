@@ -107,17 +107,17 @@ export default function Introduction() {
           <button
             type="button"
             onClick={handlePrev}
-            className="absolute -left-20 2xl:-left-40 top-1/2 -translate-y-1/2 z-10 w-10 h-10 lg:w-14 lg:h-14 flex items-center justify-center active:scale-70 hover:scale-115 transition-transform duration-200 animate-arrow-left hover:drop-shadow-[0px_0px_5px_white]"
+            className="absolute -left-15 lg:-left-25 2xl:-left-40 top-1/2 -translate-y-1/2 z-10 w-10 h-10 lg:w-14 lg:h-14 flex items-center justify-center active:scale-70 hover:scale-115 transition-transform duration-200 animate-arrow-left hover:drop-shadow-[0px_0px_5px_white]"
           >
-            <img src="/arrow-triangle-left.webp" className="w-full h-full"/>
+            <img src="/arrow-triangle-left.webp" className="w-1/2 h-1/2 lg:w-full lg:h-full"/>
           </button>
 
           <button
             type="button"
             onClick={handleNext}
-            className="absolute -right-20 2xl:-right-40 top-1/2 -translate-y-1/2 z-10 w-10 h-10 lg:w-14 lg:h-14 flex items-center justify-center active:scale-70 hover:scale-115 transition-transform duration-200 animate-arrow-right hover:drop-shadow-[0px_0px_5px_white]"
+            className="absolute -right-15 lg:-right-25 2xl:-right-40 top-1/2 -translate-y-1/2 z-10 w-10 h-10 lg:w-14 lg:h-14 flex items-center justify-center active:scale-70 hover:scale-115 transition-transform duration-200 animate-arrow-right hover:drop-shadow-[0px_0px_5px_white]"
           >
-            <img src="/arrow-triangle-right.webp" className="w-full h-full"/>
+            <img src="/arrow-triangle-right.webp" className="w-1/2 h-1/2 lg:w-full lg:h-full"/>
           </button>
         </div>
 

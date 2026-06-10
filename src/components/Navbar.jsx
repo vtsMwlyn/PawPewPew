@@ -55,7 +55,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`w-full flex flex-col px-6 py-4 fixed top-0 left-0 z-999 ${passed100vh ? 'bg-blueblack/75' : 'bg-transparent'}`}>
+    <nav className={`w-full flex flex-col px-6 py-4 fixed top-0 left-0 z-999 ${showMobileList ? 'bg-blueblack/75' : passed100vh ? 'bg-blueblack/75' : 'bg-transparent'}  transition-colors duration-300`}>
       {/* Desktop mode */}
       <div className="w-full flex justify-between items-center">
         <div className="flex">
@@ -93,7 +93,7 @@ export default function Navbar() {
           <Button 
             selected={activeSection === "features-page"} 
             onClick={() => scrollToSection("features-page")}>
-            Features
+            Biomes
           </Button>
           <Button 
             selected={activeSection === "gallery-page"} 
@@ -135,31 +135,30 @@ export default function Navbar() {
           
           {/* Dropdown Menu Mobile */}
           {showCharDropdown && (
-            <div className="flex gap-10">
-              <Button className="w-full!" >
-                Heroes
-              </Button >
-              <Button className="w-full!" >
+            <div className="flex flex-col gap-2">
+              <Button className="w-9/10!" >Heroes</Button >
+              <Button className="w-9/10!" >
                 Enemies
               </Button>
-              <Button className="w-full!" >
+              <Button className="w-9/10!" >
                 Bosses
               </Button>
             </div>
           )}
         </div>
         <Button className="w-full!" selected={activeSection === "features-page"} onClick={() => scrollToSection("features-page")}>
-          Features
+          Biomes
         </Button>
         <Button className="w-full!" selected={activeSection === "gallery-page"} onClick={() => scrollToSection("gallery-page")}>
           Gallery
         </Button>
-        <Button className={`w-full! ${passed100vh ? 'opacity-100' : 'opacity-0'}`} link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/">
-          <div className="flex items-center justify-center gap-2">
-            <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
-            <p className="text-2xl 2xl:text-lg leading-tight text-left">Wishlist <br className="hidden 2xl:block" /> on Steam</p>
-          </div>
-        </Button>
+        
+            <Button link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" className={`w-full!`}>
+              <div className="flex items-center justify-center gap-2">
+                <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
+                <p className="leading-tight">Wishlist on Steam</p>
+              </div>
+            </Button>
       </div>
     </nav>
   )

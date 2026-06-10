@@ -16,7 +16,7 @@ export default function Button({ selected, children, link,onClick, className, ..
       `}
       {...rest}
     >
-      <p className="text-shadow-[-1px_4px_0px_#0F1B24] text-2xl">{children}</p>
+      <div className="text-shadow-[-1px_4px_0px_#0F1B24] text-2xl">{children}</div>
     </a>
   )
 }

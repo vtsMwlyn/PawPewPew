@@ -1,5 +1,5 @@
 export default function CharacterCard({ selectedCharacter }) {
-	const { name, subname, weaponIcon, quotes, traits } = selectedCharacter;
+	const {  subname, weaponIcon, quotes, traits, text } = selectedCharacter;
 
   return (
     <div className='flex flex-col w-full
@@ -10,10 +10,10 @@ export default function CharacterCard({ selectedCharacter }) {
         className="w-full flex flex-col p-8 gap-5 2xl:gap-7
         border-b-5 border-blueblack">
 				<div className="w-full flex gap-4">
-					<img src={weaponIcon} alt="weapon icon" />
-					<div className="flex flex-col">
-						<h1 className="text-4xl lg:text-5xl 2xl:text-6xl uppercase text-shadow-[-2px_4px_0px_#0F1B24] lg:text-shadow-[-2px_6px_0px_#0F1B24]">{name}</h1>
-						<h2 className="text-2xl lg:text-4xl uppercase text-shadow-[-2px_4px_0px_#0F1B24] lg:text-shadow-[-2px_6px_0px_#0F1B24]">{subname}</h2>
+					<img src={weaponIcon} alt="weapon icon" className="w-18 h-18 lg:w-30 lg:h-30"/>
+					<div className="flex flex-col justify-between">
+						<img src={text} alt={name} className="drop-shadow-[-2px_4px_0px_#0F1B24] lg:drop-shadow-[-2px_10px_0px_#0F1B24] w-40 lg:w-50" />
+						<img src={subname} alt={name} className="drop-shadow-[-2px_4px_0px_#0F1B24] lg:drop-shadow-[-2px_8px_0px_#0F1B24] w-40 lg:w-80" />
 					</div>
 				</div>
         <h3 className="w-full text-base lg:text-xl 2xl:text-2xl comic-relief-bold text-shadow-[-1px_4px_0px_#0F1B24]">“{quotes}”</h3>

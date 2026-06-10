@@ -1,31 +1,9 @@
 [
   {
     "id": 1,
-    "name": "TOTO",
-    "subname": "The Brawler",
-    "quotes": "The frontline is wherever my weapon lands. Step aside.",
-    "traits": [
-      {
-        "title": "Frontline Duty",
-        "description": "Built for the front line, he moves in without delay, treating any threat as something to be immediately eliminated."
-      },
-      {
-        "title": "Creating Safe Zones",
-        "description": "His weapon is designed to push forward, break enemy lines, and force space open."
-      },
-      {
-        "title": "Frontline Momentum",
-        "description": "Fiercely loyal and built for the frontline, Toto dashes straight into chaos. He cuts through enemies with relentless momentum."
-      }
-    ],
-    "image": "/splashart-toto.webp",
-    "icon": "/icon-toto.webp",
-    "weaponIcon": "/weapon-icon-toto.webp"
-  },
-  {
-    "id": 2,
     "name": "PIPI",
-    "subname": "The Gunslinger",
+    "text": "/text-name-pipi.webp",
+    "subname": "text-subname-pipi.webp",
     "quotes": "Distance means nothing when your aim is flawless.",
     "traits": [
       {
@@ -46,9 +24,34 @@
     "weaponIcon": "/weapon-icon-pipi.webp"
   },
   {
+    "id": 2,
+    "name": "TOTO",
+    "text": "/text-name-toto.webp",
+    "subname": "/text-subname-toto.webp",
+    "quotes": "The frontline is wherever my weapon lands. Step aside.",
+    "traits": [
+      {
+        "title": "Frontline Duty",
+        "description": "Built for the front line, he moves in without delay, treating any threat as something to be immediately eliminated."
+      },
+      {
+        "title": "Creating Safe Zones",
+        "description": "His weapon is designed to push forward, break enemy lines, and force space open."
+      },
+      {
+        "title": "Frontline Momentum",
+        "description": "Fiercely loyal and built for the frontline, Toto dashes straight into chaos. He cuts through enemies with relentless momentum."
+      }
+    ],
+    "image": "/splashart-toto.webp",
+    "icon": "/icon-toto.webp",
+    "weaponIcon": "/weapon-icon-toto.webp"
+  },
+  {
     "id": 3,
     "name": "PITO",
-    "subname": "The Spellbinder",
+    "text": "/text-name-pito.webp",
+    "subname": "/text-subname-pito.webp",
     "quotes": "I do not run. I simply cease to be where danger exists.",
     "traits": [
       {
@@ -70,8 +73,9 @@
   },
   {
     "id": 4,
-    "name": "Coming Soon",
-    "subname": "???",
+    "name":"coming soon",
+    "text": "/text-name-unknown.webp",
+    "subname": "/text-subname-unknown.webp",
     "quotes": "???",
     "traits": [
       {

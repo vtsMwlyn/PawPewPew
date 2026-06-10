@@ -1,12 +1,17 @@
 import { useState, useRef } from "react"
 import FrameEdge from "../../components/FrameEdge";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useAudio } from "../../context/AudioContext";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default function Introduction() {
   const [playingIndex, setPlayingIndex] = useState(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const videoRefs = useRef([]);
+  const { pauseForVideo, resumeAfterVideo } = useAudio();
   const swiperRef = useRef(null);
+  const videoRefs = useRef([]);
 
   const handlePlayButtonClick = (index) => {
     const video = videoRefs.current[index];
@@ -18,14 +23,14 @@ export default function Introduction() {
     }
   };
 
-  const handleSlideChange = (swiper) => {
-    const prevVideo = videoRefs.current[activeIndex];
-    if (prevVideo) {
-      prevVideo.pause();
-      prevVideo.currentTime = 0;
-      setPlayingIndex(null);
-    }
-    setActiveIndex(swiper.realIndex);
+  const handleSlideChange = () => {
+    videoRefs.current.forEach((video) => {
+      if (!video) return;
+      video.pause();
+      video.currentTime = 0;
+    });
+    setPlayingIndex(null);
+    resumeAfterVideo();
   };
 
   const handlePrev = () => swiperRef.current?.slidePrev();
@@ -69,33 +74,30 @@ export default function Introduction() {
 
           <div className="w-full h-full border-6 rounded-xl lg:rounded-4xl overflow-hidden">
             <Swiper
-              allowTouchMove={false} 
+              spaceBetween={0}
               slidesPerView={1}
-              loop={true}
               onSwiper={(swiper) => (swiperRef.current = swiper)}
               onSlideChange={handleSlideChange}
+              loop={true}
               className="cursor-grab active:cursor-grabbing overflow-hidden h-full w-full"
             >
-              {[0, 0, 0].map((item, index) => (
+              {['/gameplay-forest-web.mp4', '/gameplay-ruins-web.mp4', '/gameplay-temple-web.mp4'].map((src, index) => (
                 <SwiperSlide key={index} className="h-full w-full">
                   <video
                     ref={(el) => (videoRefs.current[index] = el)}
                     className="w-full h-full shadow-[-10px_10px_25px_#000000] object-cover"
-                    onPlay={() => setPlayingIndex(index)}
-                    onPause={() => setPlayingIndex(null)}
-                    onEnded={() => {
-                      videoRefs.current[index].currentTime = 0;
-                      setPlayingIndex(null);
-                    }}
+                    onPlay={() => { setPlayingIndex(index); pauseForVideo(); }}
+                    onPause={() => { setPlayingIndex(null); resumeAfterVideo(); }}
+                    onEnded={(e) => { e.target.currentTime = 0; setPlayingIndex(null); resumeAfterVideo(); }}
                   >
-                    <source src="/sample.mp4" type="video/mp4" />
+                    <source src={src} type="video/mp4" />
                   </video>
 
                   <button
                     type="button"
                     onClick={() => handlePlayButtonClick(index)}
                     className={`w-full h-full flex justify-center items-center bg-[rgba(0,0,0,0.8)] absolute top-0 transition ease-in-out duration-200
-                      ${playingIndex === index ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+                      ${playingIndex === index ? 'opacity-0' : 'opacity-100'}`}
                   >
                     <img src="/play-button.webp" className="w-10 lg:w-16" />
                   </button>

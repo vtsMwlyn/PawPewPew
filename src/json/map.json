@@ -4,19 +4,15 @@
     "name": "Forest",
     "image":"/map-forest.webp",
     "background":"/bg-map-forest.webp",
-    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam amet doloribus repudiandae. Quibusdam asperiores laborum in, fuga nulla quam officiis nemo necessitatibus tenetur voluptas quidem voluptatibus, labore voluptate! Eveniet, doloribus quam natus quibusdam, ratione fugiat accusamus amet dolor.",
+    "desc": "A sunlit woodland clearing where nature reclaims what was once civilized. Wild grass grows untamed between a weathered camp tent and a striped merchant stall, with towering pine trees and mossy boulders standing silent watch.",
     "enemies": [
       {
-        "image": "/rhino.webp",
-        "name": "Rhino"
-      },
-      {
-        "image": "/chicken.webp",
+        "image": "/chicken-forest.webp",
         "name": "Chicken"
       },
       {
-        "image": "/bird.webp",
-        "name": "Bird"
+        "image": "/unknown.webp",
+        "name": "Unknown"
       },
       {
         "image": "/unknown.webp",
@@ -29,23 +25,15 @@
     "name": "ruins",
     "image":"/map-ruins.webp",
     "background":"/bg-map-ruins.webp",
-    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam nobis nisi, omnis modi quia odit facilis laboriosam dolore maiores sed sint, quibusdam sunt voluptatum cupiditate tempora dicta sapiente quaerat expedita, amet doloribus repudiandae. Quibusdam asperiores laborum in, fuga nulla quam officiis nemo necessitatibus tenetur voluptas quidem voluptatibus.",
+    "desc": "A haunted marshland shrouded in deep blue darkness, scattered with glowing mushrooms and eerie floating lights. The crumbled remnants of stone walls form an arena where something ancient — and dangerous — still stirs in the shadows.",
     "enemies": [
       {
-        "image": "/unknown.webp",
-        "name": "Unknown"
+        "image": "/chicken-ruins.webp",
+        "name": "Chicken"
       },
       {
-        "image": "/unknown.webp",
-        "name": "Unknown"
-      },
-      {
-        "image": "/unknown.webp",
-        "name": "Unknown"
-      },
-      {
-        "image": "/unknown.webp",
-        "name": "Unknown"
+        "image": "/bird-ruins.webp",
+        "name": "Bird"
       },
       {
         "image": "/unknown.webp",
@@ -58,19 +46,15 @@
     "name": "temple",
     "image":"/map-temple.webp",
     "background":"/bg-map-temple.webp",
-    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam nobis nisi, omnis modi quia odit facilis laboriosam dolore maiores sed sint,  in aliquid, deleniti ipsum placeat molestias tempora ipsam reprehenderit. Doloremque, blanditiis facilis autem eum vitae nihil voluptates commodi amet dolor.",
+    "desc": "An ancient temple frozen in eternal night, its cracked stone floors etched with glowing runes. Twisted vines crawl between collapsed pillars, and bioluminescent orbs cast a cold teal light across the ruins of a forgotten altar.",
     "enemies": [
       {
-        "image": "/unknown.webp",
-        "name": "Unknown"
+        "image": "/rhino-temple.webp",
+        "name": "Rhino"
       },
       {
-        "image": "/unknown.webp",
-        "name": "Unknown"
-      },
-      {
-        "image": "/unknown.webp",
-        "name": "Unknown"
+        "image": "/chicken-temple.webp",
+        "name": "Chicken"
       },
       {
         "image": "/unknown.webp",

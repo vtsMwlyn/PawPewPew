@@ -1,7 +1,33 @@
 import Button from "./Button"
 import { useState, useEffect } from "react";
+import { useAudio } from "../context/AudioContext";
+
+function MuteButton({ isMuted, onClick, className = '' }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`flex items-center justify-center w-16 h-16 rounded-full border-4 border-blueblack transition duration-200 hover:scale-110 ease-out active:shadow-[-1px_4px_0px_#0F1B24] ${isMuted ? 'bg-hijaubaru hover:bg-ungupink' : 'bg-ungupink shadow-[-1px_4px_0px_#0F1B24]'} ${className}`}
+    >
+      {isMuted ? (
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+          <line x1="23" y1="9" x2="17" y2="15" />
+          <line x1="17" y1="9" x2="23" y2="15" />
+        </svg>
+      ) : (
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+        </svg>
+      )}
+    </button>
+  );
+}
 
 export default function Navbar() {
+  const { isMuted, toggleMute } = useAudio();
   const [activeSection, setActiveSection] = useState('');
   const [showMobileList, setShowMobileList] = useState(false);
   const [passed100vh, setPassed100vh] = useState(false);
@@ -64,8 +90,9 @@ export default function Navbar() {
           </button>
         </div>
 
-        <div className="gap-2 hidden lg:flex">
-          <div 
+        <div className="gap-2 hidden lg:flex items-center">
+          <MuteButton isMuted={isMuted} onClick={toggleMute} />
+          <div
             className="relative cursor-pointer flex justify-center" 
             onMouseEnter={() => setShowCharDropdown(true)}
             onMouseLeave={() => setShowCharDropdown(false)}
@@ -152,13 +179,13 @@ export default function Navbar() {
         <Button className="w-full!" selected={activeSection === "gallery-page"} onClick={() => scrollToSection("gallery-page")}>
           Gallery
         </Button>
-        
-            <Button link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" className={`w-full!`}>
-              <div className="flex items-center justify-center gap-2">
-                <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
-                <p className="leading-tight">Wishlist on Steam</p>
-              </div>
-            </Button>
+        <Button className={`w-full! ${passed100vh ? 'opacity-100' : 'opacity-0'}`} link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/">
+          <div className="flex items-center justify-center gap-2">
+            <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
+            <p className="text-2xl 2xl:text-lg leading-tight text-left">Wishlist <br className="hidden 2xl:block" /> on Steam</p>
+          </div>
+        </Button>
+        <MuteButton isMuted={isMuted} onClick={toggleMute} className="w-full!" />
       </div>
     </nav>
   )

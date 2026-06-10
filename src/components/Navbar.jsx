@@ -68,7 +68,7 @@ export default function Navbar() {
     });
 
     // Jangan kaku cuma cari 'section'. Tembak langsung ID-nya buat ngehindarin salah tag HTML.
-    const sections = document.querySelectorAll('#heroes-page, #features-page, #gallery-page, #introduction-page, #hero-page');
+    const sections = document.querySelectorAll('#heroes-page, #biomes-page, #gallery-page, #introduction-page, #hero-page');
 
     // Guard clause: Pastikan elemennya beneran ketemu sebelum di-observe
     if (sections.length > 0) {
@@ -118,8 +118,8 @@ export default function Navbar() {
             )}
           </div>
           <Button 
-            selected={activeSection === "features-page"} 
-            onClick={() => scrollToSection("features-page")}>
+            selected={activeSection === "biomes-page"} 
+            onClick={() => scrollToSection("biomes-page")}>
             Biomes
           </Button>
           <Button 
@@ -142,7 +142,8 @@ export default function Navbar() {
         </div>
 
         {/* Mobile toggler */}
-        <div className="block lg:hidden">
+        <div className="flex lg:hidden">
+          <MuteButton isMuted={isMuted} onClick={toggleMute} className="w-full!" />
           <Button onClick={() => setShowMobileList(!showMobileList)} className="w-20!">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /></svg>
           </Button>
@@ -173,19 +174,19 @@ export default function Navbar() {
             </div>
           )}
         </div>
-        <Button className="w-full!" selected={activeSection === "features-page"} onClick={() => scrollToSection("features-page")}>
+        <Button className="w-full!" selected={activeSection === "biomes-page"} onClick={() => scrollToSection("biomes-page")}>
           Biomes
         </Button>
         <Button className="w-full!" selected={activeSection === "gallery-page"} onClick={() => scrollToSection("gallery-page")}>
           Gallery
         </Button>
-        <Button className={`w-full! ${passed100vh ? 'opacity-100' : 'opacity-0'}`} link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/">
+        <Button className={`w-full!`} link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/">
           <div className="flex items-center justify-center gap-2">
             <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
             <p className="text-2xl 2xl:text-lg leading-tight text-left">Wishlist <br className="hidden 2xl:block" /> on Steam</p>
           </div>
         </Button>
-        <MuteButton isMuted={isMuted} onClick={toggleMute} className="w-full!" />
+        
       </div>
     </nav>
   )

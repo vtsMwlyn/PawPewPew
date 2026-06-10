@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useState, useRef } from "react"
 import FrameEdge from "../../components/FrameEdge";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from "swiper/modules";
@@ -8,19 +8,27 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export default function Introduction() {
+  const [playingIndex, setPlayingIndex] = useState(null);
   const swiperRef = useRef(null);
   const videoRefs = useRef([]);
 
-  const handleSlideChange = (swiper) => {
-    videoRefs.current.forEach((video, i) => {
+  const handlePlayButtonClick = (index) => {
+    const video = videoRefs.current[index];
+    if (!video) return;
+    if (video.paused || video.ended) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  };
+
+  const handleSlideChange = () => {
+    videoRefs.current.forEach((video) => {
       if (!video) return;
-      if (i === swiper.realIndex) {
-        video.currentTime = 0;
-        video.play();
-      } else {
-        video.pause();
-      }
+      video.pause();
+      video.currentTime = 0;
     });
+    setPlayingIndex(null);
   };
 
   const handlePrev = () => swiperRef.current?.slidePrev();
@@ -67,6 +75,7 @@ export default function Introduction() {
               spaceBetween={0}
               slidesPerView={1}
               onSwiper={(swiper) => (swiperRef.current = swiper)}
+              onSlideChange={handleSlideChange}
               loop={true}
               className="cursor-grab active:cursor-grabbing overflow-hidden h-full w-full"
             >
@@ -75,10 +84,21 @@ export default function Introduction() {
                   <video
                     ref={(el) => (videoRefs.current[index] = el)}
                     className="w-full h-full shadow-[-10px_10px_25px_#000000] object-cover"
-                    controls
+                    onPlay={() => setPlayingIndex(index)}
+                    onPause={() => setPlayingIndex(null)}
+                    onEnded={(e) => { e.target.currentTime = 0; setPlayingIndex(null); }}
                   >
                     <source src={src} type="video/mp4" />
                   </video>
+
+                  <button
+                    type="button"
+                    onClick={() => handlePlayButtonClick(index)}
+                    className={`w-full h-full flex justify-center items-center bg-[rgba(0,0,0,0.8)] absolute top-0 transition ease-in-out duration-200
+                      ${playingIndex === index ? 'opacity-0' : 'opacity-100'}`}
+                  >
+                    <img src="/play-button.webp" className="w-10 lg:w-16" />
+                  </button>
                 </SwiperSlide>
               ))}
             </Swiper>

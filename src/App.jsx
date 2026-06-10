@@ -1,5 +1,6 @@
 import './App.css'
 
+import { AudioProvider } from './context/AudioContext'
 import Navbar from './components/Navbar'
 import Hero from './page/1 - Hero/Index'
 import Footer from './components/Footer'
@@ -13,22 +14,24 @@ import SeeItInAction from './page/6 - Gallery/Index'
 
 export default function App() {
   return (
-    <main className="w-full flex flex-col items-stretch">
-      {/* Navbar */}
-      {/* <ScreenInfo /> */}
-      <Navbar />
+    <AudioProvider>
+      <main className="w-full flex flex-col items-stretch">
+        {/* Navbar */}
+        {/* <ScreenInfo /> */}
+        <Navbar />
 
-      {/* Content */}
-      <Hero />
-      <WorldMeadow />
-      <CharacterPage />
-      <Map />
-      {/* <Features /> */}
-      <SeeItInAction />
-      <CTAPage />
+        {/* Content */}
+        <Hero />
+        <WorldMeadow />
+        <CharacterPage />
+        <Map />
+        {/* <Features /> */}
+        <SeeItInAction />
+        <CTAPage />
 
-      {/* Footer */}
-      <Footer />
-    </main>
+        {/* Footer */}
+        <Footer />
+      </main>
+    </AudioProvider>
   )
 }

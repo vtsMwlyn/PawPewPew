@@ -1,6 +1,7 @@
 import { useState, useRef } from "react"
 import FrameEdge from "../../components/FrameEdge";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useAudio } from "../../context/AudioContext";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -8,6 +9,7 @@ import "swiper/css/pagination";
 
 export default function Introduction() {
   const [playingIndex, setPlayingIndex] = useState(null);
+  const { pauseForVideo, resumeAfterVideo } = useAudio();
   const swiperRef = useRef(null);
   const videoRefs = useRef([]);
 
@@ -28,6 +30,7 @@ export default function Introduction() {
       video.currentTime = 0;
     });
     setPlayingIndex(null);
+    resumeAfterVideo();
   };
 
   const handlePrev = () => swiperRef.current?.slidePrev();
@@ -83,9 +86,9 @@ export default function Introduction() {
                   <video
                     ref={(el) => (videoRefs.current[index] = el)}
                     className="w-full h-full shadow-[-10px_10px_25px_#000000] object-cover"
-                    onPlay={() => setPlayingIndex(index)}
-                    onPause={() => setPlayingIndex(null)}
-                    onEnded={(e) => { e.target.currentTime = 0; setPlayingIndex(null); }}
+                    onPlay={() => { setPlayingIndex(index); pauseForVideo(); }}
+                    onPause={() => { setPlayingIndex(null); resumeAfterVideo(); }}
+                    onEnded={(e) => { e.target.currentTime = 0; setPlayingIndex(null); resumeAfterVideo(); }}
                   >
                     <source src={src} type="video/mp4" />
                   </video>

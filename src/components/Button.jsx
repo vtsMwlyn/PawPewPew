@@ -16,7 +16,7 @@ export default function Button({ selected, children, link,onClick, className, ..
       `}
       {...rest}
     >
-      <div className="text-shadow-[-1px_4px_0px_#0F1B24] text-2xl">{children}</div>
+      <div className="text-shadow-[-1px_4px_0px_#0F1B24] text-xl lg:text-2xl">{children}</div>
     </a>
   )
 }

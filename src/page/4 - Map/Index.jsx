@@ -55,11 +55,11 @@ export default function Map() {
             <h2 className='text-xl 2xl:text-3xl uppercase tracking-wider text-shadow-[-1px_4px_0px_#0F1B24] text-white'>
               Enemies Encountered
             </h2>
-            <div key={selectedMap.name} className="w-full xl:w-1/2 grid grid-cols-6 lg:grid-cols-3 gap-4 mt-6">
+            <div key={selectedMap.name} className="w-3/4 xl:w-1/2 grid grid-cols-3 gap-4 mt-6">
               {selectedMap.enemies.map((enemy, index) => (
                 <div
                   key={index}
-                  className="w-full aspect-square border-4 border-black rounded-xl overflow-hidden animate-pop-up opacity-0"
+                  className="w-full aspect-square border-3 lg:border-6 border-black rounded-xl overflow-hidden animate-pop-up opacity-0"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <img src={enemy.image} />

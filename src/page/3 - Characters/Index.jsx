@@ -9,8 +9,7 @@ export default function Characters() {
   return (
     <section className="relative flex" id="heroes-page">
       {/* Background Image */}
-      <img
-        src="/bg-character.webp" alt="bg-characterpage"
+      <img src="/bg-character.webp" alt="bg-characterpage"
         className="absolute top-0 left-0 w-full h-full -z-10"
       />
 
@@ -18,7 +17,7 @@ export default function Characters() {
       <div className="w-full flex flex-col justify-center items-center gap-15 2xl:gap-30 px-3 2xl:p-0">
         {/* Section Title */}
         <h1 className="flex justify-center text-center text-4xl lg:text-5xl 2xl:text-6xl text-white 
-          uppercase text-shadow-[-2px_6px_0px_#0F1B24] mt-60">
+          uppercase text-shadow-[-2px_6px_0px_#0F1B24] mt-30">
           choose your survivor
         </h1>
 

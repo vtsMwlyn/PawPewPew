@@ -107,7 +107,7 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
   };
 
   return (
-    <div className="bg-hijaubaru-light flex flex-col items-center justify-center relative overflow-hidden pb-40" id="gallery-page">
+    <div className="bg-hijaubaru-light flex flex-col items-center justify-center relative overflow-hidden pb-40 pt-10" id="gallery-page">
       <div className="flex flex-col w-full">
         <h1 className="flex justify-center text-4xl lg:text-5xl text-center 2xl:text-6xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24]">
           See it in action
@@ -154,9 +154,9 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
                   draggable={false} // Crucial: Prevents browser from intercepting the drag
                   className={`w-full h-full object-cover transition-opacity duration-500 select-none`}
                 />
-                <div className="absolute z-5 inset-0 flex flex-col justify-end p-8 bg-linear-to-t from-black/50 to-transparent">
-                  <h2 className="text-xl 2xl:text-3xl uppercase tracking-wider text-shadow-[-1px_4px_0px_#0F1B24] text-white">{feature.title}</h2>
-                  <p className="text-sm lg:text-base 2xl:text-xl comic-relief-bold text-shadow-[-1px_4px_0px_#0F1B24] text-white mt-2">{feature.description}</p>
+                <div className="absolute z-5 inset-0 flex flex-col justify-end p-1 lg:p-8 bg-linear-to-t from-black/50 to-transparent">
+                  <h2 className="text-xl 2xl:text-3xl uppercase tracking-wider text-shadow-[-1px_4px_0px_#0F1B24] text-white text-center lg:text-left">{feature.title}</h2>
+                  <p className="text-sm lg:text-base 2xl:text-xl comic-relief-bold text-shadow-[-1px_4px_0px_#0F1B24] text-white mt-2 hidden lg:block">{feature.description}</p>
                 </div>
               </div>
             </div>

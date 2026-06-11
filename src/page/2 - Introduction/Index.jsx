@@ -41,13 +41,13 @@ export default function Introduction() {
       {/* A peaceful sanctuary for all. */}
       <div className="w-full flex flex-col pt-10 lg:pt-30 bg-hijaubaru-reverse items-center justify-center">
         <div className="w-full flex flex-col items-center gap-5 px-8 2xl:p-0">
-          <h3 className="text-xl lg:text-3xl text-white comic-relief-bold text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_4px_0px_#0F1B24]">
+          <h3 className="text-xl lg:text-2xl 2xl:text-3xl text-white comic-relief-bold text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_4px_0px_#0F1B24]">
             Welcome to STARLIT HAVEN
           </h3>
-          <h1 className="text-5xl lg:text-7xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24] text-center">
+          <h1 className="text-4xl lg:text-5xl 2xl:text-7xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24] text-center">
             A peaceful sanctuary for all.
           </h1>
-          <p className="text-white comic-relief-bold text-lg lg:text-2xl w-full lg:w-4xl text-center text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_4px_0px_#0F1B24]">
+          <p className="text-white comic-relief-bold text-lg lg:text-xl 2xl:text-2xl w-full lg:w-4xl text-center text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_4px_0px_#0F1B24]">
             Step into our hidden refuge, a safe space to gather scattered survivors. Together, you'll rebuild Starlit Haven, gathering the strength and resources needed for whatever comes next.
           </p>
         </div>
@@ -55,12 +55,12 @@ export default function Introduction() {
       </div>
 
       {/* Village of Meadow */}
-      <div className="w-full flex flex-col bg-hijaubaru-light items-center justify-center pb-10 gap-6 px-8 -mt-80">
-        <h1 className="text-2xl lg:text-4xl text-white uppercase text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_6px_0px_#0F1B24] w-full lg:w-4xl text-center">
+      <div className="w-full flex flex-col bg-hijaubaru-light items-center justify-center pb-10 px-8 lg:-mt-80">
+        <h1 className="text-xl lg:text-4xl text-white uppercase text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_6px_0px_#0F1B24] w-full lg:w-4xl text-center">
           Life in the village of Meadow was peaceful, whimsical, and perfectly happy
         </h1>
 
-        <div className="relative w-3/4 2xl:w-full max-w-7xl h-auto md:h-100 lg:h-120 xl:h-165 mt-10">
+        <div className="relative w-3/4 2xl:w-full max-w-7xl h-auto md:h-100 lg:h-120 xl:h-165 mt-10 2xl:mt-20">
           <FrameEdge position="topLeft" className={`
             w-20 md:w-30 2xl:w-40
             -top-8 md:-top-12 2xl:-top-15
@@ -71,7 +71,6 @@ export default function Introduction() {
             -bottom-8 md:-bottom-12 2xl:-bottom-15
             -right-7 md:-right-10 2xl:-right-14
           `}/>
-
           <div className="w-full h-full border-6 rounded-xl lg:rounded-4xl overflow-hidden">
             <Swiper
               spaceBetween={0}
@@ -105,7 +104,6 @@ export default function Introduction() {
               ))}
             </Swiper>
           </div>
-
           <button
             type="button"
             onClick={handlePrev}
@@ -113,7 +111,6 @@ export default function Introduction() {
           >
             <img src="/arrow-triangle-left.webp" className="w-1/2 h-1/2 lg:w-full lg:h-full"/>
           </button>
-
           <button
             type="button"
             onClick={handleNext}
@@ -123,7 +120,7 @@ export default function Introduction() {
           </button>
         </div>
 
-        <p className="text-white comic-relief-bold text-lg lg:text-2xl w-full lg:w-4xl text-center text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_4px_0px_#0F1B24] mt-20">
+        <p className="text-white comic-relief-bold text-base lg:text-2xl w-full lg:w-4xl  text-center text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_4px_0px_#0F1B24] mt-10 2xl:mt-20">
           But when a relentless Robo-Beast army crashes in and kidnaps the villagers, playtime is officially over.
         </p>
       </div>

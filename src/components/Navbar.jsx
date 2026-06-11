@@ -98,7 +98,7 @@ export default function Navbar() {
             onMouseLeave={() => setShowCharDropdown(false)}
           >
             <Button selected={activeSection === "heroes-page"}>
-              {activeSection === "heroes-page" ? "Heroes" : "Characters"}
+              {activeSection === "heroes-page" ? "Heroes" : activeSection === "biomes-page" ? "Enemies" : "Characters" }
             </Button>
 
             {/* Dropdown Menu Desktop */}
@@ -107,13 +107,12 @@ export default function Navbar() {
                 <Button onClick={() => scrollToSection("heroes-page")} 
                 className={`overflow-hidden animate-pop-up opacity-0`}
                 style={{ animationDelay: `${1 * 150}ms` }}>Heroes</Button>
-                <Button onClick={() => scrollToSection("enemies-page")} 
+                <Button onClick={() => scrollToSection("biomes-page")} 
                 className={`overflow-hidden animate-pop-up opacity-0`}
                 style={{ animationDelay: `${2 * 150}ms` }}>Enemies</Button>
                 <Button onClick={() => scrollToSection("bosses-page")} 
                 className={`overflow-hidden animate-pop-up opacity-0`}
-                style={{ animationDelay: `${3 * 150}ms` }}>
-                  Bosses</Button>
+                style={{ animationDelay: `${3 * 150}ms` }}>Bosses</Button>
               </div>
             )}
           </div>
@@ -133,7 +132,7 @@ export default function Navbar() {
             }`}
           >
             <Button link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" className="w-full">
-              <div className="flex items-center justify-center gap-2 whitespace-nowrap">
+              <div className="flex items-center justify-center gap-2">
                 <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
                 <p className="text-lg leading-tight text-left">Wishlist <br /> on Steam</p>
               </div>
@@ -163,10 +162,16 @@ export default function Navbar() {
           
           {/* Dropdown Menu Mobile */}
           {showCharDropdown && (
-            <div className="flex flex-col gap-2">
-              <Button className="w-9/10!" >Heroes</Button >
-              <Button className="w-9/10!" >Enemies</Button>
-              <Button className="w-9/10!" >Bosses</Button>
+            <div className="flex gap-2">
+              <Button onClick={() => scrollToSection("heroes-page")} 
+              className={`overflow-hidden animate-pop-up opacity-0`}
+              style={{ animationDelay: `${1 * 150}ms` }}>Heroes</Button>
+              <Button onClick={() => scrollToSection("biomes-page")} 
+              className={`overflow-hidden animate-pop-up opacity-0`}
+              style={{ animationDelay: `${2 * 150}ms` }}>Enemies</Button>
+              <Button onClick={() => scrollToSection("bosses-page")} 
+              className={`overflow-hidden animate-pop-up opacity-0`}
+              style={{ animationDelay: `${3 * 150}ms` }}>Bosses</Button>
             </div>
           )}
         </div>
@@ -179,7 +184,7 @@ export default function Navbar() {
         <Button className={`w-full!`} link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/">
           <div className="flex items-center justify-center gap-2">
             <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
-            <p className="text-2xl 2xl:text-lg leading-tight text-left">Wishlist <br className="hidden 2xl:block" /> on Steam</p>
+            <p className="text-xl 2xl:text-lg leading-tight text-left">Wishlist <br className="hidden 2xl:block" /> on Steam</p>
           </div>
         </Button>
         

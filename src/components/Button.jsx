@@ -1,22 +1,61 @@
-export default function Button({ selected, children, link,onClick, className, ...rest }) {
-  
+export default function Link({
+  selected = false,
+  buttonType = "wooden",
+  frameType = "long",
+  image,
+  children,
+  className = '',
+  frameClassName = 'w-full',
+  ...rest
+}) {
+  if (buttonType === 'wooden') {
+    return (
+      <button
+        className={`
+          flex justify-center items-center w-60 py-1 px-4 text-white uppercase relative
+          ${className}
+        `}
+        {...rest}
+        >
+          <img src={frameType === 'long' ? '/wooden-border-long.webp' : frameType === 'medium' ? '/wooden-border-medium.webp' : '/wooden-border-short.webp'} className={`${selected && 'opacity-100'} hover:opacity-100 opacity-0 absolute z-5 w-full ${frameClassName}`} />
+          <div className="w-full flex items-center justify-center gap-2">
+            {image && <img src={image} alt="Logo" className="h-8 2xl:h-10 drop-shadow-[-1px_3px_0px_#0F1B24]" />}
+            <div className="text-2xl 2xl:text-2xl text-left text-shadow-[-2px_3px_0px_#0F1B24] leading-tight">{children}</div>
+          </div>
+      </button>
+    )
+  }
+
+  if (buttonType === 'root') {
+    return (
+      <button
+        className={`
+          flex justify-center items-center w-60 py-1 px-4 text-white uppercase relative
+          ${className}
+        `}
+        {...rest}
+        >
+          <img src="/root.webp" className={`${selected && 'opacity-100 drop-shadow-[0px_0px_5px_black]'} hover:opacity-100 opacity-0 absolute z-5 w-full ${frameClassName}`} />
+          <div className="w-full flex items-center justify-center gap-2">
+            {image && <img src={image} alt="Logo" className="h-8 2xl:h-10 drop-shadow-[-1px_3px_0px_#0F1B24]" />}
+            <div className="text-2xl 2xl:text-2xl text-left text-shadow-[-2px_3px_0px_#0F1B24] leading-tight">{children}</div>
+          </div>
+      </button>
+    )
+  }
+
   return (
-    <a type="button"
-      href={link} target="_blank" rel="noopener noreferrer"
-      onClick={onClick}
+    <button
       className={`
-        justify-center flex items-center w-50 rounded-full py-1 px-4 text-white uppercase 
-        border-4 border-blueblack transition duration-200 h-16 hover:scale-110 ease-out hover:mx-2 
-        ${selected 
-          ? 'bg-ungupink shadow-[-1px_4px_0px_#0F1B24]' // Kalau selected, warna statis ungu dan berbayang
-          : 'bg-hijaubaru hover:bg-ungupink'             // Kalau nggak selected, hijau dan berubah ungu SAAT di-hover
-        }
-        active:shadow-[-1px_4px_0px_#0F1B24]
+        flex justify-center items-center w-55 py-1 px-4 text-white uppercase relative
         ${className}
       `}
       {...rest}
     >
-      <div className="text-shadow-[-1px_4px_0px_#0F1B24] text-xl lg:text-2xl">{children}</div>
-    </a>
+      <div className="w-full flex items-center justify-center gap-2">
+        {image && <img src={image} alt="Logo" className="h-8 2xl:h-10 drop-shadow-[-1px_3px_0px_#0F1B24]" />}
+        <div className="text-2xl 2xl:text-2xl text-left text-shadow-[-2px_3px_0px_#0F1B24] leading-tight">{children}</div>
+      </div>
+    </button>
   )
 }

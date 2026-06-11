@@ -37,9 +37,9 @@ export default function Introduction() {
   const handleNext = () => swiperRef.current?.slideNext();
 
   return (
-    <section className="w-full" id="introduction-page">
+    <section className="w-full relative" id="introduction-page">
       {/* A peaceful sanctuary for all. */}
-      <div className="w-full flex flex-col pt-10 lg:pt-30 bg-hijaubaru-reverse items-center justify-center">
+      <div className="w-full h-screen flex flex-col pt-10 lg:pt-20 items-center justify-start">
         <div className="w-full flex flex-col items-center gap-5 px-8 2xl:p-0">
           <h3 className="text-xl lg:text-2xl 2xl:text-3xl text-white comic-relief-bold text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_4px_0px_#0F1B24]">
             Welcome to STARLIT HAVEN
@@ -51,14 +51,19 @@ export default function Introduction() {
             Step into our hidden refuge, a safe space to gather scattered survivors. Together, you'll rebuild Starlit Haven, gathering the strength and resources needed for whatever comes next.
           </p>
         </div>
-        <img src="/bg-world-map.webp" alt="AI Map" />
+        <div className="w-full h-screen bg-linear-to-b from-black/40 to-transparent absolute top-0 -z-3"></div>
+        <img src="/bg-world-map.webp" className="absolute top-0 h-screen object-cover object-center -z-5" />
       </div>
 
       {/* Village of Meadow */}
-      <div className="w-full flex flex-col bg-hijaubaru-light items-center justify-center pb-10 px-8 lg:-mt-80">
+      <div className="w-full h-[120vh] flex flex-col items-center justify-center px-8 py-20 relative">
         <h1 className="text-xl lg:text-4xl text-white uppercase text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_6px_0px_#0F1B24] w-full lg:w-4xl text-center">
           Life in the village of Meadow was peaceful, whimsical, and perfectly happy
         </h1>
+
+        <p className="text-white comic-relief-bold text-base lg:text-2xl w-full lg:w-4xl text-center text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_4px_0px_#0F1B24] mt-10">
+          But when a relentless Robo-Beast army crashes in and kidnaps the villagers, playtime is officially over.
+        </p>
 
         <div className="relative w-3/4 2xl:w-full max-w-7xl h-auto md:h-100 lg:h-120 xl:h-165 mt-10 2xl:mt-20">
           <FrameEdge position="topLeft" className={`
@@ -120,9 +125,7 @@ export default function Introduction() {
           </button>
         </div>
 
-        <p className="text-white comic-relief-bold text-base lg:text-2xl w-full lg:w-4xl  text-center text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_4px_0px_#0F1B24] mt-10 2xl:mt-20">
-          But when a relentless Robo-Beast army crashes in and kidnaps the villagers, playtime is officially over.
-        </p>
+        <img src="/bg-shop.webp" className="absolute inset-0 h-full w-full object-cover object-center -z-5" />
       </div>
     </section>
   )

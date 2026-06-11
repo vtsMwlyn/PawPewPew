@@ -1,20 +1,65 @@
-export default function Link({children, image, link}) {
-  return(
+export default function Link({
+  buttonType = "wooden",
+  frameType = "long",
+  link,
+  target = '_blank',
+  image,
+  children,
+  className = '',
+  frameClassName = 'w-full',
+  ...rest
+}) {
+  if (buttonType === 'wooden') {
+    return (
+      <a
+      href={link}
+      target={target}
+      className={`
+        flex justify-center items-center w-60 py-1 px-4 text-white uppercase relative
+        ${className}
+      `}
+      {...rest}
+      >
+        <img src={frameType === 'long' ? '/wooden-border-long.webp' : frameType === 'medium' ? '/wooden-border-medium.webp' : '/wooden-border-short.webp'} className={`hover:opacity-100 opacity-0 absolute w-full z-5 ${frameClassName}`} />
+        <div className="w-full flex items-center justify-center gap-2">
+          {image && <img src={image} alt="Logo" className="h-8 2xl:h-10 drop-shadow-[-1px_3px_0px_#0F1B24]" />}
+          <div className="text-2xl 2xl:text-2xl text-left text-shadow-[-2px_3px_0px_#0F1B24] leading-tight">{children}</div>
+        </div>
+    </a>
+    )
+  }
+  
+  if (buttonType === 'root') {
+    return (
+      <button
+        className={`
+          flex justify-center items-center w-60 py-1 px-4 text-white uppercase relative
+          ${className}
+        `}
+        {...rest}
+        >
+          <img src="/root.webp" className={`hover:opacity-100 opacity-0 absolute z-5 w-full ${frameClassName}`} />
+          <div className="w-full flex items-center justify-center gap-2">
+            {image && <img src={image} alt="Logo" className="h-8 2xl:h-10 drop-shadow-[-1px_3px_0px_#0F1B24]" />}
+            <div className="text-2xl 2xl:text-2xl text-left text-shadow-[-2px_3px_0px_#0F1B24] leading-tight">{children} a</div>
+          </div>
+      </button>
+    )
+  }
+
+  return (
     <a
       href={link}
-      target="_blank"
+      target={target}
       className={`
-        border-5 border-blueblack
-        rounded-full px-6 py-2 2xl:py-1
-        text-white uppercase bg-hijaubaru 
-        active:shadow-[-1px_4px_0px_#0F1B24]
-        hover:bg-ungupink
-        w-full lg:w-fit
+        flex justify-center items-center w-55 py-1 px-4 text-white uppercase relative
+        ${className}
       `}
+      {...rest}
     >
-      <div className="flex items-center gap-4">
-        <img src={image} alt="Logo" className="h-8 2xl:h-10 drop-shadow-[-1px_3px_0px_#0F1B24]" />
-        <p className="text-2xl 2xl:text-2xl text-left text-shadow-[-2px_3px_0px_#0F1B24] leading-tight">{children}</p>
+      <div className="w-full flex items-center justify-center gap-2">
+        {image && <img src={image} alt="Logo" className="h-8 2xl:h-10 drop-shadow-[-1px_3px_0px_#0F1B24]" />}
+        <div className="text-2xl 2xl:text-2xl text-left text-shadow-[-2px_3px_0px_#0F1B24] leading-tight">{children}</div>
       </div>
     </a>
   )

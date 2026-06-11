@@ -107,7 +107,7 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
   };
 
   return (
-    <div className="bg-hijaubaru-light flex flex-col items-center justify-center relative overflow-hidden pb-40 pt-10" id="gallery-page">
+    <div className="w-full h-screen flex flex-col items-center justify-center relative overflow-hidden py-20" id="gallery-page">
       <div className="flex flex-col w-full">
         <h1 className="flex justify-center text-4xl lg:text-5xl text-center 2xl:text-6xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24]">
           See it in action
@@ -163,6 +163,8 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
           );
         })}
       </div>
+
+      <img src="/bg-chest.webp" className="absolute top-0 w-full h-screen object-cover object-center blur-xs -z-5" />
     </div>
   );
 }

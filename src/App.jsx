@@ -10,6 +10,7 @@ import Map from './page/4 - Map/Index'
 import CTAPage from './page/6 - Call to Action/Index'
 import SeeItInAction from './page/5 - Gallery/Index'
 // import ScreenInfo from "./components/ScreenInfo"
+import MuteButton from './components/MuteButton'
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
         <CTAPage />
 
         {/* Footer */}
+        <MuteButton />
         <Footer />
       </main>
     </AudioProvider>

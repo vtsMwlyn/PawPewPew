@@ -29,13 +29,13 @@ export default function Map() {
   }, [selectedMap]);
 
   return (
-    <div className="relative w-full h-200 lg:h-300 2xl:h-400" id='biomes-page'>
+    <div className="relative w-full h-screen" id='biomes-page'>
       <img
         src={selectedMap.background} alt="map"
         className="w-full object-cover absolute inset-0 -z-5 h-full"
       />
 
-      <div className="w-full flex flex-col items-center justify-center h-full py-30 lg:py-80 2xl:py-120">
+      <div className="w-full flex flex-col items-center justify-center h-full py-30 lg:py-50">
         <h1 className="absolute top-30 text-4xl lg:text-5xl 2xl:text-6xl text-white 
           uppercase text-shadow-[-2px_6px_0px_#0F1B24]">
           Biomes

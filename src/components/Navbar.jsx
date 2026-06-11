@@ -142,8 +142,8 @@ export default function Navbar() {
         </div>
 
         {/* Mobile toggler */}
-        <div className="flex lg:hidden">
-          <MuteButton isMuted={isMuted} onClick={toggleMute} className="w-full!" />
+        <div className="flex lg:hidden gap-4">
+          <MuteButton isMuted={isMuted} onClick={toggleMute} />
           <Button onClick={() => setShowMobileList(!showMobileList)} className="w-20!">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /></svg>
           </Button>
@@ -158,19 +158,15 @@ export default function Navbar() {
             selected={activeSection === "heroes-page"}
             onClick={() => setShowCharDropdown(!showCharDropdown)}
           >
-            {activeSection === "heroes-page" ? "Heroes" : "Characters"}
+            {activeSection === "heroes-page" ? "Heroes" : activeSection === "biomes-page" ? "Enemies" : "Characters" }
           </Button>
           
           {/* Dropdown Menu Mobile */}
           {showCharDropdown && (
             <div className="flex flex-col gap-2">
               <Button className="w-9/10!" >Heroes</Button >
-              <Button className="w-9/10!" >
-                Enemies
-              </Button>
-              <Button className="w-9/10!" >
-                Bosses
-              </Button>
+              <Button className="w-9/10!" >Enemies</Button>
+              <Button className="w-9/10!" >Bosses</Button>
             </div>
           )}
         </div>

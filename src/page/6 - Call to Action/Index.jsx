@@ -3,7 +3,7 @@ import SocialMedia from "./SocialMedia"
 
 export default function CallToAction() {
   return (
-    <div className="relative w-full h-full py-10 lg:py-100 2xl:py-150 flex justify-end pl-8 lg:pl-50 pr-8 bg-hijaubaru-light">
+    <div className="relative w-full h-full py-10 lg:py-100 2xl:py-150 flex justify-end pl-8 lg:pl-50 pr-8 bg-hijaubaru-light" id="cta-page">
       <img src="/bg-cta.webp" alt="map" className="w-full object-cover absolute inset-0 2xl:h-full w-full" />
       <div className="flex flex-col w-full lg:w-1/2 gap-5 relative z-5">
         <div className="flex flex-col gap-5 mt-60 lg:-mt-20 2xl:mt-60">
@@ -21,7 +21,7 @@ export default function CallToAction() {
             join our <br className="hidden 2xl:block" />discord
           </Link>
         </div>
-        <div className="flex gap-5 mt-8 2xl:mt-0">
+        <div className="w-full flex mt-8">
           <SocialMedia link="https://www.instagram.com/paw_pewpew?igsh=azBldzNyd3J0eTk2" image="/logo-instagram.webp" text="@paw_pewpew" />
           <SocialMedia link="#" image="/logo-youtube.webp" text="YouTube" />
           <SocialMedia link="https://x.com/paw_pew_pew" image="/logo-twitter.webp" text="@paw_pew_pew" />

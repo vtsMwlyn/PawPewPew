@@ -1,6 +1,6 @@
 export default function MapCard({ MapJson, selectedMap, setSelectedMap }) {
   return (
-    <div className="w-full flex px-5 gap-5 2xl:gap-10 justify-center absolute bottom-15 lg:bottom-40 2xl:bottom-80">
+    <div className="w-full flex px-5 gap-5 2xl:gap-10 justify-center absolute bottom-15">
       {MapJson.map((location) => {
         const isSelected = selectedMap?.name === location.name;
         return (

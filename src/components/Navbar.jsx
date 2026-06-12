@@ -65,7 +65,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:flex items-center">
-          <Button buttonType="root" frameClassName="w-55! h-25" selected={activeSection === "hero-page" || activeSection === "introduction-page"}>
+          <Button  frameClassName="w-55! h-25" selected={activeSection === "hero-page" || activeSection === "introduction-page"}>
             Home
           </Button>
           
@@ -74,7 +74,7 @@ export default function Navbar() {
             onMouseEnter={() => setShowCharDropdown(true)}
             onMouseLeave={() => setShowCharDropdown(false)}
           >
-            <Button buttonType="root" frameClassName="w-55! h-25" selected={activeSection === "heroes-page"}>
+            <Button  frameClassName="w-55! h-25" selected={activeSection === "heroes-page"}>
               {activeSection === "heroes-page" ? "Heroes" : activeSection === "biomes-page" ? "Enemies" : "Characters"}
             </Button>
 
@@ -95,7 +95,7 @@ export default function Navbar() {
           </div>
 
           <Button
-            buttonType="root" frameClassName="w-55! h-25"
+            frameClassName="w-55! h-25"
             className="-ml-5"
             selected={activeSection === "biomes-page"}
             onClick={() => scrollToSection("biomes-page")}>
@@ -103,7 +103,7 @@ export default function Navbar() {
           </Button>
 
           <Button
-            buttonType="root" frameClassName="w-55! h-25"
+            frameClassName="w-55! h-25"
             className="-ml-5"
             selected={activeSection === "gallery-page"}
             onClick={() => scrollToSection("gallery-page")}>
@@ -115,7 +115,7 @@ export default function Navbar() {
             : 'w-0 opacity-0 -translate-x-8'
             }`}
           >
-            <Button buttonType="root" selected={activeSection === "cta-page"} frameClassName="w-55! h-25" link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" className="w-full">
+            <Button  selected={activeSection === "cta-page"} frameClassName="w-55! h-25" link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" className="w-full">
               <div className="flex items-center justify-center gap-2">
                 <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
                 <p className="leading-tight text-left">Wishlist</p>

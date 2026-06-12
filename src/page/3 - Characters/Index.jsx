@@ -21,22 +21,23 @@ export default function Characters() {
           choose your survivor
         </h1>
 
-        <div className="w-full flex flex-col-reverse xl:flex-row justify-between px-0 2xl:px-20 items-start gap-0 lg:gap-10 2xl:gap-0 mb-20">
+        <div className="w-full flex items-center justify-center px-0 gap-5">
+          {/* Character Selector */}
+          <CharacterButton
+            characters={character}
+            selectedCharacter={selectedCharacter}
+            setSelectedCharacter={setSelectedCharacter}
+          />
+          <div className="flex flex-col justify-center items-center gap-10">
+            <h1 className="text-xl w-2/3 text-center text-white uppercase tracking-wider text-shadow-[-1px_4px_0px_#0F1B24]">"{selectedCharacter.quotes}"</h1>
+            <img src={selectedCharacter.image} alt={selectedCharacter.name}/>
+              <div className="flex flex-col gap-5 justify-center items-center">
+                <img src={selectedCharacter.text} alt="nama" className="w-1/2" />
+                <img src={selectedCharacter.subname} alt="nama" className="w-2/3" />
+              </div>
+          </div>
           {/* Character Info */}
           <CharacterCard selectedCharacter={selectedCharacter} />
-
-          {/* Character Selector */}
-          <div className="w-full xl:w-1/2 lg:flex flex-col items-center gap-10 relative xl:sticky xl:top-27 2xl:relative 2xl:top-0">
-            <CharacterButton
-              characters={character}
-              selectedCharacter={selectedCharacter}
-              setSelectedCharacter={setSelectedCharacter}
-            />
-            <img
-              src={selectedCharacter.image} alt={selectedCharacter.name}
-              className={`w-full lg:w-150 ${selectedCharacter.name === 'Coming Soon' && 'brightness-0'}`}
-            />
-          </div>
         </div>
       </div>
     </section>

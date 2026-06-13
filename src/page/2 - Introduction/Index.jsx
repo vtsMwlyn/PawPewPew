@@ -52,7 +52,7 @@ export default function Introduction() {
           </p>
         </div>
         <div className="w-full h-screen bg-linear-to-b from-black/40 to-transparent absolute top-0 -z-3"></div>
-        <img src="/bg-world-map.webp" className="absolute top-0 h-screen object-cover object-center -z-5" />
+        <img src="/bg-world-map2.webp" className="absolute top-0 h-screen object-cover object-center -z-5" />
       </div>
 
       {/* Village of Meadow */}
@@ -60,10 +60,6 @@ export default function Introduction() {
         <h1 className="text-xl lg:text-4xl text-white uppercase text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_6px_0px_#0F1B24] w-full lg:w-4xl text-center">
           Life in the village of Meadow was peaceful, whimsical, and perfectly happy
         </h1>
-
-        <p className="text-white comic-relief-bold text-base lg:text-2xl w-full lg:w-4xl text-center text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_4px_0px_#0F1B24] mt-10">
-          But when a relentless Robo-Beast army crashes in and kidnaps the villagers, playtime is officially over.
-        </p>
 
         <div className="relative w-3/4 2xl:w-full max-w-7xl h-auto md:h-100 lg:h-120 xl:h-165 mt-10 2xl:mt-20">
           <FrameEdge position="topLeft" className={`
@@ -124,7 +120,9 @@ export default function Introduction() {
             <img src="/arrow-triangle-right.webp" className="w-1/2 h-1/2 lg:w-full lg:h-full"/>
           </button>
         </div>
-
+        <p className="text-white comic-relief-bold text-base lg:text-2xl w-full lg:w-4xl text-center text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_4px_0px_#0F1B24] mt-10">
+          But when a relentless Robo-Beast army crashes in and kidnaps the villagers, playtime is officially over.
+        </p>
         <img src="/bg-shop.webp" className="absolute inset-0 h-full w-full object-cover object-center -z-5" />
       </div>
     </section>

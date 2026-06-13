@@ -7,14 +7,17 @@
     "quotes": "Distance means nothing when your aim is flawless.",
     "traits": [
       {
+        "id":1,
         "title": "Still Sight, Perfect Strike",
         "description": "While the battlefield turns into complete madness, Pipi calmly lines up the perfect target."
       },
       {
+        "id":2,
         "title": "Weapon Identity",
         "description": "Each weapon shapes a distinct rhythm to her combat."
       },
       {
+        "id":3,
         "title": "Flawless Execution",
         "description": "Once she starts dashing through the front lines, Pipi dictates the flow of the entire battlefield."
       }
@@ -31,14 +34,17 @@
     "quotes": "The frontline is wherever my weapon lands. Step aside.",
     "traits": [
       {
+        "id":1,
         "title": "Frontline Duty",
         "description": "Built for the front line, he moves in without delay, treating any threat as something to be immediately eliminated."
       },
       {
+        "id":2,
         "title": "Creating Safe Zones",
         "description": "His weapon is designed to push forward, break enemy lines, and force space open."
       },
       {
+        "id":3,
         "title": "Frontline Momentum",
         "description": "Fiercely loyal and built for the frontline, Toto dashes straight into chaos. He cuts through enemies with relentless momentum."
       }
@@ -55,14 +61,17 @@
     "quotes": "I do not run. I simply cease to be where danger exists.",
     "traits": [
       {
+        "id":1,
         "title": "Calculated Erasure",
         "description": "Resolves threats instantly, preferring minimal effort over prolonged engagement."
       },
       {
+        "id":2,
         "title": "Arcane Discipline",
         "description": "Her magic is defined by precision and intellect. Condensed bursts, piercing beams, and rapid volleys each offer a distinct way to fight."
       },
       {
+        "id":3,
         "title": "Spatial Reallocation",
         "description": "Employs teleportation not as escape, but as precise spatial reallocation to maintain ideal combat range."
       }
@@ -79,14 +88,17 @@
     "quotes": "???",
     "traits": [
       {
+        "id":1,
         "title": "Unknown",
         "description": "???"
       },
       {
+        "id":2,
         "title": "Unknown",
         "description": "???"
       },
       {
+        "id":3,
         "title": "Unknown",
         "description": "???"
       }

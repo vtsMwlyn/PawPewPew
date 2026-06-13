@@ -40,8 +40,7 @@ export default function Map() {
           uppercase text-shadow-[-2px_6px_0px_#0F1B24]">
           Biomes
         </h1>
-
-        <div className="w-11/12 md:w-3/4 h-full flex flex-col items-center gap-10 lg:flex-row mb-10">
+        <div className="w-11/12 md:w-3/4 h-full flex flex-col items-center gap-10 lg:flex-row">
           <div className="w-full lg:w-1/2 xl:w-1/3 flex flex-col items-center lg:items-start gap-6 h-full justify-end" ref={mapNameRef}>
             <h2 className='text-xl 2xl:text-3xl uppercase tracking-wider text-shadow-[-1px_4px_0px_#0F1B24] text-white'>
               {selectedMap.name}
@@ -68,7 +67,6 @@ export default function Map() {
             </div>
           </div>
         </div>
-
         <MapCard
           selectedMap={selectedMap}
           setSelectedMap={setSelectedMap}

@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "name": "Forest",
+    "name": "Greatwood Forest",
     "image":"/map-forest.webp",
     "background":"/map-forest.webp",
-    "desc": "A sunlit woodland clearing where nature reclaims what was once civilized. Wild grass grows untamed between a weathered camp tent and a striped merchant stall, with towering pine trees and mossy boulders standing silent watch.",
+    "desc": "A vast forest dominated by towering golden-green pines and ancient trees that stretch high above the canopy. Massive rocks and rugged terrain dot the landscape, while robot chickens roam among the woods, guarding the forest and threatening anyone who dares to pass through.",
     "enemies": [
       {
         "image": "/chicken-forest.webp",
@@ -22,10 +22,10 @@
   },
   {
     "id": 2,
-    "name": "ruins",
+    "name": "Ravenrock Ruins",
     "image":"/map-ruins.webp",
     "background":"/map-ruins.webp",
-    "desc": "A haunted marshland shrouded in deep blue darkness, scattered with glowing mushrooms and eerie floating lights. The crumbled remnants of stone walls form an arena where something ancient — and dangerous — still stirs in the shadows.",
+    "desc": "Ancient stone ruins surrounded by rugged cliffs and overgrown vegetation. Though time has worn away much of the old settlement, robot chickens have claimed the area, turning its forgotten pathways into a dangerous obstacle for adventurers.",
     "enemies": [
       {
         "image": "/chicken-ruins.webp",
@@ -43,7 +43,7 @@
   },
   {
     "id": 3,
-    "name": "temple",
+    "name": "Mossveil Temple",
     "image":"/map-temple.webp",
     "background":"/map-temple.webp",
     "desc": "An ancient temple frozen in eternal night, its cracked stone floors etched with glowing runes. Twisted vines crawl between collapsed pillars, and bioluminescent orbs cast a cold teal light across the ruins of a forgotten altar.",

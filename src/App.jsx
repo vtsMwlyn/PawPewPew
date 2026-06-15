@@ -11,6 +11,7 @@ import CTAPage from './page/6 - Call to Action/Index'
 import SeeItInAction from './page/5 - Gallery/Index'
 // import ScreenInfo from "./components/ScreenInfo"
 import MuteButton from './components/MuteButton'
+import Separator from './components/Separator'
 
 export default function App() {
   return (
@@ -22,10 +23,20 @@ export default function App() {
 
         {/* Content */}
         <Hero />
+        <Separator />
+
         <WorldMeadow />
+        <Separator />
+
         <CharacterPage />
+        <Separator />
+
         <Map />
+        <Separator />
+
         <SeeItInAction />
+        <Separator />
+
         <CTAPage />
 
         {/* Footer */}

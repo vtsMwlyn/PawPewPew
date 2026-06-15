@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Greatwood Forest",
+    "name": "Greedwood Forest",
     "button" :"/button-greetwood-forest.webp",
     "image":"/map-forest.webp",
     "background":"/map-forest.webp",

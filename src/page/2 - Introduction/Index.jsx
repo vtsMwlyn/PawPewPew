@@ -2,6 +2,7 @@ import { useState, useRef } from "react"
 import FrameEdge from "../../components/FrameEdge";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useAudio } from "../../context/AudioContext";
+import Separator from "../../components/Separator";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -40,20 +41,22 @@ export default function Introduction() {
     <section className="w-full relative" id="introduction-page">
       {/* A peaceful sanctuary for all. */}
       <div className="w-full h-screen flex flex-col pt-10 lg:pt-20 items-center justify-start">
-        <div className="w-full flex flex-col items-center gap-5 px-8 2xl:p-0">
-          <h3 className="text-xl lg:text-2xl 2xl:text-3xl text-white poppins-regular">
+        <div className="w-full flex flex-col items-center gap-5 px-8 2xl:px-0">
+          <h3 className="text-xl lg:text-2xl 2xl:text-3xl text-white poppins-medium">
             Welcome to STARLIT HAVEN
           </h3>
           <h1 className="text-4xl lg:text-5xl 2xl:text-7xl text-white uppercase text-center">
             A peaceful sanctuary for all.
           </h1>
-          <p className="text-white poppins-regular text-lg lg:text-xl 2xl:text-2xl w-full lg:w-4xl text-center">
+          <p className="text-white poppins-medium text-lg lg:text-xl 2xl:text-2xl w-full lg:w-4xl text-center">
             Step into our hidden refuge, a safe space to gather scattered survivors. Together, you'll rebuild Starlit Haven, gathering the strength and resources needed for whatever comes next.
           </p>
         </div>
         <div className="w-full h-screen bg-linear-to-b from-black/40 to-transparent absolute top-0 -z-3"></div>
         <img src="/bg-world-map2.webp" className="absolute top-0 h-screen object-cover object-center -z-5" />
       </div>
+
+      <Separator />
 
       {/* Village of Meadow */}
       <div className="w-full h-[120vh] flex flex-col items-center justify-center px-8 py-20 relative">
@@ -71,7 +74,7 @@ export default function Introduction() {
             w-20 md:w-30 2xl:w-40
             -bottom-8 md:-bottom-12 2xl:-bottom-15
             -right-7 md:-right-10 2xl:-right-14
-          `}/>
+          `} />
           <div className="w-full h-full border-6 rounded-xl lg:rounded-4xl overflow-hidden">
             <Swiper
               spaceBetween={0}
@@ -110,17 +113,17 @@ export default function Introduction() {
             onClick={handlePrev}
             className="absolute -left-15 lg:-left-25 2xl:-left-40 top-1/2 -translate-y-1/2 z-10 w-10 h-10 lg:w-14 lg:h-14 flex items-center justify-center active:scale-70 hover:scale-115 transition-transform duration-200 animate-arrow-left hover:drop-shadow-[0px_0px_5px_white]"
           >
-            <img src="/arrow-triangle-left.webp" className="w-1/2 h-1/2 lg:w-full lg:h-full"/>
+            <img src="/arrow-triangle-left.webp" className="w-1/2 h-1/2 lg:w-full lg:h-full" />
           </button>
           <button
             type="button"
             onClick={handleNext}
             className="absolute -right-15 lg:-right-25 2xl:-right-40 top-1/2 -translate-y-1/2 z-10 w-10 h-10 lg:w-14 lg:h-14 flex items-center justify-center active:scale-70 hover:scale-115 transition-transform duration-200 animate-arrow-right hover:drop-shadow-[0px_0px_5px_white]"
           >
-            <img src="/arrow-triangle-right.webp" className="w-1/2 h-1/2 lg:w-full lg:h-full"/>
+            <img src="/arrow-triangle-right.webp" className="w-1/2 h-1/2 lg:w-full lg:h-full" />
           </button>
         </div>
-        <p className="text-white poppins-regular text-base lg:text-2xl w-full lg:w-4xl text-center mt-10">
+        <p className="text-white poppins-medium text-base lg:text-2xl w-full lg:w-4xl text-center mt-10">
           But when a relentless Robo-Beast army crashes in and kidnaps the villagers, playtime is officially over.
         </p>
         <img src="/bg-shop.webp" className="absolute inset-0 h-full w-full object-cover object-center -z-5" />

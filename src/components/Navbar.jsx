@@ -64,17 +64,17 @@ export default function Navbar() {
           </button>
         </div>
 
-        <div className="hidden lg:flex items-center">
-          <Button  frameClassName="w-55! h-25" selected={activeSection === "hero-page" || activeSection === "introduction-page"}>
+        <div className="hidden lg:flex items-center gap-10">
+          <Button frameClassName="w-40! h-25" selected={activeSection === "hero-page" || activeSection === "introduction-page"}>
             Home
           </Button>
-          
+
           <div
-            className="relative cursor-pointer flex justify-center -ml-5"
+            className="relative cursor-pointer flex justify-center"
             onMouseEnter={() => setShowCharDropdown(true)}
             onMouseLeave={() => setShowCharDropdown(false)}
           >
-            <Button  frameClassName="w-55! h-25" selected={activeSection === "heroes-page"}>
+            <Button frameClassName="w-40! h-25" selected={activeSection === "heroes-page"}>
               {activeSection === "heroes-page" ? "Heroes" : activeSection === "biomes-page" ? "Enemies" : "Characters"}
             </Button>
 
@@ -95,27 +95,25 @@ export default function Navbar() {
           </div>
 
           <Button
-            frameClassName="w-55! h-25"
-            className="-ml-5"
+            frameClassName="w-40! h-25"
             selected={activeSection === "biomes-page"}
             onClick={() => scrollToSection("biomes-page")}>
             Biomes
           </Button>
 
           <Button
-            frameClassName="w-55! h-25"
-            className="-ml-5"
+            frameClassName="w-40! h-25"
             selected={activeSection === "gallery-page"}
             onClick={() => scrollToSection("gallery-page")}>
             Gallery
           </Button>
 
-          <div className={`transition-all duration-500 ease-out -ml-5 ${passed100vh
-            ? 'w-55 opacity-100 translate-x-0'
+          <div className={`transition-all duration-500 ease-out ${passed100vh
+            ? 'w-60 opacity-100 translate-x-0'
             : 'w-0 opacity-0 -translate-x-8'
             }`}
           >
-            <Button  selected={activeSection === "cta-page"} frameClassName="w-55! h-25" link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" className="w-full">
+            <Button selected={activeSection === "cta-page"} frameClassName="w-40! h-25" link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" className="w-full">
               <div className="flex items-center justify-center gap-2">
                 <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
                 <p className="leading-tight text-left">Wishlist</p>

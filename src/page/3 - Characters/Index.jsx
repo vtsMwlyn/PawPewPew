@@ -30,7 +30,7 @@ export default function Characters() {
           />
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-2xl w-2/3 text-center text-white uppercase tracking-wider text-shadow-[-1px_4px_0px_#0F1B24]">"{selectedCharacter.quotes}"</h1>
-            <img src={selectedCharacter.image} alt={selectedCharacter.name} className="mb-10"/>
+            <img src={selectedCharacter.image} alt={selectedCharacter.name} className="mb-10 w-120"/>
             <div className="flex flex-col gap-5 justify-center items-center">
               <img src={selectedCharacter.text} alt="nama" className="w-1/2" />
               <img src={selectedCharacter.subname} alt="nama" className="w-2/3" />

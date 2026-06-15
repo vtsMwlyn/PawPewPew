@@ -3,10 +3,10 @@ import SocialMedia from "./SocialMedia"
 
 export default function CallToAction() {
   return (
-    <div className="relative w-full h-full py-10 lg:py-100 2xl:py-150 flex justify-end pl-8 lg:pl-50 pr-8 bg-hijaubaru-light" id="cta-page">
-      <img src="/bg-cta.webp" alt="map" className="w-full object-cover absolute inset-0 2xl:h-full w-full" />
+    <div className="relative w-full h-screen items-center flex justify-end pl-8 lg:pl-50 pr-8" id="cta-page">
+      <img src="/bg-cta.webp" alt="map" className="w-full h-screen object-cover absolute inset-0" />
       <div className="flex flex-col w-full lg:w-1/2 gap-5 relative z-5">
-        <div className="flex flex-col gap-5 mt-60 lg:-mt-20 2xl:mt-60">
+        <div className="flex flex-col gap-5">
           <h1 className="text-5xl text-white text-shadow-[-2px_6px_0px_#0F1B24]">join the fight</h1>
           <p className="text-lg 2xl:text-2xl text-white w-full comic-relief-bold text-shadow-[-1px_3px_0px_#0F1B24] lg:text-shadow-[-2px_4px_0px_#0F1B24]">Add PAWPEWPEW to your Steam Wishlist now and get notified the exact moment the battle begins.</p>
         </div>

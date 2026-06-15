@@ -164,7 +164,7 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
         })}
       </div>
 
-      <img src="/bg-chest.webp" className="absolute top-0 w-full h-screen object-cover object-center blur-xs -z-5" />
+      <img src="/bg-chest.webp" className="absolute top-0 w-full h-screen object-cover object-center -z-5" />
     </div>
   );
 }

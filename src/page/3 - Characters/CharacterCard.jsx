@@ -5,7 +5,7 @@ export default function CharacterCard({ selectedCharacter }) {
     <div className="flex w-150">
       <div className="flex flex-col gap-5 h-full">
         {traits.map((trait, index) => (
-          <div key={index} className={`flex flex-col pl-10 bg-gradient-to-r py-3 from-[#D6BC51] to-transparent rounded-xl ${index == traits.length - 1 ? '' : ''}`}>
+          <div key={index} className={`flex flex-col pl-13 bg-gradient-to-r py-8 from-[#D6BC51] to-transparent rounded-xl ${index == traits.length - 1 ? '' : ''}`}>
             <h3 className="text-xl 2xl:text-3xl text-white uppercase tracking-wider text-shadow-[-1px_4px_0px_#0F1B24]">{trait.title}</h3>
             <p className="text-sm lg:text-base text-white 2xl:text-xl comic-relief-bold text-shadow-[-1px_4px_0px_#0F1B24] ">{trait.description}</p>
           </div>

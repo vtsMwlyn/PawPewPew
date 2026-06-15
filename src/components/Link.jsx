@@ -10,7 +10,7 @@ export default function Link({
         className={`
           flex justify-center items-center
         `}>
-         <img src={image} alt="Logo" className="hover:scale-110 transition-transform duration-200 active:scale-90" />
+         <img src={image} alt="Logo" className="h-20 hover:scale-110 transition-transform duration-200 active:scale-90" />
       </a>
     )
   }

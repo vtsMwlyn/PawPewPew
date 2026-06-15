@@ -1,32 +1,23 @@
 [
   {
     "id": 1,
-    "type": "video/mp4",
-    "src":"/gameplay-forest.mp4"
+    "type":"video/mp4",
+    "src":"/trailer.mp4"
   },
   {
     "id": 2,
     "type": "video/mp4",
-    "src":"/gameplay-ruins.mp4"
-  },
-  {
-    "id": 3,
-    "type": "video/mp4",
-    "src":"/gameplay-temple.mp4"
-  },
-	{
-    "id": 1,
-    "type": "video/mp4",
     "src":"/gameplay-forest.mp4"
   },
   {
-    "id": 2,
+    "id": 3,
     "type": "video/mp4",
     "src":"/gameplay-ruins.mp4"
   },
   {
-    "id": 3,
+    "id": 4,
     "type": "video/mp4",
     "src":"/gameplay-temple.mp4"
   }
+  
 ]

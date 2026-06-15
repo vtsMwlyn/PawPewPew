@@ -83,7 +83,7 @@ export default function Introduction() {
               loop={true}
               className="cursor-grab active:cursor-grabbing overflow-hidden h-full w-full"
             >
-              {['/gameplay-forest-web.mp4', '/gameplay-ruins-web.mp4', '/gameplay-temple-web.mp4'].map((src, index) => (
+              {['/trailer.mp4','/gameplay-forest-web.mp4', '/gameplay-ruins-web.mp4', '/gameplay-temple-web.mp4'].map((src, index) => (
                 <SwiperSlide key={index} className="h-full w-full">
                   <video
                     ref={(el) => (videoRefs.current[index] = el)}
@@ -123,7 +123,7 @@ export default function Introduction() {
           </button>
         </div>
         <p className="text-white poppins-medium text-base lg:text-2xl w-full lg:{/* w-4xl text-center text-shadow-[-2px_3px_0px_#0F1B24] mt-10">
-          But when a relentless Robo-Beast army crashes in and kidnaps the villagers, playtime is officially over, turning a peaceful life into a fast-paced battle for survival.
+          But when a relentless Robo-Beast army crashes in and kidnaps the villagers, <br/>playtime is officially over, turning a peaceful life into a fast-paced battle for survival.
         </p>
         <img src="/bg-shop.webp" className="absolute inset-0 h-full w-full object-cover object-center -z-5" />
       </div>

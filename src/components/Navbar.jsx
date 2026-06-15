@@ -111,12 +111,12 @@ export default function Navbar() {
             : 'w-0 opacity-0 -translate-x-8'
             }`}
           >
-            <Button selected={activeSection === "cta-page"} frameClassName="h-5" link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" className="w-full">
+            <Link buttonType="no_background" selected={activeSection === "cta-page"} frameClassName="h-5" link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" className="w-full">
               <div className="flex items-center justify-center gap-2">
                 <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
                 <p className="leading-tight text-left text-shadow-[-2px_3px_0px_#0F1B24]">Wishlist</p>
               </div>
-            </Button>
+            </Link>
           </div>
         </div>
 
@@ -157,12 +157,12 @@ export default function Navbar() {
         <Button className="w-full!" selected={activeSection === "gallery-page"} onClick={() => scrollToSection("gallery-page")}>
           Gallery
         </Button>
-        <Button className={`w-full!`} link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/">
+        <Link className={`w-full!`} buttonType="no_background" link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/">
           <div className="flex items-center justify-center gap-2">
             <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
             <p className="text-xl 2xl:text-lg leading-tight text-left text-shadow-[-2px_3px_0px_#0F1B24]">Wishlist <br className="hidden 2xl:block" /> on Steam</p>
           </div>
-        </Button>
+        </Link>
       </div>
 
       <img src="/vine.webp" className="w-50 top-0 -left-24 -rotate-270 -scale-y-100 absolute z-100" />

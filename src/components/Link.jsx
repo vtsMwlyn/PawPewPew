@@ -2,7 +2,12 @@ export default function Link({
   buttonType = "background",
   link,
   target = '_blank',
-  image
+  image,
+  className = '',
+  frameClassName = '',
+  selected = false,
+  children,
+  ...rest
 }) {
   if (buttonType === 'background') {
     return (

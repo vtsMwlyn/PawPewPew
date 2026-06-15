@@ -1,7 +1,7 @@
 export default function CharacterButton({ characters, selectedCharacter, setSelectedCharacter, }) {
   
   return (
-    <div className="flex flex-col gap-15 justify-center items-center top-0 z-10">
+    <div className="flex lg:flex-col gap-5 lg:gap-15 justify-center items-center top-0 z-10">
       {characters.map((char) => {
         const isSelected = selectedCharacter?.name === char.name;
         return (
@@ -18,7 +18,7 @@ export default function CharacterButton({ characters, selectedCharacter, setSele
             <img
               src={char.icon}
               alt={char.name}
-              className={`w-15 sm:w-30 m-1 lg:m-2 scale-250 shadow-[0_4px_8px_rgba(0,0,0,0)]`}
+              className={`w-12 lg:w-18 2xl:w-30 m-1 2xl:m-2 scale-250 shadow-[0_4px_8px_rgba(0,0,0,0)]`}
             />
           </button>
         );

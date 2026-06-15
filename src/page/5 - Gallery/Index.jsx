@@ -6,7 +6,7 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
   // visibleCount controls how many cards render on screen (e.g., set to 3 or 5)
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
-  
+
   // Single ref to handle both touch and mouse starting positions
   const dragStartX = useRef(null);
   const isDragging = useRef(false);
@@ -67,7 +67,7 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
     // 1. Calculate shortest distance from active index (e.g., -2, -1, 0, 1, 2)
     let offset = ((index - activeIndex) % total + total) % total;
     if (offset > total / 2) offset -= total;
-    
+
     const absOffset = Math.abs(offset);
     const maxVisible = Math.floor(visibleCount / 2);
 
@@ -85,9 +85,9 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
 
     // 3. Dynamically spread the visible items
     // `maxSpreadPercent` controls how close the furthest cards get to the container edges
-    const maxSpreadPercent = 42; 
+    const maxSpreadPercent = 42;
     const spread = maxVisible > 0 ? maxSpreadPercent / maxVisible : 0;
-    
+
     // Calculate final layout values based on how far the card is from the center (0)
     const left = `${50 + (offset * spread)}%`;
     const scale = 1 - (absOffset * 0.15);
@@ -107,12 +107,12 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
   };
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center relative overflow-hidden py-20" id="gallery-page">
+    <div className="w-full h-screen fllg:h-screen ol items-center justify-center relative overflow-hidden py-20" id="gallery-page">
       <div className="flex flex-col w-full">
-        <h1 className="flex justify-center text-4xl lg:text-5xl text-center 2xl:text-6xl text-white uppercase">
+        <h1 className="flex justify-center text-4xl lg:text-5xl text-center 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]">
           See it in action
         </h1>
-        <h2 className="flex justify-center text-lg 2xl:text-2xl poppins-regular text-white mt-4">
+        <h2 className="flex justify-center text-lg 2xl:text-2xl poppins-regular text-white text-shadow-[-2px_3px_0px_#0F1B24] mt-4">
           Charm and Courage, Hand in Paw
         </h2>
       </div>
@@ -145,7 +145,7 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
                 -bottom-8 md:-bottom-12 2xl:-bottom-15
                 -right-7 md:-right-10 2xl:-right-14
               `} />
-              
+
               {/* Plain Image Card Wrapper */}
               <div className={`relative w-70 lg:w-160 2xl:w-240 h-40 lg:h-100 2xl:h-140 overflow-hidden border-blueblack border-6 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-2xl lg:rounded-4xl transition-all duration-500`}>
                 <img
@@ -155,8 +155,8 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
                   className={`w-full h-full object-cover transition-opacity duration-500 select-none`}
                 />
                 <div className="absolute z-5 inset-0 flex flex-col justify-end p-1 lg:p-8 bg-linear-to-t from-black/50 to-transparent">
-                  <h2 className="text-xl 2xl:text-3xl uppercase tracking-wider text-white text-center lg:text-left">{feature.title}</h2>
-                  <p className="text-sm lg:text-base 2xl:text-xl poppins-regular text-white mt-2 hidden lg:block">{feature.description}</p>
+                  <h2 className="text-xl 2xl:text-3xl uppercase tracking-wider text-shadow-[-2px_3px_0px_#0F1B24] text-white text-center lg:text-left">{feature.title}</h2>
+                  <p className="text-sm lg:text-base 2xl:text-xl poppins-regular text-shadow-[-2px_3px_0px_#0F1B24] text-white mt-2 hidden lg:block">{feature.description}</p>
                 </div>
               </div>
             </div>

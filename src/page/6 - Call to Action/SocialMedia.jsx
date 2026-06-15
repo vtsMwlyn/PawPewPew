@@ -2,7 +2,7 @@ import Link from "../../components/Button"
 
 export default function SocialMedia({ link, image, text }) {
   return (
-    <div className="w-30 relative group">
+    <div className="w-15 2xl:w-30 relative group">
       <Link
         frameType="short"
         frameClassName=""

@@ -10,16 +10,10 @@ export default function CallToAction() {
           <h1 className="text-5xl text-white text-shadow-[-4px_4px_0px_#0F1B24]">join the fight</h1>
           <p className="text-lg 2xl:text-2xl text-white w-full poppins-regular text-shadow-[-2px_3px_0px_#0F1B24]">Add PAWPEWPEW to your Steam Wishlist now and get notified the exact moment the battle begins.</p>
         </div>
-        <div className="flex flex-col 2xl:flex-row gap-5">
-          <Link image={`/button-wishlish-steam.webp`} link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/">
-            wishlist <br className="hidden 2xl:block" /> on steam
-          </Link>
-          <Link image={`/button-kickstater.webp`}>
-            back us on <br className="hidden 2xl:block" />kickstarter
-          </Link>
-          <Link image={`/button-join-discord.webp`} link="https://discord.gg/G27dAtVGSS">
-            join our <br className="hidden 2xl:block" />discord
-          </Link>
+        <div className="flex flex-col lg:flex-row gap-5">
+          <Link image={`/button-wishlish-steam.webp`} link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/"/>
+          <Link image={`/button-kickstater.webp`}/>
+          <Link image={`/button-join-discord.webp`} link="https://discord.gg/G27dAtVGSS"/>
         </div>
         <div className="w-full flex mt-8">
           <SocialMedia link="https://www.instagram.com/paw_pewpew?igsh=azBldzNyd3J0eTk2" image="/logo-instagram.webp" text="@paw_pewpew" />

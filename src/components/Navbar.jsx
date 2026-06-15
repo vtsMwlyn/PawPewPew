@@ -64,8 +64,8 @@ export default function Navbar() {
           </button>
         </div>
 
-        <div className="hidden lg:flex items-center gap-10">
-          <Button frameClassName="w-40! h-25" selected={activeSection === "hero-page" || activeSection === "introduction-page"} onClick={() => scrollToSection("hero-page")}>
+        <div className="hidden xl:flex items-center gap-0 2xl:gap-5">
+          <Button frameClassName="h-10" selected={activeSection === "hero-page" || activeSection === "introduction-page"} onClick={() => scrollToSection("hero-page")}>
             Home
           </Button>
 
@@ -74,7 +74,7 @@ export default function Navbar() {
             onMouseEnter={() => setShowCharDropdown(true)}
             onMouseLeave={() => setShowCharDropdown(false)}
           >
-            <Button frameClassName="w-40! h-25" selected={activeSection === "heroes-page"} >
+            <Button frameClassName="h-10" selected={activeSection === "heroes-page"} >
               {activeSection === "heroes-page" ? "Heroes" : activeSection === "biomes-page" ? "Enemies" : "Characters"}
             </Button>
 
@@ -82,27 +82,27 @@ export default function Navbar() {
             {showCharDropdown && (
               <div className="absolute top-18 rounded-xl flex flex-col items-center pt-4 gap-2 bg-black/50 p-4">
                 <Button onClick={() => scrollToSection("heroes-page")}
-                  className={`overflow-hidden animate-pop-up opacity-0 h-25`}
+                  className={`overflow-hidden animate-pop-up opacity-0 h-10`}
                   style={{ animationDelay: `${1 * 150}ms` }}>Heroes</Button>
                 <Button onClick={() => scrollToSection("biomes-page")}
-                  className={`overflow-hidden animate-pop-up opacity-0 h-25`}
+                  className={`overflow-hidden animate-pop-up opacity-0 h-10`}
                   style={{ animationDelay: `${2 * 150}ms` }}>Enemies</Button>
                 <Button onClick={() => scrollToSection("bosses-page")}
-                  className={`overflow-hidden animate-pop-up opacity-0 h-25`}
+                  className={`overflow-hidden animate-pop-up opacity-0 h-10`}
                   style={{ animationDelay: `${3 * 150}ms` }}>Bosses</Button>
               </div>
             )}
           </div>
 
           <Button
-            frameClassName="w-40! h-25"
+            frameClassName="h-10"
             selected={activeSection === "biomes-page"}
             onClick={() => scrollToSection("biomes-page")}>
             Biomes
           </Button>
 
           <Button
-            frameClassName="w-40! h-25"
+            frameClassName="h-10"
             selected={activeSection === "gallery-page"}
             onClick={() => scrollToSection("gallery-page")}>
             Gallery
@@ -113,17 +113,17 @@ export default function Navbar() {
             : 'w-0 opacity-0 -translate-x-8'
             }`}
           >
-            <Button selected={activeSection === "cta-page"} frameClassName="w-40! h-25" link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" className="w-full">
+            <Button selected={activeSection === "cta-page"} frameClassName="h-10" link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" className="w-full">
               <div className="flex items-center justify-center gap-2">
                 <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
-                <p className="leading-tight text-left">Wishlist</p>
+                <p className="leading-tight text-left text-shadow-[-2px_3px_0px_#0F1B24]">Wishlist</p>
               </div>
             </Button>
           </div>
         </div>
 
         {/* Mobile toggler */}
-        <div className="flex lg:hidden gap-4">
+        <div className="flex xl:hidden gap-4">
           <Button onClick={() => setShowMobileList(!showMobileList)} className="w-20!">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /></svg>
           </Button>
@@ -165,7 +165,7 @@ export default function Navbar() {
         <Button className={`w-full!`} link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/">
           <div className="flex items-center justify-center gap-2">
             <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
-            <p className="text-xl 2xl:text-lg leading-tight text-left">Wishlist <br className="hidden 2xl:block" /> on Steam</p>
+            <p className="text-xl 2xl:text-lg leading-tight text-left text-shadow-[-2px_3px_0px_#0F1B24]">Wishlist <br className="hidden 2xl:block" /> on Steam</p>
           </div>
         </Button>
       </div>

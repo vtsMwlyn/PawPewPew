@@ -13,7 +13,7 @@ export default function CallToAction() {
         </div>
         <div className="flex flex-col lg:flex-row gap-5">
           <Link image={`/button-wishlish-steam.webp`} link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/"/>
-          <div className="relative group">
+          <div className="w-full flex justify-center relative group">
             <Button buttonType="no_background" disabled={true} image={`/button-kickstater.webp`} />
             <span
               className={`

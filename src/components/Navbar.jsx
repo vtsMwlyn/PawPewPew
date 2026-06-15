@@ -1,4 +1,5 @@
 import Button from "./Button"
+import Link from "./Link"
 import { useState, useEffect } from "react";
 
 export default function Navbar() {

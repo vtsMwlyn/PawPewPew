@@ -43,13 +43,13 @@ export default function Introduction() {
       <div className="w-full min-h-screen flex flex-col items-center justify-start py-20">
         <div className="w-full flex flex-col items-center gap-5 px-8 2xl:px-0">
           <h3 className="text-xl lg:text-2xl 2xl:text-3xl text-white poppins-medium text-shadow-[-2px_3px_0px_#0F1B24]">
-            Welcome to STARLIT HAVEN
+            Welcome to STARLIT ALCOVE
           </h3>
           <h1 className="text-4xl lg:text-5xl 2xl:text-7xl text-white uppercase text-center text-shadow-[-4px_4px_0px_#0F1B24]">
             A peaceful sanctuary for all.
           </h1>
           <p className="text-white poppins-medium text-lg lg:text-xl 2xl:text-2xl w-full lg:w-4xl text-center text-shadow-[-2px_3px_0px_#0F1B24]">
-            Step into our hidden refuge, a safe space to gather scattered survivors. Together, you'll rebuild Starlit Haven
+            Step into our hidden refuge, a safe space to gather scattered survivors. Together, you'll rebuild Starlit Alcove
           </p>
           <img src="/bg-world-map2.webp" className="absolute top-0 h-screen object-cover o r -z-5" />
         </div>

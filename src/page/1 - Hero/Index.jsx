@@ -1,4 +1,5 @@
 import Link from "../../components/Link"
+import Button from "../../components/Button"
 
 export default function Hero() {
   return (
@@ -10,9 +11,23 @@ export default function Hero() {
           <Link image={`/button-wishlish-steam.webp`} link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/">
             wishlist <br className="hidden 2xl:block" /> on steam
           </Link>
-          <Link image={`/button-kickstater.webp`}>
-            back us on <br className="hidden 2xl:block" />kickstarter
-          </Link>
+          <div className="relative group">
+            <Button buttonType="no_background" disabled={true} image={`/button-kickstater.webp`} />
+            <span
+              className={`
+                absolute poppins-reguler  
+                px-2 py-1 text-sm
+                bg-stone-900/90 text-white
+                rounded-md opacity-0 translate-y-2
+                -bottom-10 left-1/2 transform -translate-x-1/2
+                group-hover:opacity-100 group-hover:translate-y-0
+                transition-all duration-200
+                pointer-events-none whitespace-nowrap
+              `}
+            >
+              Coming Soon
+            </span>
+          </div>
           <Link image={`/button-join-discord.webp`} link="https://discord.gg/G27dAtVGSS">
             join our <br className="hidden 2xl:block" />discord
           </Link>

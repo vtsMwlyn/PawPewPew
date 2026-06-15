@@ -87,9 +87,6 @@ export default function Navbar() {
                 <Button onClick={() => scrollToSection("biomes-page")}
                   className={`overflow-hidden animate-pop-up opacity-0 h-10`}
                   style={{ animationDelay: `${2 * 150}ms` }}>Enemies</Button>
-                <Button onClick={() => scrollToSection("bosses-page")}
-                  className={`overflow-hidden animate-pop-up opacity-0 h-10`}
-                  style={{ animationDelay: `${3 * 150}ms` }}>Bosses</Button>
               </div>
             )}
           </div>
@@ -150,9 +147,6 @@ export default function Navbar() {
               <Button onClick={() => scrollToSection("biomes-page")}
                 className={`overflow-hidden animate-pop-up opacity-0`}
                 style={{ animationDelay: `${2 * 150}ms` }}>Enemies</Button>
-              <Button onClick={() => scrollToSection("bosses-page")}
-                className={`overflow-hidden animate-pop-up opacity-0`}
-                style={{ animationDelay: `${3 * 150}ms` }}>Bosses</Button>
             </div>
           )}
         </div>

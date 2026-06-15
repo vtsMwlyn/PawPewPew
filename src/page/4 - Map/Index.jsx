@@ -35,13 +35,18 @@ export default function Map() {
         className="w-full object-cover absolute inset-0 -z-5 h-full"
       />
 
-      <div className="w-full flex flex-col items-center justify-center h-full py-30 lg:py-50">
-        <h1 className="absolute top-30 text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase">
-          Biomes
-        </h1>
+      <div className="w-full flex flex-col items-center gap-20 justify-center h-full py-30">
+        <div className="flex flex-col w-full text-4xl lg:text-5xl 2xl:text-6xl text-white">
+          <h1 className="flex justify-center text-4xl lg:text-5xl text-center 2xl:text-6xl text-white uppercase">
+            BIOMES
+          </h1>
+          <h2 className="flex justify-center text-lg 2xl:text-2xl poppins-regular text-white">
+            A Playful Journey With Heart
+          </h2>
+        </div>
 
-        <div className="w-11/12 md:w-3/4 h-full flex flex-col items-center gap-10 lg:flex-row mb-10">
-          <div className="w-full lg:w-1/2 xl:w-1/3 flex flex-col items-center lg:items-start gap-6 h-full justify-end" ref={mapNameRef}>
+        <div className="w-11/12 md:w-3/4 h-full flex flex-col items-center justify-center gap-10 lg:flex-row">
+          <div className="w-full lg:w-1/2 xl:w-1/3 flex flex-col justify-start items-center lg:items-start gap-6 h-full" ref={mapNameRef}>
             <h2 className='text-xl 2xl:text-3xl uppercase tracking-wider text-white'>
               {selectedMap.name}
             </h2>

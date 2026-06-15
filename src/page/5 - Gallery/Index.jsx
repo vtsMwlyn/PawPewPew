@@ -109,17 +109,17 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center relative overflow-hidden py-20" id="gallery-page">
       <div className="flex flex-col w-full">
-        <h1 className="flex justify-center text-4xl lg:text-5xl text-center 2xl:text-6xl text-white uppercase text-shadow-[-2px_6px_0px_#0F1B24]">
+        <h1 className="flex justify-center text-4xl lg:text-5xl text-center 2xl:text-6xl text-white uppercase">
           See it in action
         </h1>
-        <h2 className="flex justify-center text-lg 2xl:text-2xl comic-relief-bold text-white text-shadow-[-2px_4px_0px_#0F1B24] mt-4">
-          Gameplay chaos
+        <h2 className="flex justify-center text-lg 2xl:text-2xl poppins-regular text-white mt-4">
+          Charm and Courage, Hand in Paw
         </h2>
       </div>
 
       {/* Slider Track */}
       <div
-        className="mt-40 2xl:mt-30 relative w-full lg:w-1/2 h-auto lg:h-60 2xl:h-100 cursor-grab active:cursor-grabbing"
+        className="my-40 2xl:my-30 relative w-full lg:w-1/2 h-auto lg:h-60 2xl:h-100 cursor-grab active:cursor-grabbing"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onMouseDown={handleMouseDown}
@@ -155,8 +155,8 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
                   className={`w-full h-full object-cover transition-opacity duration-500 select-none`}
                 />
                 <div className="absolute z-5 inset-0 flex flex-col justify-end p-1 lg:p-8 bg-linear-to-t from-black/50 to-transparent">
-                  <h2 className="text-xl 2xl:text-3xl uppercase tracking-wider text-shadow-[-1px_4px_0px_#0F1B24] text-white text-center lg:text-left">{feature.title}</h2>
-                  <p className="text-sm lg:text-base 2xl:text-xl comic-relief-bold text-shadow-[-1px_4px_0px_#0F1B24] text-white mt-2 hidden lg:block">{feature.description}</p>
+                  <h2 className="text-xl 2xl:text-3xl uppercase tracking-wider text-white text-center lg:text-left">{feature.title}</h2>
+                  <p className="text-sm lg:text-base 2xl:text-xl poppins-regular text-white mt-2 hidden lg:block">{feature.description}</p>
                 </div>
               </div>
             </div>

@@ -5,15 +5,21 @@
   src: url('./fonts/ChunkParty.ttf') format('opentype');
 }
 
-.comic-relief-regular {
-  font-family: "Comic Relief", system-ui;
-  font-weight: 400;
+.poppins-thin {
+  font-family: "Poppins", system-ui;
+  font-weight: 100;
   font-style: normal;
 }
 
-.comic-relief-bold {
-  font-family: "Comic Relief", system-ui;
-  font-weight: 700;
+.poppins-extralight {
+  font-family: "Poppins", system-ui;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", system-ui;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -23,9 +29,33 @@
   font-style: normal;
 }
 
+.poppins-medium {
+  font-family: "Poppins", system-ui;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", system-ui;
+  font-weight: 600;
+  font-style: normal;
+}
+
 .poppins-bold {
   font-family: "Poppins", system-ui;
   font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", system-ui;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", system-ui;
+  font-weight: 900;
   font-style: normal;
 }
 #features-page, #gallery-page {

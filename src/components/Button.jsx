@@ -19,7 +19,7 @@ export default function Link({
         <div className={`${selected && 'bg-gradient-to-t from-[#551755] to-transparent'} w-full h-full absolute group-hover:bg-gradient-to-t group-hover:from-[#551755] group-hover:to-transparent -z-10 scale-y-140`}></div>
         <div className="w-full flex items-center justify-center gap-2">
           {image && <img src={image} alt="Logo" className="h-8 2xl:h-10 drop-shadow-[-1px_3px_0px_#0F1B24]" />}
-          <div className="text-2xl 2xl:text-2xl text-left text-shadow-[-2px_3px_0px_#0F1B24] leading-tight">{children}</div>
+          <div className="text-2xl 2xl:text-2xl text-left leading-tight">{children}</div>
         </div>
       </button>
     )
@@ -36,7 +36,7 @@ export default function Link({
       >
         <div className="w-full flex items-center justify-center gap-2">
           {image && <img src={image} alt="Logo" className="h-8 2xl:h-10 drop-shadow-[-1px_3px_0px_#0F1B24]" />}
-          <div className="text-2xl 2xl:text-2xl text-left text-shadow-[-2px_3px_0px_#0F1B24] leading-tight">{children}</div>
+          <div className="text-2xl 2xl:text-2xl text-left leading-tight">{children}</div>
         </div>
       </button>
     )

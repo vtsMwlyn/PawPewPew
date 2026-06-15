@@ -36,23 +36,22 @@ export default function Map() {
       />
 
       <div className="w-full flex flex-col items-center justify-center h-full py-30 lg:py-50">
-        <h1 className="absolute top-30 text-4xl lg:text-5xl 2xl:text-6xl text-white 
-          uppercase text-shadow-[-2px_6px_0px_#0F1B24]">
+        <h1 className="absolute top-30 text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase">
           Biomes
         </h1>
 
         <div className="w-11/12 md:w-3/4 h-full flex flex-col items-center gap-10 lg:flex-row mb-10">
           <div className="w-full lg:w-1/2 xl:w-1/3 flex flex-col items-center lg:items-start gap-6 h-full justify-end" ref={mapNameRef}>
-            <h2 className='text-xl 2xl:text-3xl uppercase tracking-wider text-shadow-[-1px_4px_0px_#0F1B24] text-white'>
+            <h2 className='text-xl 2xl:text-3xl uppercase tracking-wider text-white'>
               {selectedMap.name}
             </h2>
-            <p className='text-sm lg:text-base 2xl:text-xl comic-relief-bold text-shadow-[-1px_4px_0px_#0F1B24] text-white'>
+            <p className='text-sm lg:text-base 2xl:text-xl poppins-regular text-white'>
               {selectedMap.desc}
             </p>
           </div>
 
           <div className="w-full lg:w-1/2 xl:w-2/3 flex flex-col items-center lg:items-end gap-6 h-full justify-start">
-            <h2 className='text-xl 2xl:text-3xl uppercase tracking-wider text-shadow-[-1px_4px_0px_#0F1B24] text-white'>
+            <h2 className='text-xl 2xl:text-3xl uppercase tracking-wider text-white'>
               Enemies Encountered
             </h2>
             <div key={selectedMap.name} className="w-3/4 xl:w-1/2 grid grid-cols-3 gap-4 mt-6">

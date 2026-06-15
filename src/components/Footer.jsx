@@ -5,7 +5,7 @@ export default function Footer() {
 
         {/* Brand Section */}
         <div className="w-full lg:w-1/2 flex flex-col gap-6">
-          <h2 className="text-2xl uppercase text-shadow-[-2px_3px_0px_#0F1B24]">
+          <h2 className="text-2xl uppercase">
             SANGNILA — <br className="block 2xl:hidden" /> Developer & Publisher
           </h2>
           <a href="https://www.sangnilaindonesia.com" target="_blank" rel="noopener noreferrer">
@@ -22,20 +22,20 @@ export default function Footer() {
 
           {/* Page List */}
           <div className="flex-1 flex flex-col gap-6">
-            <h2 className="text-2xl uppercase text-shadow-[-2px_3px_0px_#0F1B24]">
+            <h2 className="text-2xl uppercase">
               paw pew pew
             </h2>
-            <nav className="flex flex-col gap-3 comic-relief-bold">
-              <p className="hover:text-shadow-[-2px_2px_0px_#0F1B24] cursor-pointer">Character</p>
-              <p className="hover:text-shadow-[-2px_2px_0px_#0F1B24] cursor-pointer">Features</p>
-              <p className="hover:text-shadow-[-2px_2px_0px_#0F1B24] cursor-pointer">Gallery</p>
+            <nav className="flex flex-col gap-3 poppins-regular">
+              <p className="cursor-pointer">Character</p>
+              <p className="cursor-pointer">Features</p>
+              <p className="cursor-pointer">Gallery</p>
               <a href="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" target="_blank" rel="noopener noreferrer">
-                <p className="cursor-pointer hover:underline hover:text-shadow-[-2px_2px_0px_#0F1B24]">
+                <p className="cursor-pointer hover:underline">
                   Wishlist on Steam ↗
                 </p>
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer">
-                <p className="cursor-pointer hover:underline hover:text-shadow-[-2px_2px_0px_#0F1B24]">
+                <p className="cursor-pointer hover:underline">
                   Back Us on Kickstarter ↗
                 </p>
               </a>
@@ -44,10 +44,10 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="flex-1 flex flex-col gap-6">
-            <h2 className="text-2xl uppercase text-shadow-[-2px_3px_0px_#0F1B24]">
+            <h2 className="text-2xl uppercase">
               contact
             </h2>
-            <div className="flex flex-col gap-3 comic-relief-bold">
+            <div className="flex flex-col gap-3 poppins-regular">
               <a href="mailto:admin@pawpewpew.com" target="_blank" rel="noopener noreferrer">
                 <p className="hover:underline cursor-pointer">admin@pawpewpew.com</p>
               </a>
@@ -63,7 +63,7 @@ export default function Footer() {
 
         </div>
       </div>
-      <p className="text-base comic-relief-bold uppercase leading-relaxed">
+      <p className="text-base poppins-bold uppercase leading-relaxed">
         ©2026 Sangnila. <br className="block 2xl:hidden" />All rights reserved.
       </p>
     </div>

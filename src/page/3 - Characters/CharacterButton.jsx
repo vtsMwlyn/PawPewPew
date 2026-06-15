@@ -1,7 +1,7 @@
 export default function CharacterButton({ characters, selectedCharacter, setSelectedCharacter, }) {
   
   return (
-    <div className="flex flex-col gap-4 sm:gap-15 lg:gap-5 justify-center items-center top-0 z-10">
+    <div className="flex flex-col gap-15 justify-center items-center top-0 z-10">
       {characters.map((char) => {
         const isSelected = selectedCharacter?.name === char.name;
         return (

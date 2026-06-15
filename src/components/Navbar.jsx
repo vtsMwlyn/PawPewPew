@@ -65,7 +65,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:flex items-center gap-10">
-          <Button frameClassName="w-40! h-25" selected={activeSection === "hero-page" || activeSection === "introduction-page"}>
+          <Button frameClassName="w-40! h-25" selected={activeSection === "hero-page" || activeSection === "introduction-page"} onClick={() => scrollToSection("hero-page")}>
             Home
           </Button>
 
@@ -74,7 +74,7 @@ export default function Navbar() {
             onMouseEnter={() => setShowCharDropdown(true)}
             onMouseLeave={() => setShowCharDropdown(false)}
           >
-            <Button frameClassName="w-40! h-25" selected={activeSection === "heroes-page"}>
+            <Button frameClassName="w-40! h-25" selected={activeSection === "heroes-page"} >
               {activeSection === "heroes-page" ? "Heroes" : activeSection === "biomes-page" ? "Enemies" : "Characters"}
             </Button>
 

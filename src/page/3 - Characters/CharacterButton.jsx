@@ -14,6 +14,7 @@ export default function CharacterButton({ characters, selectedCharacter, setSele
                 : 'bg-blueblack hover:bg-ungupink '
               }`}
             onClick={() => setSelectedCharacter(char)}
+            disabled={char.id === 4}
           >
             <img
               src={char.icon}

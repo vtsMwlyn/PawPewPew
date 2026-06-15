@@ -19,13 +19,13 @@ export default function MapCard({ MapJson, selectedMap, setSelectedMap }) {
             />
             <button
               type="button"
-              className="flex w-full h-full justify-center items-end absolute bottom-1 z-5 "
+              className="flex w-full h-full justify-center items-end absolute left-0 bottom-1 z-5"
               onClick={() => setSelectedMap(location)}
             >
               <div className={`
                 px-5 lg:px-10 py-1 lg:py-2
               `}>
-                <img src={location.button} alt={location.name} className="w-25 2xl:w-35" />
+                <img src={location.button} alt={location.name} className="w-20 lg:w-25 2xl:w-35" />
               </div>
             </button>
           </div>

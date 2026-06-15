@@ -65,7 +65,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden xl:flex items-center gap-0 2xl:gap-5">
-          <Button frameClassName="h-10" selected={activeSection === "hero-page" || activeSection === "introduction-page"} onClick={() => scrollToSection("hero-page")}>
+          <Button frameClassName="h-5" selected={activeSection === "hero-page" || activeSection === "introduction-page"} onClick={() => scrollToSection("hero-page")}>
             Home
           </Button>
 
@@ -74,13 +74,13 @@ export default function Navbar() {
             onMouseEnter={() => setShowCharDropdown(true)}
             onMouseLeave={() => setShowCharDropdown(false)}
           >
-            <Button frameClassName="h-10" selected={activeSection === "heroes-page"} >
+            <Button frameClassName="h-5" selected={activeSection === "heroes-page"} >
               {activeSection === "heroes-page" ? "Heroes" : activeSection === "biomes-page" ? "Enemies" : "Characters"}
             </Button>
 
             {/* Dropdown Menu Desktop */}
             {showCharDropdown && (
-              <div className="absolute top-18 rounded-xl flex flex-col items-center pt-4 gap-2 bg-black/50 p-4">
+              <div className="absolute top-10 rounded-xl flex flex-col items-center py-10 gap-8 bg-black/50 p-4">
                 <Button onClick={() => scrollToSection("heroes-page")}
                   className={`overflow-hidden animate-pop-up opacity-0 h-10`}
                   style={{ animationDelay: `${1 * 150}ms` }}>Heroes</Button>
@@ -95,14 +95,14 @@ export default function Navbar() {
           </div>
 
           <Button
-            frameClassName="h-10"
+            frameClassName="h-5"
             selected={activeSection === "biomes-page"}
             onClick={() => scrollToSection("biomes-page")}>
             Biomes
           </Button>
 
           <Button
-            frameClassName="h-10"
+            frameClassName="h-5"
             selected={activeSection === "gallery-page"}
             onClick={() => scrollToSection("gallery-page")}>
             Gallery
@@ -113,7 +113,7 @@ export default function Navbar() {
             : 'w-0 opacity-0 -translate-x-8'
             }`}
           >
-            <Button selected={activeSection === "cta-page"} frameClassName="h-10" link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" className="w-full">
+            <Button selected={activeSection === "cta-page"} frameClassName="h-5" link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" className="w-full">
               <div className="flex items-center justify-center gap-2">
                 <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />
                 <p className="leading-tight text-left text-shadow-[-2px_3px_0px_#0F1B24]">Wishlist</p>

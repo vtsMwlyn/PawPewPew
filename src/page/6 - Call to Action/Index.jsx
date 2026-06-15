@@ -4,7 +4,7 @@ import SocialMedia from "./SocialMedia"
 export default function CallToAction() {
   return (
     <div className="relative w-full h-screen items-center flex justify-end pl-8 lg:pl-50 pr-8" id="cta-page">
-      <img src="/bg-cta.webp" alt="map" className="w-full h-screen object-cover absolute inset-0" />
+      <img src="/bg-cta.webp" alt="map" className="w-full h-screen object-cover absolute inset-0 brightness-80" />
       <div className="flex flex-col w-full lg:w-1/2 gap-5 relative z-5">
         <div className="flex flex-col gap-5">
           <h1 className="text-5xl text-white text-shadow-[-4px_4px_0px_#0F1B24]">join the fight</h1>

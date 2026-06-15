@@ -49,7 +49,7 @@ export default function Introduction() {
             A peaceful sanctuary for all.
           </h1>
           <p className="text-white poppins-medium text-lg lg:text-xl 2xl:text-2xl w-full lg:w-4xl text-center text-shadow-[-2px_3px_0px_#0F1B24]">
-            Step into our hidden refuge, a safe space to gather scattered survivors. Together, you'll rebuild Starlit Ha  <div className="w-full h-screen bg-linear-to-b from-black/40 to-transparent absolute top-0 -z-3"></div>
+            Step into our hidden refuge, a safe space to gather scattered survivors. Together, you'll rebuild Starlit Haven
           </p>
           <img src="/bg-world-map2.webp" className="absolute top-0 h-screen object-cover o r -z-5" />
         </div>
@@ -57,8 +57,8 @@ export default function Introduction() {
 
       <Separator />
 
-      !{/* Village of Meadow */}
-      <div className="w-full h-[120vh] flex flex-col items-center justify-center px-8 py-20 relative">
+      {/* Village of Meadow */}
+      <div className="w-full flex flex-col items-center justify-center px-8 py-20 relative">
         <h1 className="text-xl lg:text-4xl text-white uppercase w-full lg:w-4xl text-center text-shadow-[-4px_4px_0px_#0F1B24]">
           Life in the village of Meadow was peaceful, whimsical, and perfectly happy
         </h1>

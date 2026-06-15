@@ -9,6 +9,7 @@ export default function MuteButton() {
 			<Button
 				selected={true}
 				frameType="short"
+				frameClassName="h-3"
 				type="button"
 				className={`${isMuted ? '' : ''}`}
 				onClick={toggleMute}

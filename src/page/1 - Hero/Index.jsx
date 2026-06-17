@@ -1,7 +1,9 @@
 import Link from "../../components/Link"
 import Button from "../../components/Button"
+import { useToast } from "../../context/ToastContext"
 
 export default function Hero() {
+  const { showToast } = useToast()
   return (
     <div className="relative w-full" id="hero-page">
       <img src="/bg-hero.webp" alt="pawpewpew" className="absolute inset-0 -z-5 h-screen w-full object-cover 2xl:object-fit" />
@@ -12,7 +14,7 @@ export default function Hero() {
             wishlist <br className="hidden 2xl:block" /> on steam
           </Link>
           <div className="relative group">
-            <Button buttonType="no_background" disabled={true} image={`/button-kickstater.webp`} />
+            <Button buttonType="no_background" onClick={() => showToast('Kickstater Soon')} image={`/button-kickstater.webp`} />
             <span
               className={`
                 absolute poppins-reguler  

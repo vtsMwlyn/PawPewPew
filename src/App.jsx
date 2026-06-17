@@ -12,37 +12,40 @@ import SeeItInAction from './page/5 - Gallery/Index'
 // import ScreenInfo from "./components/ScreenInfo"
 import MuteButton from './components/MuteButton'
 import Separator from './components/Separator'
+import { ToastProvider } from './context/ToastContext'
 
 export default function App() {
   return (
     <AudioProvider>
-      <main className="w-full flex flex-col items-stretch">
-        {/* Navbar */}
-        {/* <ScreenInfo /> */}
-        <Navbar />
+      <ToastProvider>
+        <main className="w-full flex flex-col items-stretch">
+          {/* Navbar */}
+          {/* <ScreenInfo /> */}
+          <Navbar />
 
-        {/* Content */}
-        <Hero />
-        <Separator />
+          {/* Content */}
+          <Hero />
+          <Separator />
 
-        <WorldMeadow />
-        <Separator />
+          <WorldMeadow />
+          <Separator />
 
-        <CharacterPage />
-        <Separator />
+          <CharacterPage />
+          <Separator />
 
-        <Map />
-        <Separator />
+          <Map />
+          <Separator />
 
-        <SeeItInAction />
-        <Separator />
+          <SeeItInAction />
+          <Separator />
 
-        <CTAPage />
+          <CTAPage />
 
-        {/* Footer */}
-        <MuteButton />
-        <Footer />
-      </main>
+          {/* Footer */}
+          <MuteButton />
+          <Footer />
+        </main>
+      </ToastProvider>
     </AudioProvider>
   )
 }

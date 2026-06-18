@@ -1,9 +1,12 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'ChunkParty';
-  src: url('./fonts/ChunkParty.ttf') format('opentype');
+
+.luckiest-guy-regular {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
+
 
 .poppins-thin {
   font-family: "Poppins", system-ui;
@@ -102,7 +105,7 @@
 }
 
 body {
-  font-family: 'ChunkParty', sans-serif;
+  font-family: 'Luckiest Guy', sans-serif;
 }
 
 a, button{

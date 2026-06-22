@@ -9,7 +9,7 @@ export default function Link({
 }) {
   if (buttonType === 'background') {
     return (
-      <button
+      <a
         className={`
           flex justify-center items-center w-50 py-1 px-4 text-white uppercase relative group
           ${className}
@@ -22,7 +22,7 @@ export default function Link({
           {image && <img src={image} alt="Logo" className={`h-8 2xl:h-10 drop-shadow-[-1px_3px_0px_#0F1B24]`} />}
           <div className="text-2xl 2xl:text-2xl text-left text-shadow-[-2px_3px_0px_#0F1B24] leading-tight">{children}</div>
         </div>
-      </button>
+      </a>
     )
   }
 

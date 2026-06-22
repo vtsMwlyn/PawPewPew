@@ -4,7 +4,7 @@ import SocialMedia from "./SocialMedia"
 import { useToast } from "../../context/ToastContext"
 
 export default function CallToAction() {
-  const { showToast } = useToast() 
+  const { showToast } = useToast()
   return (
     <div className="relative w-full h-screen items-center flex justify-end pl-8 lg:pl-50 pr-8" id="cta-page">
       <img src="/bg-cta.webp" alt="map" className="w-full h-screen object-cover absolute inset-0 brightness-80" />
@@ -16,7 +16,7 @@ export default function CallToAction() {
         <div className="flex flex-col items-start lg:flex-row gap-5">
           <Link image={`/button-wishlish-steam.webp`} link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/" />
           <div className="flex justify-center relative group">
-            <Button buttonType="no_background" onClick={() => showToast('Kickstater Soon')}  image={`/button-kickstater.webp`} />
+            <Button buttonType="no_background" onClick={() => showToast('Kickstater Soon')} image={`/button-kickstater.webp`} />
             <span
               className={`
                 absolute poppins-reguler  
@@ -36,7 +36,7 @@ export default function CallToAction() {
         </div>
         <div className="w-full flex mt-8">
           <SocialMedia link="https://www.instagram.com/paw_pewpew?igsh=azBldzNyd3J0eTk2" image="/logo-instagram.webp" text="@paw_pewpew" />
-          <SocialMedia link="#" image="/logo-youtube.webp" text="YouTube" />
+          <SocialMedia link="https://www.youtube.com/@PawPewPew" image="/logo-youtube.webp" text="@PawPewPew" />
           <SocialMedia link="https://x.com/paw_pew_pew" image="/logo-twitter.webp" text="@paw_pew_pew" />
           <SocialMedia link="https://www.tiktok.com/@pawpewpew4?_r=1&_t=ZS-95jwHaah5cO" image="/logo-tiktok.webp" text="@pawpewpew4" />
         </div>

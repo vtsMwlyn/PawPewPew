@@ -7,10 +7,15 @@
   font-style: normal;
 }
 
+.outfit-medium{
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
 
-.poppins-thin {
-  font-family: "Poppins", system-ui;
-  font-weight: 100;
+.outfit-bold{
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
   font-style: normal;
 }
 

@@ -28,7 +28,7 @@ export default function Characters() {
             setSelectedCharacter={setSelectedCharacter}
           />
           <div className="flex flex-col justify-center items-center">
-            <h1 className="text-xl 2xl:text-2xl w-2/3 text-center text-white uppercase tracking-wider text-shadow-[-2px_3px_0px_#0F1B24]">"{selectedCharacter.quotes}"</h1>
+            <h1 className="text-xl 2xl:text-2xl w-2/3 text-center text-white outfit-bold tracking-wider text-shadow-[-2px_3px_0px_#0F1B24]">"{selectedCharacter.quotes}"</h1>
             <img src={selectedCharacter.image} alt={selectedCharacter.name} className="mb-10 w-100 2xl:w-120"/>
             <div className="flex flex-col gap-5 justify-center items-center">
               <img src={selectedCharacter.text} alt="nama" className="w-60 2xl:w-1/2" />

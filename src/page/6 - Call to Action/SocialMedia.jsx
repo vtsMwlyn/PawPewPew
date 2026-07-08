@@ -14,7 +14,7 @@ export default function SocialMedia({ link, image, text }) {
       </Link>
       <span
         className={`
-          absolute poppins-reguler  
+          absolute outfit-medium  
           px-2 py-1 text-sm
           bg-stone-900/90 text-white
           rounded-md opacity-0 translate-y-2

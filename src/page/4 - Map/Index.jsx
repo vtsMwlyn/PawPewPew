@@ -40,7 +40,7 @@ export default function Map() {
           <h1 className="flex justify-center text-4xl lg:text-5xl text-center 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]">
             BIOMES
           </h1>
-          <h2 className="flex justify-center text-lg 2xl:text-2xl poppins-regular text-white text-shadow-[-2px_3px_0px_#0F1B24]">
+          <h2 className="flex justify-center text-lg 2xl:text-2xl outfit-medium  text-white text-shadow-[-2px_3px_0px_#0F1B24]">
             A Playful Journey With Heart
           </h2>
         </div>

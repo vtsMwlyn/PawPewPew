@@ -112,7 +112,7 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
         <h1 className="flex justify-center text-4xl lg:text-5xl text-center 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]">
           See it in action
         </h1>
-        <h2 className="flex justify-center text-lg 2xl:text-2xl poppins-regular text-white text-shadow-[-2px_3px_0px_#0F1B24] mt-4">
+        <h2 className="flex justify-center text-lg 2xl:text-2xl outfit-medium text-white text-shadow-[-2px_3px_0px_#0F1B24] mt-4">
           Charm and Courage, Hand in Paw
         </h2>
       </div>

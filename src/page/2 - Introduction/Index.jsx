@@ -51,7 +51,7 @@ export default function Introduction() {
           <p className="text-white poppins-medium text-lg lg:text-xl 2xl:text-2xl w-full lg:w-4xl text-center text-shadow-[-2px_3px_0px_#0F1B24]">
             Step into our hidden refuge, a safe space to gather scattered survivors. Together, you'll rebuild Starlit Alcove
           </p>
-          <img src="/bg-world-map2.webp" className="absolute top-0 h-screen object-cover o r -z-5" />
+          <img src="/bg-world-map2.webp" className="absolute top-0 h-screen w-full object-cover o r -z-5" />
         </div>
       </div>
 
@@ -122,7 +122,7 @@ export default function Introduction() {
             <img src="/arrow-triangle-right.webp" className="w-1/2 h-1/2 lg:w-full lg:h-full" />
           </button>
         </div>
-        <p className="text-white poppins-medium text-base lg:text-2xl w-full lg:{/* w-4xl text-center text-shadow-[-2px_3px_0px_#0F1B24] mt-10">
+        <p className="text-white outfit-bold text-base lg:text-2xl w-full lg:w-4xl text-center text-shadow-[-2px_3px_0px_#0F1B24] mt-10">
           But when a relentless Robo-Beast army crashes in and kidnaps the villagers, <br/>playtime is officially over, turning a peaceful life into a fast-paced battle for survival.
         </p>
         <img src="/bg-shop.webp" className="absolute inset-0 h-full w-full object-cover object-center -z-5" />

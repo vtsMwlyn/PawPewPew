@@ -1,4 +1,4 @@
-import Link from "../../components/Button"
+import Link from "../../components/LinkSosmed"
 
 export default function SocialMedia({ link, image, text }) {
   return (
@@ -10,10 +10,10 @@ export default function SocialMedia({ link, image, text }) {
         href={link}
         target="_blank" rel="noopener noreferrer"
       >
-        <img src={image} className="w-10 drop-shadow-[-2px_6px_0px_#0F1B24]" />
+        <img src={image} alt={`Paw Pew Pew - ${text}`} className="w-10 drop-shadow-[-2px_6px_0px_#0F1B24]" />
       </Link>
       <span
-        className={`
+        className={`    
           absolute outfit-medium  
           px-2 py-1 text-sm
           bg-stone-900/90 text-white

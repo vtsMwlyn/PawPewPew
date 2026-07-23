@@ -2,22 +2,22 @@
   {
     "id": 1,
     "type":"video/mp4",
-    "src":"/trailer.mp4"
+    "src":"videos/trailer.mp4"
   },
   {
     "id": 2,
     "type": "video/mp4",
-    "src":"/gameplay-forest.mp4"
+    "src":"videos/gameplay-forest.mp4"
   },
   {
     "id": 3,
     "type": "video/mp4",
-    "src":"/gameplay-ruins.mp4"
+    "src":"videos/gameplay-ruins.mp4"
   },
   {
     "id": 4,
     "type": "video/mp4",
-    "src":"/gameplay-temple.mp4"
+    "src":"videos/gameplay-temple.mp4"
   }
   
 ]

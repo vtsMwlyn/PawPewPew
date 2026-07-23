@@ -2,21 +2,21 @@
   {
     "id": 1,
     "name": "Greedwood Forest",
-    "button" :"/button-greetwood-forest.webp",
-    "image":"/map-forest.webp",
-    "background":"/map-forest.webp",
+    "button" :"biomes-page/button-greedwood-forest.webp",
+    "image":"biomes-page/map-forest.webp",
+    "background":"biomes-page/map-forest.webp",
     "desc": "A vast forest dominated by towering golden-green pines and ancient trees that stretch high above the canopy. Massive rocks and rugged terrain dot the landscape, while robot chickens roam among the woods, guarding the forest and threatening anyone who dares to pass through.",
     "enemies": [
       {
-        "image": "/afichick-greedwood.webp",
+        "image": "biomes-page/afichick-greedwood.webp",
         "name": "Chicken"
       },
       {
-        "image": "/unknown-greedwood.webp",
+        "image": "biomes-page/unknown-greedwood.webp",
         "name": "unknown-greedwood"
       },
       {
-        "image": "/unknown-greedwood.webp",
+        "image": "biomes-page/unknown-greedwood.webp",
         "name": "Unknown"
       }
     ]
@@ -24,21 +24,21 @@
   {
     "id": 2,
     "name": "Ravenrock Ruins",
-    "button" : "/button-ravenrock-ruins.webp",
-    "image":"/map-ruins.webp",
-    "background":"/map-ruins.webp",
+    "button" : "biomes-page/button-ravenrocks-ruins.webp",
+    "image":"biomes-page/map-ruins.webp",
+    "background":"biomes-page/map-ruins.webp",
     "desc": "Ancient stone ruins surrounded by rugged cliffs and overgrown vegetation. Though time has worn away much of the old settlement, robot chickens have claimed the area, turning its forgotten pathways into a dangerous obstacle for adventurers.",
     "enemies": [
       {
-        "image": "/afichick-ravenrocks.webp",
+        "image": "biomes-page/afichick-ravenrocks.webp",
         "name": "Chicken"
       },
       {
-        "image": "/hornbill-ravenrocks.webp",
+        "image": "biomes-page/hornbill-ravenrocks.webp",
         "name": "Bird"
       },
       {
-        "image": "/unknown-ravenrocks.webp",
+        "image": "biomes-page/unknown-ravenrocks.webp",
         "name": "Unknown"
       }
     ]
@@ -46,21 +46,21 @@
   {
     "id": 3,
     "name": "Mossveil Temple",
-    "button" : "/button-mossveil-temple.webp",
-    "image":"/map-temple.webp",
-    "background":"/map-temple.webp",
+    "button" : "biomes-page/button-mossveil-temple.webp",
+    "image":"biomes-page/map-temple.webp",
+    "background":"biomes-page/map-temple.webp",
     "desc": "An ancient temple frozen in eternal night, its cracked stone floors etched with glowing runes. Twisted vines crawl between collapsed pillars, and bioluminescent orbs cast a cold teal light across the ruins of a forgotten altar.",
     "enemies": [
       {
-        "image": "/afichick-mossveil.webp",
+        "image": "biomes-page/afichick-mossveil.webp",
         "name": "Chicken"
       },
       {
-        "image": "/rhino-mossveil.webp",
+        "image": "biomes-page/rhino-mossveil.webp",
         "name": "Rhino"
       },
       {
-        "image": "/hornbill-mossveil.webp",
+        "image": "biomes-page/hornbill-mossveil.webp",
         "name": "Hornbill"
       }
     ]

@@ -2,8 +2,8 @@
   {
     "id": 1,
     "name": "PIPI",
-    "text": "/text-name-pipi.webp",
-    "subname": "text-subname-pipi.webp",
+    "text": "character-page/text-name-pipi.webp",
+    "subname": "character-page/text-subname-pipi.webp",
     "quotes": "Distance means nothing when your aim is flawless.",
     "traits": [
       {
@@ -22,15 +22,15 @@
         "description": "Once she starts dashing through the front lines, Pipi dictates the flow of the entire battlefield."
       }
     ],
-    "image": "/splashart-pipi.webp",
-    "icon": "/icon-pipi.webp",
-    "weaponIcon": "/weapon-icon-pipi.webp"
-  },
+    "image": "character-page/splashart-pipi.webp",
+    "icon": "character-page/icon-pipi.webp",
+    "weaponIcon": "character-page/weapon-icon-pipi.webp"
+  },  
   {
     "id": 2,
     "name": "TOTO",
-    "text": "/text-name-toto.webp",
-    "subname": "/text-subname-toto.webp",
+    "text": "character-page/text-name-toto.webp",
+    "subname": "character-page/text-subname-toto.webp",
     "quotes": "The frontline is wherever my weapon lands. Step aside.",
     "traits": [
       {
@@ -49,15 +49,15 @@
         "description": "Fiercely loyal and built for the frontline, Toto dashes straight into chaos. He cuts through enemies with relentless momentum."
       }
     ],
-    "image": "/splashart-toto.webp",
-    "icon": "/icon-toto.webp",
-    "weaponIcon": "/weapon-icon-toto.webp"
+    "image": "character-page/splashart-toto.webp",
+    "icon": "character-page/icon-toto.webp",
+    "weaponIcon": "character-page/weapon-icon-toto.webp"
   },
   {
     "id": 3,
     "name": "PITO",
-    "text": "/text-name-pito.webp",
-    "subname": "/text-subname-pito.webp",
+    "text": "character-page/text-name-pito.webp",
+    "subname": "character-page/text-subname-pito.webp",
     "quotes": "I do not run. I simply cease to be where danger exists.",
     "traits": [
       {
@@ -76,15 +76,15 @@
         "description": "Employs teleportation not as escape, but as precise spatial reallocation to maintain ideal combat range."
       }
     ],
-    "image": "/splashart-pito.webp",
-    "icon": "/icon-pito.webp",
-    "weaponIcon": "/weapon-icon-pito.webp"
+    "image": "character-page/splashart-pito.webp",
+    "icon": "character-page/icon-pito.webp",
+    "weaponIcon": "character-page/weapon-icon-pito.webp"
   },
   {
     "id": 4,
     "name":"coming soon",
-    "text": "/text-name-unknown.webp",
-    "subname": "/text-subname-unknown.webp",
+    "text": "character-page/text-name-unknown.webp",
+    "subname": "character-page/text-subname-unknown.webp",
     "quotes": "???",
     "traits": [
       {
@@ -103,8 +103,8 @@
         "description": "???"
       }
     ],
-    "image": "/splashart-coming-soon.webp",
-    "icon": "/icon-coming-soon.webp",
-    "weaponIcon": "/weapon-icon-coming-soon.webp"
+    "image": "character-page/splashart-coming-soon.webp",
+    "icon": "character-page/icon-coming-soon.webp",
+    "weaponIcon": "character-page/weapon-icon-coming-soon.webp"
   }
 ]

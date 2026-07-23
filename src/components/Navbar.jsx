@@ -1,6 +1,8 @@
 import Button from "./Button"
 import Link from "./Link"
 import { useState, useEffect } from "react";
+import DropdownButton from "./DropdownButton";  
+import NavButton from "./NavButton";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState('');
@@ -66,45 +68,45 @@ export default function Navbar() {
         </div>
 
         <div className="hidden xl:flex items-center gap-0 2xl:gap-5">
-          <Button frameClassName="h-5" selected={activeSection === "hero-page" || activeSection === "introduction-page"} onClick={() => scrollToSection("hero-page")}>
+          <NavButton frameClassName="h-5" selected={activeSection === "hero-page" || activeSection === "introduction-page"} onClick={() => scrollToSection("hero-page")}>
             Home
-          </Button>
+          </NavButton>
 
           <div
             className="relative cursor-pointer flex justify-center"
             onMouseEnter={() => setShowCharDropdown(true)}
             onMouseLeave={() => setShowCharDropdown(false)}
           >
-            <Button frameClassName="h-5" selected={activeSection === "heroes-page"} >
-              {activeSection === "heroes-page" ? "Heroes" : activeSection === "biomes-page" ? "Enemies" : "Characters"}
-            </Button>
+            <NavButton frameClassName="h-5" selected={activeSection === "heroes-page"} >
+              {activeSection === "heroes-page" ? "Tailguards" : activeSection === "biomes-page" ? "Robo-Beasts" : "Characters"}
+            </NavButton>
 
             {/* Dropdown Menu Desktop */}
             {showCharDropdown && (
-              <div className="absolute top-10 rounded-xl flex flex-col items-center py-10 gap-8 bg-black/50 p-4">
-                <Button onClick={() => scrollToSection("heroes-page")}
+              <div className="absolute top-15 mt-1 rounded-xl flex bg-black/55 flex-col items-center py-5 gap-8 p-4">
+                <DropdownButton onClick={() => scrollToSection("heroes-page")}
                   className={`overflow-hidden animate-pop-up opacity-0 h-10`}
-                  style={{ animationDelay: `${1 * 150}ms` }}>Heroes</Button>
-                <Button onClick={() => scrollToSection("biomes-page")}
+                  style={{ animationDelay: `${1 * 150}ms` }}>Tailguards</DropdownButton>
+                <DropdownButton onClick={() => scrollToSection("biomes-page")}
                   className={`overflow-hidden animate-pop-up opacity-0 h-10`}
-                  style={{ animationDelay: `${2 * 150}ms` }}>Enemies</Button>
+                  style={{ animationDelay: `${2 * 150}ms` }}>Robo-Beasts</DropdownButton>
               </div>
             )}
           </div>
 
-          <Button
+          <NavButton
             frameClassName="h-5"
             selected={activeSection === "biomes-page"}
             onClick={() => scrollToSection("biomes-page")}>
             Biomes
-          </Button>
+          </NavButton>
 
-          <Button
+          <NavButton
             frameClassName="h-5"
             selected={activeSection === "gallery-page"}
             onClick={() => scrollToSection("gallery-page")}>
             Gallery
-          </Button>
+          </NavButton>
 
           <div className={`transition-all duration-500 ease-out ${passed100vh
             ? 'w-60 opacity-100 translate-x-0'
@@ -131,32 +133,32 @@ export default function Navbar() {
       {/* Mobile navbar list */}
       <div className={`w-full flex-col items-stretch mt-8 gap-4 ${showMobileList ? 'flex' : 'hidden'}`}>
         <div className="w-full flex flex-col gap-2">
-          <Button
+          <NavButton
             className="w-full! flex justify-between items-center"
             selected={activeSection === "heroes-page"}
             onClick={() => setShowCharDropdown(!showCharDropdown)}
           >
-            {activeSection === "heroes-page" ? "Heroes" : activeSection === "biomes-page" ? "Enemies" : "Characters"}
-          </Button>
+            {activeSection === "heroes-page" ? "Tailguards" : activeSection === "biomes-page" ? "Robo-Beasts" : "Characters"}
+          </NavButton>
 
           {/* Dropdown Menu Mobile */}
           {showCharDropdown && (
-            <div className="flex gap-2">
-              <Button onClick={() => scrollToSection("heroes-page")}
+            <div className="flex justify-center gap-2">
+              <DropdownButton onClick={() => scrollToSection("heroes-page")}
                 className={`overflow-hidden animate-pop-up opacity-0`}
-                style={{ animationDelay: `${1 * 150}ms` }}>Heroes</Button>
-              <Button onClick={() => scrollToSection("biomes-page")}
+                style={{ animationDelay: `${1 * 150}ms` }}>Tailguards</DropdownButton>
+              <DropdownButton onClick={() => scrollToSection("biomes-page")}
                 className={`overflow-hidden animate-pop-up opacity-0`}
-                style={{ animationDelay: `${2 * 150}ms` }}>Enemies</Button>
+                style={{ animationDelay: `${2 * 150}ms` }}>Robo-Beasts</DropdownButton>
             </div>
           )}
         </div>
-        <Button className="w-full!" selected={activeSection === "biomes-page"} onClick={() => scrollToSection("biomes-page")}>
+        <NavButton className="w-full!" selected={activeSection === "biomes-page"} onClick={() => scrollToSection("biomes-page")}>
           Biomes
-        </Button>
-        <Button className="w-full!" selected={activeSection === "gallery-page"} onClick={() => scrollToSection("gallery-page")}>
+        </NavButton>
+        <NavButton className="w-full!" selected={activeSection === "gallery-page"} onClick={() => scrollToSection("gallery-page")}>
           Gallery
-        </Button>
+        </NavButton>
         <Link className={`w-full!`} buttonType="no_background" link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/">
           <div className="flex items-center justify-center gap-2">
             <img src="/logo-steam.webp" className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]" />

@@ -18,7 +18,7 @@ export default function CharacterButton({ characters, selectedCharacter, setSele
           >
             <img
               src={char.icon}
-              alt={char.name}
+              alt={`Paw Pew Pew - ${char.name}`}
               className={`w-12 lg:w-18 2xl:w-30 m-1 2xl:m-2 scale-250 shadow-[0_4px_8px_rgba(0,0,0,0)]`}
             />
           </button>

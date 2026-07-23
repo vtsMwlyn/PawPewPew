@@ -150,7 +150,7 @@ export default function Gallery({ visibleCount = window.innerWidth > 768 ? 5 : 3
               <div className={`relative w-70 lg:w-160 2xl:w-240 h-40 lg:h-100 2xl:h-140 overflow-hidden border-blueblack border-6 drop-shadow-[-6px_7px_6px_#0F1B24] rounded-2xl lg:rounded-4xl transition-all duration-500`}>
                 <img
                   src={feature.image}
-                  alt={`Slide ${i}`}
+                  alt={`Paw Pew Pew - Slide ${i}`}
                   draggable={false} // Crucial: Prevents browser from intercepting the drag
                   className={`w-full h-full object-cover transition-opacity duration-500 select-none`}
                 />

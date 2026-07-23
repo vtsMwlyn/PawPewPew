@@ -14,7 +14,7 @@ export default function MapCard({ MapJson, selectedMap, setSelectedMap }) {
 
             <img
               src={location.image}
-              alt={location.name}
+              alt={`Paw Pew Pew - ${location.name}`}
               className={`w-full rounded-lg`}
             />
             <button
@@ -25,7 +25,7 @@ export default function MapCard({ MapJson, selectedMap, setSelectedMap }) {
               <div className={`
                 px-5 lg:px-10 py-1 lg:py-2
               `}>
-                <img src={location.button} alt={location.name} className="w-20 lg:w-25 2xl:w-35" />
+                <img src={location.button} alt={`Paw Pew Pew - ${location.name}`} className="w-20 lg:w-25 2xl:w-35" />
               </div>
             </button>
           </div>

@@ -31,7 +31,7 @@ export default function Map() {
   return (
     <div className="relative w-full h-screen" id='biomes-page'>
       <img
-        src={selectedMap.background} alt="map"
+        src={selectedMap.background} alt="Paw Pew Pew - Biomes"
         className="w-full object-cover absolute inset-0 -z-5 h-full"
       />
 
@@ -63,7 +63,7 @@ export default function Map() {
               {selectedMap.enemies.map((enemy, index) => (
                 <div
                   key={index}
-                  className="w-full aspect-square border-3 lg:border-6 border-black rounded-xl overflow-hidden animate-pop-up opacity-0"
+                  className="aspect-square border-3 lg:border-6 border-blueblack rounded-xl overflow-hidden animate-pop-up opacity-0"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <img src={enemy.image} />

@@ -83,7 +83,7 @@ export default function Introduction() {
               loop={true}
               className="cursor-grab active:cursor-grabbing overflow-hidden h-full w-full"
             >
-              {['/trailer.mp4','/gameplay-forest-web.mp4', '/gameplay-ruins-web.mp4', '/gameplay-temple-web.mp4'].map((src, index) => (
+              {['videos/trailer.mp4', 'videos/gameplay-forest-web.mp4', 'videos/gameplay-ruins-web.mp4', 'videos/gameplay-temple-web.mp4'].map((src, index) => (
                 <SwiperSlide key={index} className="h-full w-full">
                   <video
                     ref={(el) => (videoRefs.current[index] = el)}
@@ -101,7 +101,7 @@ export default function Introduction() {
                     className={`w-full h-full flex justify-center items-center bg-[rgba(0,0,0,0.8)] absolute top-0 transition ease-in-out duration-200
                       ${playingIndex === index ? 'opacity-0' : 'opacity-100'}`}
                   >
-                    <img src="/play-button.webp" className="w-10 lg:w-16" />
+                    <img src="button/play-button.webp" className="w-10 lg:w-16" />
                   </button>
                 </SwiperSlide>
               ))}
@@ -112,14 +112,14 @@ export default function Introduction() {
             onClick={handlePrev}
             className="absolute -left-15 lg:-left-25 2xl:-left-40 top-1/2 -translate-y-1/2 z-10 w-10 h-10 lg:w-14 lg:h-14 flex items-center justify-center active:scale-70 hover:scale-115 transition-transform duration-200 animate-arrow-left hover:drop-shadow-[0px_0px_5px_white]"
           >
-            <img src="/arrow-triangle-left.webp" className="w-1/2 h-1/2 lg:w-full lg:h-full" />
+            <img src="button/arrow-triangle-left.webp" className="w-1/2 h-1/2 lg:w-full lg:h-full" />
           </button>
           <button
             type="button"
             onClick={handleNext}
             className="absolute -right-15 lg:-right-25 2xl:-right-40 top-1/2 -translate-y-1/2 z-10 w-10 h-10 lg:w-14 lg:h-14 flex items-center justify-center active:scale-70 hover:scale-115 transition-transform duration-200 animate-arrow-right hover:drop-shadow-[0px_0px_5px_white]"
           >
-            <img src="/arrow-triangle-right.webp" className="w-1/2 h-1/2 lg:w-full lg:h-full" />
+            <img src="button/arrow-triangle-right.webp" className="w-1/2 h-1/2 lg:w-full lg:h-full" />
           </button>
         </div>
         <p className="text-white outfit-bold text-base lg:text-2xl w-full lg:w-4xl text-center text-shadow-[-2px_3px_0px_#0F1B24] mt-10">

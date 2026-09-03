@@ -6,9 +6,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const videos = [
-  "/gameplay-forest-web.mp4",
-  "/gameplay-ruins-web.mp4",
-  "/gameplay-temple-web.mp4",
+  "/videos/gameplay-forest-web.mp4",
+  "/videos/gameplay-ruins-web.mp4",
+  "/videos/gameplay-temple-web.mp4",
 ];
 
 export default function VideoSwiper() {
@@ -19,7 +19,7 @@ export default function VideoSwiper() {
       pagination={{ clickable: true }}
       spaceBetween={20}
       slidesPerView={1}
-      className="w-full h-[500px]"
+      className="w-full h-125"
     >
       {videos.map((video, index) => (
         <SwiperSlide key={index}>

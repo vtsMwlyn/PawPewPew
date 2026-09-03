@@ -96,9 +96,9 @@ export default function Introduction() {
             >
               {[
                 "videos/trailer.mp4",
-                "videos/gameplay-forest-web.mp4",
-                "videos/gameplay-ruins-web.mp4",
-                "videos/gameplay-temple-web.mp4",
+                "videos/output-gameplay-forest-web.mp4",
+                "videos/gameplay-ruin-web.mp4",
+                "videos/output-gameplay-temple-web.mp4",
               ].map((src, index) => (
                 <SwiperSlide key={index} className="h-full w-full">
                   <video

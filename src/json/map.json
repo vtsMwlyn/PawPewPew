@@ -12,8 +12,16 @@
         "name": "Chicken"
       },
       {
-        "image": "biomes-page/unknown-greedwood.webp",
+        "image": "biomes-page/hornbill-greedwood.webp",
         "name": "unknown-greedwood"
+      },
+      {
+        "image": "biomes-page/mud-greedwood.webp",
+        "name": "mud-greedwood"
+      },
+      {
+        "image": "biomes-page/unknown-greedwood.webp",
+        "name": "Unknown"
       },
       {
         "image": "biomes-page/unknown-greedwood.webp",
@@ -30,12 +38,20 @@
     "desc": "Ancient stone ruins surrounded by rugged cliffs and overgrown vegetation. Though time has worn away much of the old settlement, robot chickens have claimed the area, turning its forgotten pathways into a dangerous obstacle for adventurers.",
     "enemies": [
       {
-        "image": "biomes-page/afichick-ravenrocks.webp",
+        "image": "biomes-page/spider-ravenrocks.webp",
         "name": "Chicken"
       },
       {
-        "image": "biomes-page/hornbill-ravenrocks.webp",
+        "image": "biomes-page/bat-ravenrocks.webp",
         "name": "Bird"
+      },
+      {
+        "image": "biomes-page/poison-ravenrocks.webp",
+        "name": "Bird"
+      },
+      {
+        "image": "biomes-page/unknown-ravenrocks.webp",
+        "name": "Unknown"
       },
       {
         "image": "biomes-page/unknown-ravenrocks.webp",
@@ -52,16 +68,24 @@
     "desc": "An ancient temple frozen in eternal night, its cracked stone floors etched with glowing runes. Twisted vines crawl between collapsed pillars, and bioluminescent orbs cast a cold teal light across the ruins of a forgotten altar.",
     "enemies": [
       {
-        "image": "biomes-page/afichick-mossveil.webp",
+        "image": "biomes-page/spider-mossveil.webp",
         "name": "Chicken"
       },
       {
-        "image": "biomes-page/rhino-mossveil.webp",
+        "image": "biomes-page/bat-mossveil.webp",
         "name": "Rhino"
       },
       {
-        "image": "biomes-page/hornbill-mossveil.webp",
+        "image": "biomes-page/rhino-mossveil.webp",
         "name": "Hornbill"
+      },
+      {
+        "image": "biomes-page/poison-ravenrocks.webp",
+        "name": "poison"
+      },
+      {
+        "image": "biomes-page/unknown-mossveil.webp",
+        "name": "Unknown"
       }
     ]
   }

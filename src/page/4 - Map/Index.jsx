@@ -65,7 +65,7 @@ export default function Map() {
 
           <div className="w-full lg:w-1/2 xl:w-2/3 flex flex-col items-center lg:items-end gap-6 h-full justify-start">
             <h2 className="text-xl 2xl:text-3xl uppercase tracking-wider text-white text-shadow-[-2px_3px_0px_#0F1B24]">
-              Enemies Encountered
+              Enemies & Hazard Encountered
             </h2>
             <div
               key={selectedMap.name}

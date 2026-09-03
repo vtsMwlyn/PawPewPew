@@ -1,20 +1,19 @@
 @import "tailwindcss";
 
-
 .luckiest-guy-regular {
   font-family: "Luckiest Guy", cursive;
   font-weight: 400;
   font-style: normal;
 }
 
-.outfit-medium{
-  font-family: 'Outfit', sans-serif;
+.outfit-medium {
+  font-family: "Outfit", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
-.outfit-bold{
-  font-family: 'Outfit', sans-serif;
+.outfit-bold {
+  font-family: "Outfit", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
@@ -66,35 +65,36 @@
   font-weight: 900;
   font-style: normal;
 }
-#features-page, #gallery-page {
+#features-page,
+#gallery-page {
   scroll-margin-top: 100px; /* tinggi navbar lo */
 }
 #character-page {
   scroll-margin-top: -160px; /* tinggi navbar lo */
 }
 
-@utility bg-ungupink{
+@utility bg-ungupink {
   background: linear-gradient(to bottom, #d31164 40%, #4a1b4e);
 }
 
-@utility bg-hijaubaru{
-  background: linear-gradient(to bottom, #428166, #49B888)
+@utility bg-hijaubaru {
+  background: linear-gradient(to bottom, #428166, #49b888);
 }
 
-@utility bg-hijaubaru-light{
-  background: linear-gradient(to bottom, #4AB787, #49B888)
+@utility bg-hijaubaru-light {
+  background: linear-gradient(to bottom, #4ab787, #49b888);
 }
 
-@utility bg-hijaubaru-reverse{
-  background: linear-gradient(to bottom, #49B888, #428166)
+@utility bg-hijaubaru-reverse {
+  background: linear-gradient(to bottom, #49b888, #428166);
 }
 
-@utility bg-ungukuning{
-  background: linear-gradient(to bottom, #eacc19 40%, #431f4c)
+@utility bg-ungukuning {
+  background: linear-gradient(to bottom, #eacc19 40%, #431f4c);
 }
 
-@utility bg-ungubiru{
-  background: linear-gradient(to bottom, #2B9CBE 40%, #431f4c)
+@utility bg-ungubiru {
+  background: linear-gradient(to bottom, #2b9cbe 40%, #431f4c);
 }
 
 @theme {
@@ -102,27 +102,36 @@
 }
 
 @theme {
-  --color-blueblack: #0F1B24;
+  --color-blueblack: #0f1b24;
 }
 
 @theme {
-  --color-bluedark: #131E28;
+  --color-bluedark: #131e28;
 }
 
 body {
-  font-family: 'Luckiest Guy', sans-serif;
+  font-family: "Luckiest Guy", sans-serif;
 }
 
-a, button{
+a,
+button {
   @apply cursor-pointer;
 }
 
-
 /* ANIMATIONS */
 @keyframes pop-up {
-  0%   { opacity: 0; transform: scale(0.8) translateY(20px); }
-  50% { opacity: 0.5; transform: scale(1.1) translateY(0); }
-  100% { opacity: 1; transform: scale(1) translateY(0); }
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 @utility animate-pop-up {

@@ -1,4 +1,4 @@
-import Link from "../../components/LinkSosmed"
+import Link from "../../components/LinkSosmed";
 
 export default function SocialMedia({ link, image, text }) {
   return (
@@ -8,9 +8,14 @@ export default function SocialMedia({ link, image, text }) {
         frameClassName=""
         className="w-full!"
         href={link}
-        target="_blank" rel="noopener noreferrer"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <img src={image} alt={`Paw Pew Pew - ${text}`} className="w-10 drop-shadow-[-2px_6px_0px_#0F1B24]" />
+        <img
+          src={image}
+          alt={`Paw Pew Pew - ${text}`}
+          className="w-10 drop-shadow-[-2px_6px_0px_#0F1B24]"
+        />
       </Link>
       <span
         className={`    
@@ -27,5 +32,5 @@ export default function SocialMedia({ link, image, text }) {
         {text}
       </span>
     </div>
-  )
+  );
 }

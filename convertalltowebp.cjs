@@ -1,21 +1,19 @@
-const sharp = require('sharp');
-const fs = require('fs/promises');
-const path = require('path');
+const sharp = require("sharp");
+const fs = require("fs/promises");
+const path = require("path");
 
 // Config
-const publicFolder = path.join(__dirname, 'public');
-const supportedExtensions = ['.jpeg', '.jpg', '.png', '.tiff', '.svg']; // no .svg or .webp
+const publicFolder = path.join(__dirname, "public");
+const supportedExtensions = [".jpeg", ".jpg", ".png", ".tiff", ".svg"]; // no .svg or .webp
 
 async function convertImage(filePath) {
   const ext = path.extname(filePath).toLowerCase();
   if (!supportedExtensions.includes(ext)) return;
 
-  const webpPath = filePath.replace(ext, '.webp');
+  const webpPath = filePath.replace(ext, ".webp");
 
   try {
-    await sharp(filePath)
-      .webp({ quality: 100 })
-      .toFile(webpPath);
+    await sharp(filePath).webp({ quality: 100 }).toFile(webpPath);
 
     console.log(`✅ Converted: ${filePath} → ${webpPath}`);
 
@@ -42,7 +40,7 @@ async function traverseAndConvert(dir) {
 }
 
 (async () => {
-  console.log('🔄 Starting WebP conversion (with original deletion)...');
+  console.log("🔄 Starting WebP conversion (with original deletion)...");
   await traverseAndConvert(publicFolder);
-  console.log('🎉 Done!');
+  console.log("🎉 Done!");
 })();

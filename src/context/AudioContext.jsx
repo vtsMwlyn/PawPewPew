@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { createContext, useContext, useRef, useState } from 'react';
+import { useEffect } from "react";
+import { createContext, useContext, useRef, useState } from "react";
 
 const AudioContext = createContext(null);
 
@@ -39,10 +39,12 @@ export function AudioProvider({ children }) {
     if (audioRef.current) {
       audioRef.current?.play();
     }
-  }, [])
+  }, []);
 
   return (
-    <AudioContext.Provider value={{ isMuted, toggleMute, pauseForVideo, resumeAfterVideo }}>
+    <AudioContext.Provider
+      value={{ isMuted, toggleMute, pauseForVideo, resumeAfterVideo }}
+    >
       <audio ref={audioRef} loop src="/bgm.mp3" />
       {children}
     </AudioContext.Provider>

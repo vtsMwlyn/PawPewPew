@@ -1,5 +1,5 @@
-import character from "../../json/character.json"
-import { useState } from "react"
+import character from "../../json/character.json";
+import { useState } from "react";
 import CharacterButton from "./CharacterButton";
 import CharacterCard from "./CharacterCard";
 
@@ -9,7 +9,9 @@ export default function Characters() {
   return (
     <section className="relative flex " id="heroes-page">
       {/* Background Image */}
-      <img src="/bg-character.webp" alt="Paw Pew Pew - Character Overview"
+      <img
+        src="/bg-character.webp"
+        alt="Paw Pew Pew - Character Overview"
         className="absolute top-0 left-0 w-full h-full object-cover -z-10"
       />
 
@@ -28,17 +30,31 @@ export default function Characters() {
             setSelectedCharacter={setSelectedCharacter}
           />
           <div className="flex flex-col justify-center items-center">
-            <h1 className="text-xl 2xl:text-2xl w-2/3 text-center text-white outfit-bold tracking-wider text-shadow-[-2px_3px_0px_#0F1B24]">"{selectedCharacter.quotes}"</h1>
-            <img src={selectedCharacter.image} alt={`Paw Pew Pew - ${selectedCharacter.name}`} className="mb-10 w-100 2xl:w-120"/>
+            <h1 className="text-xl 2xl:text-2xl w-2/3 text-center text-white outfit-bold tracking-wider text-shadow-[-2px_3px_0px_#0F1B24]">
+              "{selectedCharacter.quotes}"
+            </h1>
+            <img
+              src={selectedCharacter.image}
+              alt={`Paw Pew Pew - ${selectedCharacter.name}`}
+              className="mb-10 w-100 2xl:w-120"
+            />
             <div className="flex flex-col gap-5 justify-center items-center">
-              <img src={selectedCharacter.text} alt={`Paw Pew Pew - ${selectedCharacter.name}`} className="w-60 2xl:w-1/2" />
-              <img src={selectedCharacter.subname} alt={`Paw Pew Pew - ${selectedCharacter.subname}`} className="w-70 2xl:w-2/3" />
+              <img
+                src={selectedCharacter.text}
+                alt={`Paw Pew Pew - ${selectedCharacter.name}`}
+                className="w-60 2xl:w-1/2"
+              />
+              <img
+                src={selectedCharacter.subname}
+                alt={`Paw Pew Pew - ${selectedCharacter.subname}`}
+                className="w-70 2xl:w-2/3"
+              />
             </div>
-        </div>
+          </div>
           {/* Character Info */}
           <CharacterCard selectedCharacter={selectedCharacter} />
         </div>
       </div>
     </section>
-  )
+  );
 }

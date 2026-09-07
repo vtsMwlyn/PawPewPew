@@ -138,7 +138,7 @@ export default function Gallery({
           return (
             <div
               key={i}
-              className="absolute transition-all duration-550 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-[transform,opacity,left]"
+              className="absolute transition-all duration-550 ease-in-out will-change-[transform,opacity,left]"
               style={getDynamicStyle(i)}
               onClick={() => !isActive && goTo(i)}
             >
@@ -184,7 +184,7 @@ export default function Gallery({
       </div>
 
       <img
-        src="/bg-chest.webp"
+        src="see-it-in-action/bg-chest.webp"
         className="absolute top-0 w-full h-full object-cover object-center -z-5"
       />
     </div>

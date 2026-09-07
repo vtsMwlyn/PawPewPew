@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <div className="relative w-full" id="hero-page">
       <img
-        src="/bg-hero.webp"
+        src="/splash-art/bg-hero.webp"
         alt="pawpewpew hero background"
         className="absolute inset-0 -z-5 h-screen w-full object-cover 2xl:object-fit"
       />

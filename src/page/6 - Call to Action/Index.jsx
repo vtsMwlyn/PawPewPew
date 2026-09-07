@@ -11,7 +11,7 @@ export default function CallToAction() {
       id="cta-page"
     >
       <img
-        src="/bg-cta.webp"
+        src="/splash-art/bg-cta.webp"
         alt="Paw Pew Pew - Map Overview"
         className="w-full h-screen object-cover absolute inset-0 brightness-80"
       />

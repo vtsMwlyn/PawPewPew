@@ -10,7 +10,7 @@ export default function Characters() {
     <section className="relative flex " id="heroes-page">
       {/* Background Image */}
       <img
-        src="/bg-character.webp"
+        src="/character-page/bg-character.webp"
         alt="Paw Pew Pew - Character Overview"
         className="absolute top-0 left-0 w-full h-full object-cover -z-10"
       />

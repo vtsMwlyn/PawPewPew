@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import FrameEdge from "../../components/FrameEdge";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import { useAudio } from "../../context/AudioContext";
 import Separator from "../../components/Separator";
 import highlightData from "../../json/highlight.json";
@@ -25,7 +26,8 @@ export default function Introduction() {
     }
   };
 
-  const handleSlideChange = () => {
+  const handleSlideChange = (swiper) => {
+    // Reset all videos
     videoRefs.current.forEach((video) => {
       if (!video) return;
       video.pause();
@@ -33,6 +35,26 @@ export default function Introduction() {
     });
     setPlayingIndex(null);
     resumeAfterVideo();
+
+    const activeSwiper = swiper || swiperRef.current;
+    if (!activeSwiper) return;
+
+    const realIdx = activeSwiper.realIndex;
+    const currentItem = highlightData[realIdx];
+    const isVideo = currentItem && !currentItem.type?.startsWith("image");
+
+    if (isVideo) {
+      activeSwiper.autoplay?.stop();
+      const currentVideo = videoRefs.current[realIdx];
+      if (currentVideo) {
+        currentVideo.play().catch((err) => {
+          console.log("Autoplay prevented:", err);
+          activeSwiper.autoplay?.start();
+        });
+      }
+    } else {
+      activeSwiper.autoplay?.start();
+    }
   };
 
   const handlePrev = () => swiperRef.current?.slidePrev();
@@ -88,9 +110,17 @@ export default function Introduction() {
           />
           <div className="w-full h-full border-6 rounded-xl lg:rounded-4xl overflow-hidden">
             <Swiper
+              modules={[Autoplay]}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
               spaceBetween={0}
               slidesPerView={1}
-              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+                handleSlideChange(swiper);
+              }}
               onSlideChange={handleSlideChange}
               loop={true}
               className="cursor-grab active:cursor-grabbing overflow-hidden h-full w-full"
@@ -107,6 +137,7 @@ export default function Introduction() {
                           onPlay={() => {
                             setPlayingIndex(index);
                             pauseForVideo();
+                            swiperRef.current?.autoplay?.stop();
                           }}
                           onPause={() => {
                             setPlayingIndex(null);
@@ -116,6 +147,10 @@ export default function Introduction() {
                             e.target.currentTime = 0;
                             setPlayingIndex(null);
                             resumeAfterVideo();
+                            if (swiperRef.current) {
+                              swiperRef.current.slideNext();
+                              swiperRef.current.autoplay?.start();
+                            }
                           }}
                         >
                           <source src={item.src} type={item.type || "video/mp4"} />

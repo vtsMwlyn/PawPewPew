@@ -1,41 +1,46 @@
 [
   {
     "id": 1,
-    "type": "video/mp4",
-    "src": "videos/trailer.mp4"
+    "type": "image/webp",
+    "src": "splash-art/Trio Pawguards.webp"
   },
   {
     "id": 2,
     "type": "video/mp4",
-    "src": "videos/output-gameplay-forest-web.mp4"
+    "src": "videos/trailer.mp4"
   },
   {
     "id": 3,
     "type": "video/mp4",
-    "src": "videos/gameplay-ruin-web.mp4"
+    "src": "videos/output-gameplay-forest-web.mp4"
   },
   {
     "id": 4,
     "type": "video/mp4",
-    "src": "videos/output-gameplay-temple-web.mp4"
+    "src": "videos/gameplay-ruin-web.mp4"
   },
   {
     "id": 5,
-    "type": "image/webp",
-    "src": "splash-art/Drillix Boss Splash Art.webp"
+    "type": "video/mp4",
+    "src": "videos/output-gameplay-temple-web.mp4"
   },
   {
     "id": 6,
     "type": "image/webp",
-    "src": "splash-art/Pipi Splash Art - Varnished.webp"
+    "src": "splash-art/Drillix Boss Splash Art.webp"
   },
   {
     "id": 7,
     "type": "image/webp",
-    "src": "splash-art/Pito Wand Splash - Varnished.webp"
+    "src": "splash-art/Pipi Splash Art - Varnished.webp"
   },
   {
     "id": 8,
+    "type": "image/webp",
+    "src": "splash-art/Pito Wand Splash - Varnished.webp"
+  },
+  {
+    "id": 9,
     "type": "image/webp",
     "src": "splash-art/Toto Splash - Varnished.webp"
   }

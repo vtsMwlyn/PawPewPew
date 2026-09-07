@@ -16,12 +16,12 @@
         "name": "unknown-greedwood"
       },
       {
-        "image": "biomes-page/mud-greedwood.webp",
-        "name": "mud-greedwood"
-      },
-      {
         "image": "biomes-page/unknown-greedwood.webp",
         "name": "Unknown"
+      },
+      {
+        "image": "biomes-page/mud-greedwood.webp",
+        "name": "mud-greedwood"
       },
       {
         "image": "biomes-page/unknown-greedwood.webp",
@@ -46,12 +46,12 @@
         "name": "Bird"
       },
       {
-        "image": "biomes-page/poison-ravenrocks.webp",
-        "name": "Bird"
-      },
-      {
         "image": "biomes-page/unknown-ravenrocks.webp",
         "name": "Unknown"
+      },
+      {
+        "image": "biomes-page/poison-ravenrocks.webp",
+        "name": "Hazard"
       },
       {
         "image": "biomes-page/unknown-ravenrocks.webp",

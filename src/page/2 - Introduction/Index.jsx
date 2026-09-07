@@ -26,7 +26,7 @@ export default function Introduction() {
     }
   };
 
-  const handleSlideChange = (swiper) => {
+  const handleSlideChange = () => {
     // Reset all videos
     videoRefs.current.forEach((video) => {
       if (!video) return;
@@ -35,26 +35,7 @@ export default function Introduction() {
     });
     setPlayingIndex(null);
     resumeAfterVideo();
-
-    const activeSwiper = swiper || swiperRef.current;
-    if (!activeSwiper) return;
-
-    const realIdx = activeSwiper.realIndex;
-    const currentItem = highlightData[realIdx];
-    const isVideo = currentItem && !currentItem.type?.startsWith("image");
-
-    if (isVideo) {
-      activeSwiper.autoplay?.stop();
-      const currentVideo = videoRefs.current[realIdx];
-      if (currentVideo) {
-        currentVideo.play().catch((err) => {
-          console.log("Autoplay prevented:", err);
-          activeSwiper.autoplay?.start();
-        });
-      }
-    } else {
-      activeSwiper.autoplay?.start();
-    }
+    swiperRef.current?.autoplay?.start();
   };
 
   const handlePrev = () => swiperRef.current?.slidePrev();
@@ -119,7 +100,7 @@ export default function Introduction() {
               slidesPerView={1}
               onSwiper={(swiper) => {
                 swiperRef.current = swiper;
-                handleSlideChange(swiper);
+                handleSlideChange();
               }}
               onSlideChange={handleSlideChange}
               loop={true}
@@ -142,15 +123,13 @@ export default function Introduction() {
                           onPause={() => {
                             setPlayingIndex(null);
                             resumeAfterVideo();
+                            swiperRef.current?.autoplay?.start();
                           }}
                           onEnded={(e) => {
                             e.target.currentTime = 0;
                             setPlayingIndex(null);
                             resumeAfterVideo();
-                            if (swiperRef.current) {
-                              swiperRef.current.slideNext();
-                              swiperRef.current.autoplay?.start();
-                            }
+                            swiperRef.current?.autoplay?.start();
                           }}
                         >
                           <source src={item.src} type={item.type || "video/mp4"} />

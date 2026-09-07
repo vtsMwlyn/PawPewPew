@@ -7,16 +7,36 @@
   {
     "id": 2,
     "type": "video/mp4",
-    "src": "videos/gameplay-forest.mp4"
+    "src": "videos/output-gameplay-forest-web.mp4"
   },
   {
     "id": 3,
     "type": "video/mp4",
-    "src": "videos/gameplay-ruins.mp4"
+    "src": "videos/gameplay-ruin-web.mp4"
   },
   {
     "id": 4,
     "type": "video/mp4",
-    "src": "videos/gameplay-temple.mp4"
+    "src": "videos/output-gameplay-temple-web.mp4"
+  },
+  {
+    "id": 5,
+    "type": "image/webp",
+    "src": "splash-art/Drillix Boss Splash Art.webp"
+  },
+  {
+    "id": 6,
+    "type": "image/webp",
+    "src": "splash-art/Pipi Splash Art - Varnished.webp"
+  },
+  {
+    "id": 7,
+    "type": "image/webp",
+    "src": "splash-art/Pito Wand Splash - Varnished.webp"
+  },
+  {
+    "id": 8,
+    "type": "image/webp",
+    "src": "splash-art/Toto Splash - Varnished.webp"
   }
 ]

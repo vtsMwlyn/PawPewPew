@@ -3,6 +3,7 @@ import FrameEdge from "../../components/FrameEdge";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useAudio } from "../../context/AudioContext";
 import Separator from "../../components/Separator";
+import highlightData from "../../json/highlight.json";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -94,46 +95,54 @@ export default function Introduction() {
               loop={true}
               className="cursor-grab active:cursor-grabbing overflow-hidden h-full w-full"
             >
-              {[
-                "videos/trailer.mp4",
-                "videos/output-gameplay-forest-web.mp4",
-                "videos/gameplay-ruin-web.mp4",
-                "videos/output-gameplay-temple-web.mp4",
-              ].map((src, index) => (
-                <SwiperSlide key={index} className="h-full w-full">
-                  <video
-                    ref={(el) => (videoRefs.current[index] = el)}
-                    className="w-full h-full shadow-[-10px_10px_25px_#000000] object-cover"
-                    onPlay={() => {
-                      setPlayingIndex(index);
-                      pauseForVideo();
-                    }}
-                    onPause={() => {
-                      setPlayingIndex(null);
-                      resumeAfterVideo();
-                    }}
-                    onEnded={(e) => {
-                      e.target.currentTime = 0;
-                      setPlayingIndex(null);
-                      resumeAfterVideo();
-                    }}
-                  >
-                    <source src={src} type="video/mp4" />
-                  </video>
+              {highlightData.map((item, index) => {
+                const isVideo = !item.type?.startsWith("image");
+                return (
+                  <SwiperSlide key={item.id || index} className="h-full w-full">
+                    {isVideo ? (
+                      <>
+                        <video
+                          ref={(el) => (videoRefs.current[index] = el)}
+                          className="w-full h-full shadow-[-10px_10px_25px_#000000] object-cover"
+                          onPlay={() => {
+                            setPlayingIndex(index);
+                            pauseForVideo();
+                          }}
+                          onPause={() => {
+                            setPlayingIndex(null);
+                            resumeAfterVideo();
+                          }}
+                          onEnded={(e) => {
+                            e.target.currentTime = 0;
+                            setPlayingIndex(null);
+                            resumeAfterVideo();
+                          }}
+                        >
+                          <source src={item.src} type={item.type || "video/mp4"} />
+                        </video>
 
-                  <button
-                    type="button"
-                    onClick={() => handlePlayButtonClick(index)}
-                    className={`w-full h-full flex justify-center items-center bg-[rgba(0,0,0,0.8)] absolute top-0 transition ease-in-out duration-200
-                      ${playingIndex === index ? "opacity-0" : "opacity-100"}`}
-                  >
-                    <img
-                      src="button/play-button.webp"
-                      className="w-10 lg:w-16"
-                    />
-                  </button>
-                </SwiperSlide>
-              ))}
+                        <button
+                          type="button"
+                          onClick={() => handlePlayButtonClick(index)}
+                          className={`w-full h-full flex justify-center items-center bg-[rgba(0,0,0,0.8)] absolute top-0 transition ease-in-out duration-200
+                            ${playingIndex === index ? "opacity-0" : "opacity-100"}`}
+                        >
+                          <img
+                            src="button/play-button.webp"
+                            className="w-10 lg:w-16"
+                          />
+                        </button>
+                      </>
+                    ) : (
+                      <img
+                        src={item.src}
+                        alt="Highlight"
+                        className="w-full h-full shadow-[-10px_10px_25px_#000000] object-cover"
+                      />
+                    )}
+                  </SwiperSlide>
+                );
+              })}
             </Swiper>
           </div>
           <button

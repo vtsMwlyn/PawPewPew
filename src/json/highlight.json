@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "type": "image/webp",
+    "src": "splash-art/Trio Pawguards.webp"
+  },
+  {
+    "id": 2,
+    "type": "video/mp4",
+    "src": "videos/trailer.mp4"
+  },
+  {
+    "id": 3,
+    "type": "video/mp4",
+    "src": "videos/cinematic_cut_scene.mp4"
+  },
+  {
+    "id": 4,
+    "type": "video/mp4",
+    "src": "videos/output-gameplay-forest-web.mp4"
+  },
+  {
+    "id": 5,
+    "type": "video/mp4",
+    "src": "videos/gameplay-ruin-web.mp4"
+  },
+  {
+    "id": 6,
+    "type": "video/mp4",
+    "src": "videos/output-gameplay-temple-web.mp4"
+  },
+  {
+    "id": 7,
+    "type": "image/webp",
+    "src": "splash-art/Drillix Boss Splash Art.webp"
+  },
+  {
+    "id": 8,
+    "type": "image/webp",
+    "src": "splash-art/Pipi Splash Art - Varnished.webp"
+  },
+  {
+    "id": 9,
+    "type": "image/webp",
+    "src": "splash-art/Pito Wand Splash - Varnished.webp"
+  },
+  {
+    "id": 10,
+    "type": "image/webp",
+    "src": "splash-art/Toto Splash - Varnished.webp"
+  }
+]

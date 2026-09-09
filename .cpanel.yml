@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/u9660798/public_html/test.pawpewpew.com
+    - /bin/cp -R dist/* $DEPLOYPATH

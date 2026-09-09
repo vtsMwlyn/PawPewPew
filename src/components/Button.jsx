@@ -1,13 +1,58 @@
-export default function Button({ selected, children }) {
-  return (
-    <button type="button"
-      className={`
-        rounded-full py-1 px-4 text-white uppercase
-        border-2 ${selected ? 'border-b-8 border-l-4' : 'border-b-4 border-l-3'} border-black
-        ${selected ? 'bg-[linear-gradient(to_bottom,#d31164_40%,#4a1b4e)]' : 'bg-[linear-gradient(to_bottom,#49B888_40%,#428166)]'}
-      `}
-    >
-      <p className="text-shadow-[-0.5px_2px_0px_black] text-2xl">{children}</p>
+export default function Link({
+  selected = false,
+  image,
+  buttonType = "background",
+  children,
+  className = "",
+  frameClassName = "",
+  ...rest
+}) {
+  if (buttonType === "background") {
+    return (
+      <a
+        className={`
+          flex justify-center items-center w-50 min-h-15 text-white uppercase relative group
+          ${className}
+        `}
+        {...rest}
+      >
+        <div className="w-full flex items-center justify-center gap-2 mb-2">
+          {image && (
+            <img
+              src={image}
+              alt="Logo"
+              className={`h-8 2xl:h-20 drop-shadow-[-1px_3px_0px_#0F1B24]`}
+            />
+          )}
+          <div className="text-2xl 2xl:text-2xl text-left text-shadow-[-2px_3px_0px_#0F1B24] leading-tight">
+            {children}
+          </div>
+        </div>
+        <img
+          src="button/button-navbar.webp"
+          className={`${selected ? "opacity-100" : "opacity-0"} -z-10 group-hover:opacity-100 absolute w-full h-full hidden xl:block ${frameClassName}`}
+        />
+      </a>
+    );
+  }
+
+  if (buttonType === "no_background") {
+    return (
+      <button
+        className={`
+          flex justify-center items-center text-white uppercase relative
+          ${className}
+        `}
+        {...rest}
+      >
+        <div className="w-full flex items-center justify-center gap-2">
+          <img
+            src={image}
+            alt="Logo"
+            className="h-15 2xl:h-20 hover:scale-110 transition-transform duration-200 active:scale-90"
+          />
+        </div>
       </button>
-  )
+    );
+  }
 }

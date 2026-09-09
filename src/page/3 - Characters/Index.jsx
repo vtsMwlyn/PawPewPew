@@ -1,0 +1,60 @@
+import character from "../../json/character.json";
+import { useState } from "react";
+import CharacterButton from "./CharacterButton";
+import CharacterCard from "./CharacterCard";
+
+export default function Characters() {
+  const [selectedCharacter, setSelectedCharacter] = useState(character[0]);
+
+  return (
+    <section className="relative flex " id="heroes-page">
+      {/* Background Image */}
+      <img
+        src="/character-page/bg-character.webp"
+        alt="Paw Pew Pew - Character Overview"
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+      />
+
+      {/* Section Content */}
+      <div className="w-full flex flex-col justify-center items-center gap-10 2xl:gap-30 my-30">
+        {/* Section Title */}
+        <h1 className="flex justify-center text-center text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]">
+          choose your survivor
+        </h1>
+
+        <div className="w-full flex flex-col gap-10 lg:px-8 2xl:p-0 lg:gap-0 lg:flex-row items-center justify-center">
+          {/* Character Selector */}
+          <CharacterButton
+            characters={character}
+            selectedCharacter={selectedCharacter}
+            setSelectedCharacter={setSelectedCharacter}
+          />
+          <div className="flex flex-col justify-center items-center">
+            <h1 className="text-xl 2xl:text-2xl w-2/3 text-center text-white outfit-bold tracking-wider text-shadow-[-2px_3px_0px_#0F1B24]">
+              "{selectedCharacter.quotes}"
+            </h1>
+            <img
+              src={selectedCharacter.image}
+              alt={`Paw Pew Pew - ${selectedCharacter.name}`}
+              className="mb-10 w-100 2xl:w-120"
+            />
+            <div className="flex flex-col gap-5 justify-center items-center">
+              <img
+                src={selectedCharacter.text}
+                alt={`Paw Pew Pew - ${selectedCharacter.name}`}
+                className="w-60 2xl:w-1/2"
+              />
+              <img
+                src={selectedCharacter.subname}
+                alt={`Paw Pew Pew - ${selectedCharacter.subname}`}
+                className="w-70 2xl:w-2/3"
+              />
+            </div>
+          </div>
+          {/* Character Info */}
+          <CharacterCard selectedCharacter={selectedCharacter} />
+        </div>
+      </div>
+    </section>
+  );
+}

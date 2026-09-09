@@ -1,17 +1,63 @@
+import { useState, useEffect } from "react";
 import Link from "../../components/Link";
 import Button from "../../components/Button";
 import { useToast } from "../../context/ToastContext";
 
 export default function Hero() {
   const { showToast } = useToast();
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    let timer;
+
+    const resetTimer = () => {
+      setIsVisible(true);
+      clearTimeout(timer);
+      // Sembunyikan elemen setelah 3 detik tidak ada aktivitas
+      timer = setTimeout(() => {
+        setIsVisible(false);
+      }, 3000);
+    };
+
+    // Jalankan timer saat pertama kali dimuat
+    resetTimer();
+
+    // Event listener untuk memantau interaksi pengguna
+    const events = ["mousemove", "mousedown", "keydown", "touchstart", "scroll"];
+
+    events.forEach((event) => {
+      window.addEventListener(event, resetTimer);
+    });
+
+    return () => {
+      clearTimeout(timer);
+      events.forEach((event) => {
+        window.removeEventListener(event, resetTimer);
+      });
+    };
+  }, []);
+
   return (
     <div className="relative w-full" id="hero-page">
-      <img
+      {/* <img
         src="/splash-art/bg-hero.webp"
         alt="pawpewpew hero background"
         className="absolute inset-0 -z-5 h-screen w-full object-cover 2xl:object-fit"
-      />
-      <div className="w-full h-screen px-10 flex flex-col justify-center items-center gap-15">
+      /> */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className={`absolute inset-0 -z-5 h-screen w-full object-cover 2xl:object-fit transition-opacity duration-700 ease-in-out ${isVisible ?'blur-sm':''}`}
+      >
+        <source src="/videos/cinematic_cut_scene.mp4" type="video/mp4" />
+      </video>
+      <div
+        className={`w-full h-screen px-10 flex flex-col justify-center items-center gap-15 transition-opacity duration-700 ease-in-out ${
+          isVisible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+      >
         <img
           src="/logo-pawpewpew.webp"
           alt="pawpewpew logo"

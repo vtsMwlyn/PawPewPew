@@ -11,13 +11,10 @@ export default function ScreenInfo() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const device =
-    width < 764 ? "Mobile" :
-    width < 1536 ? "Tablet" :
-    "Desktop";
+  const device = width < 764 ? "Mobile" : width < 1536 ? "Tablet" : "Desktop";
 
   return (
-    <div className="px-4 py-2 bg-black text-white">
+    <div className="px-4 py-2 bg-black text-white z-1000 fixed bottom-0 left-0">
       {width}px - <span className="text-amber-400">{device}</span>
     </div>
   );

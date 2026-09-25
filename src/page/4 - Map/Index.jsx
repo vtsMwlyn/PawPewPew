@@ -50,9 +50,9 @@ export default function Map() {
           </h2>
         </div>
 
-        <div className="w-11/12 md:w-3/4 h-full flex flex-col items-center justify-center gap-5 xl:gap-10 lg:flex-row mb-40 xl:mb-0">
+        <div className="w-11/12 md:w-3/4 h-full flex flex-col justify-center gap-5 xl:gap-10 lg:flex-row ">
           <div
-            className="w-full lg:w-1/2 xl:w-1/3 flex flex-col justify-start items-center lg:items-start xl:gap-6 h-full"
+            className="w-full lg:w-1/2 xl:w-1/3 flex flex-col justify-start items-center lg:items-start gap-3 xl:gap-6"
             ref={mapNameRef}
           >
             <h2 className="text-xl 2xl:text-3xl uppercase tracking-wider text-white text-shadow-[-2px_3px_0px_#0F1B24]">
@@ -63,13 +63,13 @@ export default function Map() {
             </p>
           </div>
 
-          <div className="w-full lg:w-1/2 xl:w-2/3 flex flex-col items-center lg:items-end xl:gap-6 h-full justify-start">
+          <div className="w-full lg:w-1/2 xl:w-2/3 flex flex-col items-center lg:items-end gap-3 xl:gap-6 h-full justify-start">
             <h2 className="text-xl 2xl:text-3xl uppercase tracking-wider text-white text-shadow-[-2px_3px_0px_#0F1B24]">
               Enemies & Hazard Encountered
             </h2>
             <div
               key={selectedMap.name}
-              className="w-5/6 xl:w-1/2 grid grid-cols-3 gap-4 mt-6"
+              className="w-5/6 lg:w-1/2 grid grid-cols-3 gap-4"
             >
               {selectedMap.enemies.map((enemy, index) => (
                 <div

@@ -40,7 +40,7 @@ export default function Map() {
         className="w-full object-cover absolute inset-0 -z-5 h-full"
       />
 
-      <div className="w-full flex flex-col items-center gap-20 justify-center h-full py-10 xl:py-20">
+      <div className="w-full flex flex-col items-center gap-5 xl:gap-20 justify-center h-full py-10 xl:py-20">
         <div className="flex flex-col w-full text-4xl lg:text-5xl 2xl:text-6xl text-white">
           <h1 className="flex justify-center text-4xl lg:text-5xl text-center 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]">
             BIOMES
@@ -50,9 +50,9 @@ export default function Map() {
           </h2>
         </div>
 
-        <div className="w-11/12 md:w-3/4 h-full flex flex-col items-center justify-center gap-10 lg:flex-row mb-40 xl:mb-0">
+        <div className="w-11/12 md:w-3/4 h-full flex flex-col items-center justify-center gap-5 xl:gap-10 lg:flex-row mb-40 xl:mb-0">
           <div
-            className="w-full lg:w-1/2 xl:w-1/3 flex flex-col justify-start items-center lg:items-start gap-6 h-full"
+            className="w-full lg:w-1/2 xl:w-1/3 flex flex-col justify-start items-center lg:items-start xl:gap-6 h-full"
             ref={mapNameRef}
           >
             <h2 className="text-xl 2xl:text-3xl uppercase tracking-wider text-white text-shadow-[-2px_3px_0px_#0F1B24]">
@@ -63,13 +63,13 @@ export default function Map() {
             </p>
           </div>
 
-          <div className="w-full lg:w-1/2 xl:w-2/3 flex flex-col items-center lg:items-end gap-6 h-full justify-start">
+          <div className="w-full lg:w-1/2 xl:w-2/3 flex flex-col items-center lg:items-end xl:gap-6 h-full justify-start">
             <h2 className="text-xl 2xl:text-3xl uppercase tracking-wider text-white text-shadow-[-2px_3px_0px_#0F1B24]">
               Enemies & Hazard Encountered
             </h2>
             <div
               key={selectedMap.name}
-              className="w-3/4 xl:w-1/2 grid grid-cols-3 gap-4 mt-6"
+              className="w-5/6 xl:w-1/2 grid grid-cols-3 gap-4 mt-6"
             >
               {selectedMap.enemies.map((enemy, index) => (
                 <div

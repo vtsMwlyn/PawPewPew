@@ -1,3 +1,4 @@
+import { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
@@ -5,14 +6,41 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 export default function MapCard({ MapJson, selectedMap, setSelectedMap }) {
+  const swiperRef = useRef(null);
+
+  // Sync swiper position if selectedMap changes from click or external action
+  useEffect(() => {
+    if (swiperRef.current && !swiperRef.current.destroyed) {
+      const targetIndex = MapJson.findIndex((m) => m.name === selectedMap?.name);
+      if (targetIndex !== -1 && swiperRef.current.realIndex !== targetIndex) {
+        swiperRef.current.slideTo(targetIndex);
+      }
+    }
+  }, [selectedMap, MapJson]);
+
+  const handleSlideChange = (swiper) => {
+    // Only automatically select the card when on mobile (slidesPerView is 1)
+    const isMobile = window.innerWidth < 640 || swiper.params?.slidesPerView === 1;
+    if (isMobile) {
+      const activeMap = MapJson[swiper.realIndex];
+      if (activeMap && activeMap.name !== selectedMap?.name) {
+        setSelectedMap(activeMap);
+      }
+    }
+  };
+
   return (
-    <div className="w-full max-w-5xl px-5 absolute bottom-8 lg:bottom-12 z-10 flex justify-center">
+    <div className="w-full py-5 absolute bottom-0 overflow-hidden z-5 flex justify-center">
       <Swiper
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
+        onSlideChange={handleSlideChange}
+        initialSlide={MapJson.findIndex((m) => m.name === selectedMap?.name) || 0}
         modules={[Navigation]}
         spaceBetween={20}
-        slidesPerView={1.5}
+        slidesPerView={1}
         centeredSlides={true}
-        navigation={true}
         breakpoints={{
           640: {
             slidesPerView: 2,
@@ -35,8 +63,8 @@ export default function MapCard({ MapJson, selectedMap, setSelectedMap }) {
               <div
                 className={`flex rounded-xl relative cursor-pointer items-center justify-center
                   ${isSelected ? "scale-110 origin-center bg-ungupink" : "bg-blueblack hover:bg-ungupink"}
-                  group w-full max-w-65 h-21 lg:h-30 2xl:h-35 
-                  transition-all ease-out duration-300 hover:scale-105 p-1.5 drop-shadow-[-1px_3px_0px_#0F1B24] lg:drop-shadow-[-2px_6px_0px_#0F1B24]`}
+                  group w-full min-w-30 max-w-65 h-21 lg:h-30 2xl:h-35 
+                  transition-all ease-out duration-300 hover:scale-105 p-1 xl:p-1.5 drop-shadow-[-1px_3px_0px_#0F1B24] lg:drop-shadow-[-2px_6px_0px_#0F1B24]`}
                 onClick={() => setSelectedMap(location)}
               >
                 <img
@@ -47,13 +75,16 @@ export default function MapCard({ MapJson, selectedMap, setSelectedMap }) {
                 <button
                   type="button"
                   className="flex w-full h-full justify-center items-end absolute left-0 bottom-1 z-5 cursor-pointer"
-                  onClick={() => setSelectedMap(location)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedMap(location);
+                  }}
                 >
                   <div className="px-5 lg:px-10 py-1 lg:py-2">
                     <img
                       src={location.button}
                       alt={`Paw Pew Pew - ${location.name}`}
-                      className="w-20 lg:w-25 2xl:w-35"
+                      className="w-25 2xl:w-35"
                     />
                   </div>
                 </button>

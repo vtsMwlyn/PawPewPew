@@ -1,12 +1,12 @@
 import "./App.css";
 
+import { Routes, Route } from 'react-router-dom'
 import { AudioProvider } from "./context/AudioContext";
 import Navbar from "./components/Navbar";
 import Hero from "./page/1 - Hero/Index";
 import Footer from "./components/Footer";
 import WorldMeadow from "./page/2 - Introduction/Index";
-import CharacterPage from "./page/3 - Characters/Index";
-import Map from "./page/4 - Map/Index";
+import SecondPage from "./SecondPage";
 import CTAPage from "./page/6 - Call to Action/Index";
 import SeeItInAction from "./page/5 - Gallery/Index";
 // import ScreenInfo from "./components/ScreenInfo"
@@ -23,23 +23,23 @@ export default function App() {
           {/* <ScreenInfo /> */}
           <Navbar />
 
+          <Routes>
+            <Route path="/" element={<>
+              <Hero />
+              <Separator />
+
+              <WorldMeadow />
+              <Separator />
+
+              <SeeItInAction />
+              <Separator />
+
+              <CTAPage />
+            </>} />
+            <Route path="/second" element={<SecondPage/>} />
+          </Routes>
           {/* Content */}
-          <Hero />
-          <Separator />
 
-          <WorldMeadow />
-          <Separator />
-
-          <CharacterPage />
-          <Separator />
-
-          <Map />
-          <Separator />
-
-          <SeeItInAction />
-          <Separator />
-
-          <CTAPage />
 
           {/* Footer */}
           <MuteButton />

@@ -51,7 +51,7 @@ export default function Hero() {
         playsInline
         className={`absolute inset-0 -z-5 h-screen w-full object-cover 2xl:object-fit transition-opacity duration-700 ease-in-out ${isVisible ?'blur-sm':''}`}
       >
-        <source src="/videos/cinematic_cut_scene.mp4" type="video/mp4" />
+        <source src="/videos/trailer.mp4" type="video/mp4" />
       </video>
       <div
         className={`w-full h-screen px-10 flex flex-col justify-center items-center gap-15 transition-opacity duration-700 ease-in-out ${

@@ -25,7 +25,7 @@ export default function CallToAction() {
             moment the battle begins.
           </p>
         </div>
-        <div className="flex gap-5">
+        <div className="grid grid-cols-2 md:flex gap-5">
           <Link
             image={`button/button-wishlish-steam.webp`}
             link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/"

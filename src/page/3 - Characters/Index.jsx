@@ -10,13 +10,13 @@ export default function Characters() {
     <section className="relative flex " id="heroes-page">
       {/* Background Image */}
       <img
-        src="/character-page/bg-character.webp"
+        src={`/${selectedCharacter.background}`}
         alt="Paw Pew Pew - Character Overview"
         className="absolute top-0 left-0 w-full h-full object-cover -z-10"
       />
 
       {/* Section Content */}
-      <div className="w-full flex flex-col justify-center items-center gap-10 2xl:gap-30 my-30">
+      <div className="w-full flex flex-col justify-center items-center gap-10 2xl:gap-20 my-25">
         {/* Section Title */}
         <h1 className="flex justify-center text-center text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]">
           choose your survivor
@@ -36,7 +36,7 @@ export default function Characters() {
             <img
               src={selectedCharacter.image}
               alt={`Paw Pew Pew - ${selectedCharacter.name}`}
-              className="mb-10 w-100 2xl:w-120"
+              className="mb-10 w-100 2xl:w-140"
             />
             <div className="flex flex-col gap-5 justify-center items-center">
               <img

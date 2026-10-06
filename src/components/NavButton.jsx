@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function NavButton({
   selected = false,
   image,
@@ -7,7 +8,7 @@ export default function NavButton({
   ...rest
 }) {
   return (
-    <a
+    <Link
       className={`
           flex justify-center items-center w-50 min-h-15 text-white uppercase relative group
           ${className}
@@ -30,6 +31,6 @@ export default function NavButton({
         src="button/button-navbar.webp"
         className={`${selected ? "opacity-100" : "opacity-0"} -z-10 group-hover:opacity-100 absolute w-full h-full hidden xl:block ${frameClassName}`}
       />
-    </a>
+    </Link>
   );
 }

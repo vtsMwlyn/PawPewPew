@@ -30,7 +30,7 @@ export default function MapCard({ MapJson, selectedMap, setSelectedMap }) {
   };
 
   return (
-    <div className="w-full py-5 absolute bottom-0 overflow-hidden z-5 flex justify-center">
+    <div className="w-full py-10 absolute bottom-0 overflow-hidden z-5 flex justify-center">
       <Swiper
         onSwiper={(swiper) => {
           swiperRef.current = swiper;

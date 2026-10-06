@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./page/1 - Hero/Index";
 import Footer from "./components/Footer";
 import WorldMeadow from "./page/2 - Introduction/Index";
-import SecondPage from "./SecondPage";
+import Tailguards from "./Tailguards";
 import CTAPage from "./page/6 - Call to Action/Index";
 import SeeItInAction from "./page/5 - Gallery/Index";
 // import ScreenInfo from "./components/ScreenInfo"
@@ -36,7 +36,7 @@ export default function App() {
 
               <CTAPage />
             </>} />
-            <Route path="/second" element={<SecondPage/>} />
+            <Route path="/tailguard" element={<Tailguards/>} />
           </Routes>
           {/* Content */}
 

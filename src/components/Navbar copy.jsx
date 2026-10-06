@@ -1,6 +1,7 @@
 import Button from "./Button";
 import Link from "./Link";
 import { useState, useEffect } from "react";
+import DropdownButton from "./DropdownButton";
 import NavButton from "./NavButton";
 import { useNavigate, useLocation } from 'react-router-dom'
 
@@ -98,12 +99,50 @@ export default function Navbar() {
           >
             Home
           </NavButton>
+
+          <div
+            className="relative cursor-pointer flex justify-center"
+            onMouseEnter={() => setShowCharDropdown(true)}
+            onMouseLeave={() => setShowCharDropdown(false)}
+          >
+            <NavButton
+              frameClassName="h-5"
+              selected={activeSection === "heroes-page"}
+            >
+              {activeSection === "heroes-page"
+                ? "Tailguards"
+                : activeSection === "biomes-page"
+                  ? "Robo-Beasts"
+                  : "Characters"}
+            </NavButton>
+
+            {/* Dropdown Menu Desktop */}
+            {showCharDropdown && (
+              <div className="absolute top-15 mt-1 rounded-xl flex bg-black/55 flex-col items-center py-5 gap-8 p-4">
+                <DropdownButton
+                  onClick={() => scrollToSection("heroes-page")}
+                  className={`overflow-hidden animate-pop-up opacity-0 h-10`}
+                  style={{ animationDelay: `${1 * 150}ms` }}
+                >
+                  Tailguards
+                </DropdownButton>
+                <DropdownButton
+                  onClick={() => scrollToSection("biomes-page")}
+                  className={`overflow-hidden animate-pop-up opacity-0 h-10`}
+                  style={{ animationDelay: `${2 * 150}ms` }}
+                >
+                  Robo-Beasts
+                </DropdownButton>
+              </div>
+            )}
+          </div>
+
           <NavButton
             frameClassName="h-5"
-            selected={activeSection === "heroes-page"}
-            to="/tailguard"
+            selected={activeSection === "biomes-page"}
+            onClick={() => scrollToSection("biomes-page")}
           >
-            Alcove
+            Biomes
           </NavButton>
 
           <NavButton
@@ -116,8 +155,8 @@ export default function Navbar() {
 
           <div
             className={`transition-all duration-500 ease-out ${passed100vh
-              ? "w-60 opacity-100 translate-x-0"
-              : "w-0 opacity-0 -translate-x-8"
+                ? "w-60 opacity-100 translate-x-0"
+                : "w-0 opacity-0 -translate-x-8"
               }`}
           >
             <Link
@@ -170,13 +209,45 @@ export default function Navbar() {
       <div
         className={`w-full flex-col items-stretch mt-8 gap-4 ${showMobileList ? "flex" : "hidden"}`}
       >
+        <div className="w-full flex flex-col gap-2">
+          <NavButton
+            className="w-full! flex justify-between items-center"
+            selected={activeSection === "heroes-page"}
+            onClick={() => setShowCharDropdown(!showCharDropdown)}
+          >
+            {activeSection === "heroes-page"
+              ? "Tailguards"
+              : activeSection === "biomes-page"
+                ? "Robo-Beasts"
+                : "Characters"}
+          </NavButton>
+
+          {/* Dropdown Menu Mobile */}
+          {showCharDropdown && (
+            <div className="flex justify-center gap-2">
+              <DropdownButton
+                onClick={() => scrollToSection("heroes-page")}
+                className={`overflow-hidden animate-pop-up opacity-0`}
+                style={{ animationDelay: `${1 * 150}ms` }}
+              >
+                Tailguards
+              </DropdownButton>
+              <DropdownButton
+                onClick={() => scrollToSection("biomes-page")}
+                className={`overflow-hidden animate-pop-up opacity-0`}
+                style={{ animationDelay: `${2 * 150}ms` }}
+              >
+                Robo-Beasts
+              </DropdownButton>
+            </div>
+          )}
+        </div>
         <NavButton
-          className="w-full! flex justify-between items-center"
-          selected={activeSection === "heroes-page"}
-          onClick={() => setShowCharDropdown(!showCharDropdown)}
-          to="/tailguard"
+          className="w-full!"
+          selected={activeSection === "biomes-page"}
+          onClick={() => scrollToSection("biomes-page")}
         >
-          Alcove
+          Biomes
         </NavButton>
         <NavButton
           className="w-full!"

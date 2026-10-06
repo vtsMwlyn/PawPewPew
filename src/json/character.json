@@ -24,6 +24,7 @@
     ],
     "image": "character-page/splashart-pipi.webp",
     "icon": "character-page/icon-pipi.webp",
+    "background" : "splash-art/bg-pipi.webp",
     "weaponIcon": "character-page/weapon-icon-pipi.webp"
   },
   {
@@ -51,6 +52,7 @@
     ],
     "image": "character-page/splashart-toto.webp",
     "icon": "character-page/icon-toto.webp",
+    "background" : "splash-art/bg-toto.webp",
     "weaponIcon": "character-page/weapon-icon-toto.webp"
   },
   {
@@ -78,6 +80,7 @@
     ],
     "image": "character-page/splashart-pito.webp",
     "icon": "character-page/icon-pito.webp",
+    "background" : "splash-art/bg-pito.webp",
     "weaponIcon": "character-page/weapon-icon-pito.webp"
   },
   {

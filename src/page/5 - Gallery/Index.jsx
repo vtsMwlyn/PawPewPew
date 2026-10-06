@@ -113,7 +113,7 @@ export default function Gallery({
   return (
     <div
       className="w-full lg:h-screen flex flex-col items-center justify-center relative overflow-hidden py-20"
-      id="gallery-page"
+      // id="gallery-page"
     >
       <div className="flex flex-col w-full">
         <h1 className="flex justify-center text-4xl lg:text-5xl text-center 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]">

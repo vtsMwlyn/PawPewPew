@@ -13,6 +13,7 @@ import SeeItInAction from "./page/5 - Gallery/Index";
 import MuteButton from "./components/MuteButton";
 import Separator from "./components/Separator";
 import { ToastProvider } from "./context/ToastContext";
+import CardButton from "./page/4 - OtherPage/index";
 
 export default function App() {
   return (
@@ -29,6 +30,9 @@ export default function App() {
               <Separator />
 
               <WorldMeadow />
+              <Separator />
+
+              <CardButton />
               <Separator />
 
               <SeeItInAction />

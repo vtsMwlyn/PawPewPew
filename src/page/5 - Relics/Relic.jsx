@@ -1,15 +1,19 @@
 import React from 'react'
 
-function Relic({ name, speciality, image }) {
+function Relic({ key, name, speciality, image }) {
   return (
-    <div className='flex gap-5 w-25'>
+    <div
+      className='flex flex-col justify-center items-center gap-5'
+      key={key}>
       <img
         src={image}
         alt={`${image} image`}
-        className='w-20 h-20'
+        className='w-25 h-25'
       />
-      <p className='Uppercase text-4xl'>{name}</p>
-      <p className="uppercase text-xl poppins-regular">{speciality}</p>
+      <div className='flex flex-col items-center gap-2'>
+        <p className='uppercase text-white text-xl 2xl:text-2xl outfit-bold text-center'>{name}</p>
+        <p className="uppercase text-white text-sm 2xl:text-base poppins-regular">{speciality}</p>
+      </div>
     </div>
   )
 }

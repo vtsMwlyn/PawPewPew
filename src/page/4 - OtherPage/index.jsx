@@ -1,6 +1,6 @@
 import React from 'react';
 import buttons from '../../json/button.json';
-import CardButton from '../../components/CardButton';
+import CardButton from './CardButton';
 
 export default function index() {
   return (

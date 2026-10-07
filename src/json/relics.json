@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Beaver's Denture File",
+    "speciality": "offensive",
+    "image": "relics/Beaver's Denture File.webp"
+  },
+  {
+    "id": 2,
+    "name": "Fox's Foaming  Mouthwash",
+    "speciality": "offensive",
+    "image": "relics/Fox's Foaming  Mouthwash.webp"
+  },
+  {
+    "id": 3,
+    "name": "RATTLESNAKE’S METRONOME",
+    "speciality": "DPS",
+    "image": "relics/Rattlesnake's Metronome.webp"
+  },
+  {
+    "id": 4,
+    "name": "POSSUM’S SMELLING SALTS",
+    "speciality": "sustain",
+    "image": "relics/Possum's Smelling Salts.webp"
+  },
+  {
+    "id": 5,
+    "name": "CRUSTACEAN ALLOY",
+    "speciality": "DPS",
+    "image": "relics/Crustacean Alloy.webp"
+  },
+  {
+    "id": 6,
+    "name": "LEECH’S TEABAG",
+    "speciality": "sustain",
+    "image": "relics/Leech's Teabag.webp"
+  },
+  {
+    "id": 7,
+    "name": "JELLYFISH SLIME",
+    "speciality": "crowd control",
+    "image": "relics/Jellyfish Slime.webp"
+  },
+  {
+    "id": 8,
+    "name": "FLEA’S COMPRESSED THORAX",
+    "speciality": "mobility",
+    "image": "relics/Flea's Compressed Thorax.webp"
+  },
+  {
+    "id": 9,
+    "name": "RAVEN’S DRIED  GULLET",
+    "speciality": "special effects",
+    "image": "relics/Raven's Dried Gullet.webp"
+  },
+  {
+    "id": 10,
+    "name": "WOODPECKER’S  BEAK SHAVINGS",
+    "speciality": "dps",
+    "image": "relics/Woodpecker's Beak Shavings.webp"
+  },
+  {
+    "id": 11,
+    "name": "Grate White Shark",
+    "speciality": "dps",
+    "image": "relics/Grate White Shark.webp"
+  },
+  {
+    "id": 12,
+    "name": "Marlin Fin Sailcloth",
+    "speciality": "mobility",
+    "image": "relics/Marlin Fin Sailcloth.webp"
+  },
+  {
+    "id": 13,
+    "name": "Moth's Shattered Bulb",
+    "speciality": "dps",
+    "image": "relics/Moth's Shattered Bulb.webp"
+  },
+  {
+    "id": 14,
+    "name": "porcupine's bullseye",
+    "speciality": "offensive",
+    "image": "relics/porcupine's bullseye.webp"
+  },
+  {
+    "id": 15,
+    "name": "FROG TONGUE GRIP",
+    "speciality": "offensive",
+    "image": "relics/Frog Tongue Grip Tape.webp"
+  },
+  {
+    "id": 16,
+    "name": "HUMMINGBIRD’S ENERGIZING POUCH",
+    "speciality": "mobility, dps",
+    "image": "relics/Hummingbird's Energizing Pouch.webp"
+  },
+  {
+    "id": 17,
+    "name": "WASP’S EPIPEN",
+    "speciality": "special effects, dps",
+    "image": "relics/Wasp's EpiPen.webp"
+  },
+  {
+    "id": 18,
+    "name": "gummy worm hook",
+    "speciality": "mobility",
+    "image": "relics/gummy bait.webp"
+  },
+  {
+    "id": 19,
+    "name": "Pufferfish Morning star",
+    "speciality": "mobility",
+    "image": "relics/Pufferfish Morning Star.webp"
+  },
+  {
+    "id": 20,
+    "name": "SKUNK’S BATHBOMB",
+    "speciality": "special effects, offensive",
+    "image": "relics/Skunk's Bathbomb.webp"
+  },
+  {
+    "id": 21,
+    "name": "SPIDER WEB’S GACHAPON",
+    "speciality": "crowd control",
+    "image": "relics/Spider web's Gachapon.webp"
+  },
+  {
+    "id": 22,
+    "name": "RHINO’S TROPHY",
+    "speciality": "crowd control",
+    "image": "relics/Rhino's trophy.webp"
+  },
+  {
+    "id": 23,
+    "name": "ARMADILLO’S SHELL",
+    "speciality": "dps",
+    "image": "relics/Armadillo's Shell.webp"
+  },
+  {
+    "id": 24,
+    "name": "Broken Hoof of The Northstar",
+    "speciality": "mobility",
+    "image": "relics/Broken Hoof of The Northstar.webp"
+  },
+  {
+    "id": 25,
+    "name": "The Ninth Life",
+    "speciality": "sustain",
+    "image": "relics/The Ninth Life.webp"
+  },
+  {
+    "id": 26,
+    "name": "chipmunks pouch",
+    "speciality": "dps",
+    "image": "relics/chipmunks pouch.webp"
+  },
+  {
+    "id": 27,
+    "name": "Gecko's Toe Pad",
+    "speciality": "offensive",
+    "image": "relics/Gecko's Toe Pad.webp"
+  },
+  {
+    "id": 28,
+    "name": "Blood Bag",
+    "speciality": "sustain",
+    "image": "relics/Blood Bag.webp"
+  },
+  {
+    "id": 29,
+    "name": "Honeycomb",
+    "speciality": "sustain",
+    "image": "relics/Honeycomb.webp"
+  },
+  {
+    "id": 30,
+    "name": "Coyote's Extracted Canine",
+    "speciality": "offensive",
+    "image": "relics/Coyote's Extracted Canine.webp"
+  }
+]

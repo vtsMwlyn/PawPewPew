@@ -13,7 +13,7 @@ import SeeItInAction from "./page/5 - Gallery/Index";
 import MuteButton from "./components/MuteButton";
 import Separator from "./components/Separator";
 import { ToastProvider } from "./context/ToastContext";
-import CardButton from "./page/4 - OtherPage/index";
+import CardButton from "./page/4 - OtherPage/Index";
 import ScrollToHashElement from './components/ScrollToHashElement';
 
 export default function App() {

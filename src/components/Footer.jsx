@@ -29,10 +29,10 @@ export default function Footer() {
             </h2>
             <nav className="flex flex-col gap-3 poppins-regular">
               <p className="hover:text-shadow-[-2px_3px_0px_#0F1B24] cursor-pointer">
-                Character
+                Home
               </p>
               <p className="hover:text-shadow-[-2px_3px_0px_#0F1B24] cursor-pointer">
-                Features
+                Alcove
               </p>
               <p className="hover:text-shadow-[-2px_3px_0px_#0F1B24] cursor-pointer">
                 Gallery

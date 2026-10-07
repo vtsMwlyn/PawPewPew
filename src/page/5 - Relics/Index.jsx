@@ -5,7 +5,7 @@ import Relic from './Relic'
 function Index() {
   return (
     <div
-      className="flex flex-col items-center relative gap-10 py-10"
+      className="flex flex-col items-center relative gap-10 py-25"
       id='relics-page'
     >
 

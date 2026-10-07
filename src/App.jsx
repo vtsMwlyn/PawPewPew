@@ -14,6 +14,7 @@ import MuteButton from "./components/MuteButton";
 import Separator from "./components/Separator";
 import { ToastProvider } from "./context/ToastContext";
 import CardButton from "./page/4 - OtherPage/index";
+import ScrollToHashElement from './components/ScrollToHashElement';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
       <ToastProvider>
         <main className="w-full flex flex-col items-stretch">
           {/* Navbar */}
+          <ScrollToHashElement />
           {/* <ScreenInfo /> */}
           <Navbar />
 
@@ -40,7 +42,7 @@ export default function App() {
 
               <CTAPage />
             </>} />
-            <Route path="/tailguard" element={<Tailguards/>} />
+            <Route path="/alcove" element={<Tailguards/>} />
           </Routes>
           {/* Content */}
 

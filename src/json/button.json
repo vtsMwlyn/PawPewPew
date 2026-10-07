@@ -3,21 +3,24 @@
     "id": 1,
     "title": "meet tailguards",
     "desk": "Meet the Tailguards: Pipi, Pito, and Toto! Ready to protect their family from Robobeasts",
-    "buttonImg": "button/meet-tailguards.webp",
-    "image": "splash-art/bg-pito.webp"
+    "section": "heroes-page",
+    "image": "splash-art/bg-pito.webp",
+    "buttonText": "Meet The Tailguards"
   },
   {
     "id": 2,
     "title": "relics",
     "desk": "Collect powerful artifacts, boost your stats, and unlock game-changing combinations.",
-    "buttonImg": "button/view-relics.webp",
-    "image": "splash-art/bg-pipi.webp"
+    "section": "relics-page",
+    "image": "splash-art/bg-pipi.webp",
+    "buttonText": "View Relic Index"
   },
   {
     "id": 3,
     "title": "explore biomes",
     "desk": "Journey through diverse biomes, conquer regional challenges, and uncover hidden secrets to claim your rewards.",
-    "buttonImg": "button/discover-biomes.webp",
-    "image": "splash-art/bg-toto.webp"
+    "section": "biomes-page",
+    "image": "splash-art/bg-toto.webp",
+    "buttonText": "Discover The Biomes"
   }
 ]

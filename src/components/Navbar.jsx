@@ -101,7 +101,7 @@ export default function Navbar() {
           <NavButton
             frameClassName="h-5"
             selected={activeSection === "heroes-page"}
-            to="/tailguard"
+            to="/alcove"
           >
             Alcove
           </NavButton>
@@ -174,7 +174,7 @@ export default function Navbar() {
           className="w-full! flex justify-between items-center"
           selected={activeSection === "heroes-page"}
           onClick={() => setShowCharDropdown(!showCharDropdown)}
-          to="/tailguard"
+          to="/alcove"
         >
           Alcove
         </NavButton>

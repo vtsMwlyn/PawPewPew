@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import features from "../../json/features.json";
+import features from "../../json/en/features.json";
 import FrameEdge from "../../components/FrameEdge";
 
 export default function Gallery({

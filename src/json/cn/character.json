@@ -1,0 +1,113 @@
+[
+  {
+    "id": 1,
+    "name": "PIPI",
+    "text": "character-page/name-pipi-chinese.webp",
+    "subname": "character-page/subname-pipi-chinese.webp",
+    "quotes": "当你的枪法无懈可击时，距离便毫无意义",
+    "traits": [
+      {
+        "id": 1,
+        "title": "冷静瞄准，完美一击",
+        "description": "当战场变疯狂，皮皮依然冷冷静静地锁定完美的目标。"
+      },
+      {
+        "id": 2,
+        "title": "武器身份",
+        "description": "每件武器为它的战斗塑造出独特的节奏。"
+      },
+      {
+        "id": 3,
+        "title": "完美执行",
+        "description": "一旦它开始冲上前线，皮皮便掌控着整片战场的节奏。"
+      }
+    ],
+    "image": "character-page/splashart-pipi.webp",
+    "icon": "character-page/icon-pipi.webp",
+    "background" : "splash-art/bg-pipi.webp",
+    "weaponIcon": "character-page/weapon-icon-pipi.webp"
+  },
+  {
+    "id": 2,
+    "name": "TOTO",
+    "text": "character-page/name-toto-chinese.webp",
+    "subname": "character-page/subname-toto-chinese.webp",
+    "quotes": "我的武器落向何处，何处便是前线。让开。",
+    "traits": [
+      {
+        "id": 1,
+        "title": "前线职责",
+        "description": "为前线而生，它毫不犹豫地推进，将所有威胁视作必须即刻消除。"
+      },
+      {
+        "id": 2,
+        "title": "开辟安全区",
+        "description": "它的武器指在向前推进，撕开敌阵，强行打开空间。"
+      },
+      {
+        "id": 3,
+        "title": "前线势头",
+        "description": "无比忠诚，为前线而生的托托径直冲入混乱之中，以势不可挡的气势切开敌阵。"
+      }
+    ],
+    "image": "character-page/splashart-toto.webp",
+    "icon": "character-page/icon-toto.webp",
+    "background" : "splash-art/bg-toto.webp",
+    "weaponIcon": "character-page/weapon-icon-toto.webp"
+  },
+  {
+    "id": 3,
+    "name": "PITO",
+    "text": "character-page/name-pito-chinese.webp",
+    "subname": "character-page/subname-pito-chinese.webp",
+    "quotes": "我不逃跑，我只是从危险存在之处消失。",
+    "traits": [
+      {
+        "id": 1,
+        "title": "前线职责",
+        "description": "为前线而生，它毫不犹豫地推进，将所有威胁视作必须即刻消除。"
+      },
+      {
+        "id": 2,
+        "title": "开辟安全区",
+        "description": "它的武器指在向前推进，撕开敌阵，强行打开空间。"
+      },
+      {
+        "id": 3,
+        "title": "前线势头",
+        "description": "无比忠诚，为前线而生的托托径直冲入混乱之中，以势不可挡的气势切开敌阵。"
+      }
+    ],
+    "image": "character-page/splashart-pito.webp",
+    "icon": "character-page/icon-pito.webp",
+    "background" : "splash-art/bg-pito.webp",
+    "weaponIcon": "character-page/weapon-icon-pito.webp"
+  },
+  {
+    "id": 4,
+    "name": "coming soon",
+    "text": "character-page/text-name-unknown.webp",
+    "subname": "character-page/text-subname-unknown.webp",
+    "quotes": "???",
+    "traits": [
+      {
+        "id": 1,
+        "title": "Unknown",
+        "description": "???"
+      },
+      {
+        "id": 2,
+        "title": "Unknown",
+        "description": "???"
+      },
+      {
+        "id": 3,
+        "title": "Unknown",
+        "description": "???"
+      }
+    ],
+    "image": "character-page/splashart-coming-soon.webp",
+    "icon": "character-page/icon-coming-soon.webp",
+    "weaponIcon": "character-page/weapon-icon-coming-soon.webp"
+  }
+]

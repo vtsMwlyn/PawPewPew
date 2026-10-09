@@ -7,7 +7,7 @@ export default function CharacterCard({ selectedCharacter }) {
         {traits.map((trait, index) => (
           <div
             key={index}
-            className={`flex flex-col justify-center pl-5 2xl:pl-13 2xl:w-160 2xl:h-56 bg-gradient-to-r py-8 from-[#551755] to-transparent rounded-xl ${index == traits.length - 1 ? "" : ""}`}
+            className={`flex flex-col justify-center px-5 2xl:pl-13 2xl:w-160 2xl:h-56 border-blueblack border-2 bg-linear-to-r py-8 from-[#551755] to-[#F69D15] rounded-xl ${index == traits.length - 1 ? "" : ""}`}
           >
             <h3 className="text-xl 2xl:text-3xl text-white uppercase tracking-wider text-shadow-[-2px_3px_0px_#0F1B24]">
               {trait.title}

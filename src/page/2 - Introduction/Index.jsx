@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { useAudio } from "../../context/AudioContext";
 import Separator from "../../components/Separator";
-import highlightData from "../../json/highlight.json";
+import highlightData from "../../json/en/highlight.json";
 
 import "swiper/css";
 import "swiper/css/navigation";

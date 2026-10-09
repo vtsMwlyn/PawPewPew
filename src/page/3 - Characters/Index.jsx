@@ -1,4 +1,4 @@
-import character from "../../json/character.json";
+import character from "../../json/en/character.json";
 import { useState } from "react";
 import CharacterButton from "./CharacterButton";
 import CharacterCard from "./CharacterCard";
@@ -31,7 +31,7 @@ export default function Characters() {
           />
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-xl 2xl:text-2xl w-2/3 text-center text-white outfit-bold tracking-wider text-shadow-[-2px_3px_0px_#0F1B24]">
-              "{selectedCharacter.quotes}"
+              “{selectedCharacter.quotes}”
             </h1>
             <img
               src={selectedCharacter.image}

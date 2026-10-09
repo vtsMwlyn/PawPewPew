@@ -1,4 +1,4 @@
-import MapJson from "../../json/map.json";
+import MapJson from "../../json/en/map.json";
 import { useState, useEffect, useRef } from "react";
 import MapCard from "./MapCard";
 

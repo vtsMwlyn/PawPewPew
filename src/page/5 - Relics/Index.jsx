@@ -1,5 +1,5 @@
 import React from 'react'
-import Relics from '../../json/relics.json'
+import Relics from '../../json/en/relics.json'
 import Relic from './Relic'
 
 function Index() {

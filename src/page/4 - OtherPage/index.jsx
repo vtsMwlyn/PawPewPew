@@ -1,5 +1,5 @@
 import React from 'react';
-import buttons from '../../json/button.json';
+import buttons from '../../json/en/button.json';
 import CardButton from './CardButton';
 import { Link } from 'react-router-dom';
 
@@ -12,7 +12,7 @@ export default function index() {
           <p className='flex text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]'>
             meet tailguards
           </p>
-          <p className='flex text-xl lg:text-2xl 2xl:text-3xl outfit-medium text-white text-shadow-[-2px_3px_0px_#0F1B24]'>
+          <p className='flex outfit-medium text-xl lg:text-2xl text-white text-shadow-[-2px_3px_0px_#0F1B24]'>
             Meet the Tailguards: Pipi, Pito, and Toto! Ready to protect their family from Robobeasts
           </p>
         </div>
@@ -26,16 +26,16 @@ export default function index() {
             <p className='flex text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]'>
               meet tailguards
             </p>
-            <p className='flex text-xl lg:text-2xl 2xl:text-3xl outfit-medium text-white text-shadow-[-2px_3px_0px_#0F1B24]'>
+            <p className='flex outfit-medium  text-white text-shadow-[-2px_3px_0px_#0F1B24]'>
               Meet the Tailguards: Pipi, Pito, and Toto! Ready to protect their family from Robobeasts
             </p>
           </div>
           <Link
             to={`/alcove#heroes-page`}
-            className="w-50 h-12.5 bg-contain bg-no-repeat bg-center flex items-center justify-center cursor-pointer group no-underline"
+            className="w-50 h-12.5 lg:w-65 lg:h-15 bg-contain bg-no-repeat bg-center flex items-center justify-center cursor-pointer group no-underline"
             style={{ backgroundImage: `url(button/button-discover.webp)` }}
           >
-            <p className="inline-flex items-center gap-1 outfit-medium text-white group-hover:text-shadow-[-1px_2px_0px_#0F1B24] transition-all">
+            <p className="inline-flex items-center gap-1 text-lg lg:text-xl 2xl:text-2xl  outfit-medium text-white group-hover:text-shadow-[-1px_2px_0px_#0F1B24] transition-all">
               Meet The Tailguards
               <span className="hidden group-hover:inline-block">→</span>
             </p>
@@ -48,7 +48,7 @@ export default function index() {
           <p className='flex text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]'>
             Relics Index
           </p>
-          <p className='flex text-xl lg:text-2xl 2xl:text-3xl outfit-medium text-white text-shadow-[-2px_3px_0px_#0F1B24]'>
+          <p className='flex outfit-medium text-xl lg:text-2xl text-white text-shadow-[-2px_3px_0px_#0F1B24]'>
             Collect powerful artifacts, boost your stats, and unlock game-changing combinations.
           </p>
         </div>
@@ -62,16 +62,16 @@ export default function index() {
             <p className='flex text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]'>
               Relics Index
             </p>
-            <p className='flex text-xl lg:text-2xl 2xl:text-3xl outfit-medium text-white text-shadow-[-2px_3px_0px_#0F1B24]'>
+            <p className='flex outfit-medium text-white text-shadow-[-2px_3px_0px_#0F1B24]'>
               Collect powerful artifacts, boost your stats, and unlock game-changing combinations.
             </p>
           </div>
           <Link
             to={`/alcove#relics-page`}
-            className="w-50 h-12.5 bg-contain bg-no-repeat bg-center flex items-center justify-center cursor-pointer group no-underline"
+            className="w-50 h-12.5 lg:w-65 lg:h-15 bg-contain bg-no-repeat bg-center flex items-center justify-center cursor-pointer group no-underline"
             style={{ backgroundImage: `url(button/button-discover.webp)` }}
           >
-            <p className="inline-flex items-center gap-1 outfit-medium text-white group-hover:text-shadow-[-1px_2px_0px_#0F1B24] transition-all">
+            <p className="inline-flex items-center gap-1 text-lg lg:text-xl 2xl:text-2xl  outfit-medium text-white group-hover:text-shadow-[-1px_2px_0px_#0F1B24] transition-all">
               View Relics Index
               <span className="hidden group-hover:inline-block">→</span>
             </p>
@@ -89,7 +89,7 @@ export default function index() {
           <p className='flex text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]'>
             explore biomes
           </p>
-          <p className='flex text-xl lg:text-2xl 2xl:text-3xl outfit-medium text-white text-shadow-[-2px_3px_0px_#0F1B24]'>
+          <p className='flex outfit-medium text-white text-shadow-[-2px_3px_0px_#0F1B24]'>
             Journey through diverse biomes, conquer regional challenges, and uncover hidden secrets to claim your rewards.
           </p>
         </div>
@@ -103,16 +103,16 @@ export default function index() {
             <p className='flex text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]'>
               explore biomes
             </p>
-            <p className='flex text-xl lg:text-2xl 2xl:text-3xl outfit-medium text-white text-shadow-[-2px_3px_0px_#0F1B24]'>
+            <p className='flex outfit-medium text-white text-shadow-[-2px_3px_0px_#0F1B24]'>
               Journey through diverse biomes, conquer regional challenges, and uncover hidden secrets to claim your rewards.
             </p>
           </div>
           <Link
             to={`/alcove#heroes-page`}
-            className="w-50 h-12.5 bg-contain bg-no-repeat bg-center flex items-center justify-center cursor-pointer group no-underline"
+            className="w-50 h-12.5 lg:w-65 lg:h-15 bg-contain bg-no-repeat bg-center flex items-center justify-center cursor-pointer group no-underline"
             style={{ backgroundImage: `url(button/button-discover.webp)` }}
           >
-            <p className="inline-flex items-center gap-1 outfit-medium text-white group-hover:text-shadow-[-1px_2px_0px_#0F1B24] transition-all">
+            <p className="inline-flex items-center gap-1 text-lg lg:text-xl 2xl:text-2xl  outfit-medium text-white group-hover:text-shadow-[-1px_2px_0px_#0F1B24] transition-all">
               Discover The Biomes
               <span className="hidden group-hover:inline-block">→</span>
             </p>
@@ -121,7 +121,7 @@ export default function index() {
       </div>
 
       <img
-        src="splash-art/bg-cobra-blur.webp"
+        src="splash-art/bg-pito-blur.webp"
         className="absolute top-0 w-full h-full object-cover object-center -z-1 bg-blueblack"
       />
     </div>

@@ -18,7 +18,7 @@ function Index() {
         </p>
       </div>
 
-      <div className='w-9/10 grid grid-cols-5 grid-rows-5 place-items-center overflow-hidden py-10 px-5 rounded-4xl bg-black/50 mb-30'>
+      <div className='w-9/10 h-150 lg:h-250 overflow-y-auto xl:h-full grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 place-items-center overflow-hidden gap-5 p-10 rounded-4xl bg-black/50 xl:mb-30'>
         {Relics.map((relic) => {
           return (
             <Relic

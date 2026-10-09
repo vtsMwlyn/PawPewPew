@@ -16,7 +16,7 @@ export default function Index() {
             survivors. Together, you'll rebuild Starlit Alcove
           </p>
         </div>
-        <div className='flex flex-col times-center gap-5'>
+        {/* <div className='flex flex-col times-center gap-5'>
           <p className="text-white poppins-medium text-sm lg:text-xl w-full lg:w-4xl text-center text-shadow-[-2px_3px_0px_#0F1B24]">
             Life in the village of Meadow was peaceful, whimsical, and perfectly
             happy
@@ -27,7 +27,7 @@ export default function Index() {
             playtime is officially over, turning a peaceful life into a fast-paced
             battle for survival.
           </p>
-        </div>
+        </div> */}
       </div>
 
       <img

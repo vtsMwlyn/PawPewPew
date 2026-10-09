@@ -3,8 +3,10 @@ import { useState, useEffect, useRef } from "react";
 import MapCard from "./MapCard";
 
 export default function Map() {
-  const [selectedMap, setSelectedMap] = useState(MapJson[0]);
+  const [selectedMap, setSelectedMap] = useState(MapJson.content[0]);
   const mapNameRef = useRef(null);
+
+  console.log(MapJson);
 
   useEffect(() => {
     const el = mapNameRef.current;
@@ -87,7 +89,7 @@ export default function Map() {
         <MapCard
           selectedMap={selectedMap}
           setSelectedMap={setSelectedMap}
-          MapJson={MapJson}
+          MapJson={MapJson.content}
         />
       </div>
     </div>

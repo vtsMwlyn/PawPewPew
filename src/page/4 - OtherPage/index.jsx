@@ -10,10 +10,10 @@ export default function index() {
       <div className='grid xl:grid-cols-2 gap-5 xl:gap-15 w-full '>
         <div className='flex xl:hidden flex-col gap-5'>
           <p className='flex text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]'>
-            meet tailguards
+            {buttons[0].title}
           </p>
           <p className='flex outfit-medium text-xl lg:text-2xl text-white text-shadow-[-2px_3px_0px_#0F1B24]'>
-            Meet the Tailguards: Pipi, Pito, and Toto! Ready to protect their family from Robobeasts
+            {buttons[0].desk}
           </p>
         </div>
         <img
@@ -24,10 +24,10 @@ export default function index() {
         <div className='flex flex-col w-full justify-between'>
           <div className='hidden xl:flex flex-col gap-5'>
             <p className='flex text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]'>
-              meet tailguards
+              {buttons[0].title}
             </p>
             <p className='flex outfit-medium  text-white text-shadow-[-2px_3px_0px_#0F1B24]'>
-              Meet the Tailguards: Pipi, Pito, and Toto! Ready to protect their family from Robobeasts
+              {buttons[0].desk}
             </p>
           </div>
           <Link
@@ -36,7 +36,7 @@ export default function index() {
             style={{ backgroundImage: `url(button/button-discover.webp)` }}
           >
             <p className="inline-flex items-center gap-1 text-lg lg:text-xl 2xl:text-2xl  outfit-medium text-white group-hover:text-shadow-[-1px_2px_0px_#0F1B24] transition-all">
-              Meet The Tailguards
+              {buttons[0].buttonText}
               <span className="hidden group-hover:inline-block">→</span>
             </p>
           </Link>
@@ -46,10 +46,10 @@ export default function index() {
       <div className='grid xl:grid-cols-2 gap-5 xl:gap-15 w-full '>
         <div className='flex flex-col xl:hidden gap-5'>
           <p className='flex text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]'>
-            Relics Index
+            {buttons[1].title}
           </p>
           <p className='flex outfit-medium text-xl lg:text-2xl text-white text-shadow-[-2px_3px_0px_#0F1B24]'>
-            Collect powerful artifacts, boost your stats, and unlock game-changing combinations.
+            {buttons[1].desk}
           </p>
         </div>
         <img
@@ -60,10 +60,10 @@ export default function index() {
         <div className='flex flex-col w-full justify-between'>
           <div className=' hidden xl:flex flex-col gap-5'>
             <p className='flex text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]'>
-              Relics Index
+              {buttons[1].title}
             </p>
             <p className='flex outfit-medium text-white text-shadow-[-2px_3px_0px_#0F1B24]'>
-              Collect powerful artifacts, boost your stats, and unlock game-changing combinations.
+              {buttons[1].desk}
             </p>
           </div>
           <Link
@@ -72,7 +72,7 @@ export default function index() {
             style={{ backgroundImage: `url(button/button-discover.webp)` }}
           >
             <p className="inline-flex items-center gap-1 text-lg lg:text-xl 2xl:text-2xl  outfit-medium text-white group-hover:text-shadow-[-1px_2px_0px_#0F1B24] transition-all">
-              View Relics Index
+              {buttons[1].buttonText}
               <span className="hidden group-hover:inline-block">→</span>
             </p>
           </Link>
@@ -87,10 +87,10 @@ export default function index() {
       <div className='grid xl:grid-cols-2 gap-5 xl:gap-15 w-full '>
         <div className='flex xl:hidden flex-col gap-5'>
           <p className='flex text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]'>
-            explore biomes
+            {buttons[2].title}
           </p>
           <p className='flex outfit-medium text-white text-shadow-[-2px_3px_0px_#0F1B24]'>
-            Journey through diverse biomes, conquer regional challenges, and uncover hidden secrets to claim your rewards.
+            {buttons[2].desk}
           </p>
         </div>
         <img
@@ -101,10 +101,10 @@ export default function index() {
         <div className='flex flex-col w-full justify-between'>
           <div className='hidden xl:flex flex-col gap-5'>
             <p className='flex text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]'>
-              explore biomes
+              {buttons[2].title}
             </p>
             <p className='flex outfit-medium text-white text-shadow-[-2px_3px_0px_#0F1B24]'>
-              Journey through diverse biomes, conquer regional challenges, and uncover hidden secrets to claim your rewards.
+              {buttons[2].desk}
             </p>
           </div>
           <Link
@@ -113,7 +113,7 @@ export default function index() {
             style={{ backgroundImage: `url(button/button-discover.webp)` }}
           >
             <p className="inline-flex items-center gap-1 text-lg lg:text-xl 2xl:text-2xl  outfit-medium text-white group-hover:text-shadow-[-1px_2px_0px_#0F1B24] transition-all">
-              Discover The Biomes
+              {buttons[2].buttonText}
               <span className="hidden group-hover:inline-block">→</span>
             </p>
           </Link>

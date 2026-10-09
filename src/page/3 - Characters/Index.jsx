@@ -1,4 +1,4 @@
-import character from "../../json/en/character.json";
+import character from "../../json/cn/character.json";
 import { useState } from "react";
 import CharacterButton from "./CharacterButton";
 import CharacterCard from "./CharacterCard";
@@ -19,7 +19,7 @@ export default function Characters() {
       <div className="w-full flex flex-col justify-center items-center gap-10 2xl:gap-20 my-25">
         {/* Section Title */}
         <h1 className="flex justify-center text-center text-4xl lg:text-5xl 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]">
-          choose your survivor
+          choose your survivor 选择你的幸存者
         </h1>
 
         <div className="w-full flex flex-col gap-10 lg:px-8 2xl:p-0 lg:gap-0 lg:flex-row items-center justify-center">

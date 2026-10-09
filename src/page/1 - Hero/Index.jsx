@@ -68,7 +68,6 @@ export default function Hero() {
             image={`button/button-wishlish-steam.webp`}
             link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/"
           >
-            wishlist <br className="hidden 2xl:block" /> on steam
           </Link>
           <div className="relative group">
             <Button
@@ -95,8 +94,6 @@ export default function Hero() {
             image={`button/button-join-discord.webp`}
             link="https://discord.gg/G27dAtVGSS"
           >
-            join our <br className="hidden 2xl:block" />
-            discord
           </Link>
         </div>
       </div>

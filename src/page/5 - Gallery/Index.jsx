@@ -12,7 +12,7 @@ export default function Gallery({
   // Single ref to handle both touch and mouse starting positions
   const dragStartX = useRef(null);
   const isDragging = useRef(false);
-  const total = features.length;
+  const total = features.content.length;
 
   const goTo = (newIndex) => {
     if (animating) return;
@@ -117,10 +117,10 @@ export default function Gallery({
     >
       <div className="flex flex-col w-full">
         <h1 className="flex justify-center text-4xl lg:text-5xl text-center 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]">
-          See it in action
+          {features.title}
         </h1>
         <h2 className="flex justify-center text-lg 2xl:text-2xl outfit-medium text-white text-shadow-[-2px_3px_0px_#0F1B24] mt-4">
-          Charm and Courage, Hand in Paw
+          {features.subtitle}
         </h2>
       </div>
 
@@ -133,7 +133,7 @@ export default function Gallery({
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseLeave}
       >
-        {features.map((feature, i) => {
+        {features.content.map((feature, i) => {
           const isActive = i === activeIndex;
           return (
             <div

@@ -1,15 +1,15 @@
 {
-  "title":"BIOMES",
-  "subtitle":"A Playful Journey With Heart",
-  "enemies":"Enemies & Hazard Encountered",
+  "title": "生物群落",
+  "subtitle": "一场充满童趣与温情的旅程",
+  "enemies": "遭遇的敌人与危险",
   "content": [
     {
       "id": 1,
-      "name": "Greedwood Forest",
+      "name": "贪婪木森林",
       "button": "biomes-page/button-greedwood-forest.webp",
       "image": "biomes-page/map-forest.webp",
       "background": "biomes-page/map-forest.webp",
-      "desc": "A vast forest dominated by towering golden-green pines and ancient trees that stretch high above the canopy. Massive rocks and rugged terrain dot the landscape, while robot chickens roam among the woods, guarding the forest and threatening anyone who dares to pass through.",
+      "desc": "一片广袤的森林，以高耸的金绿色松树和直插云霄的古树为主。巨石与崎岖的地形散布期间； 机械鸡在林间游荡，守护着森林，威胁每个胆敢经过的人。",
       "enemies": [
         {
           "image": "biomes-page/afichick-greedwood.webp",
@@ -35,11 +35,11 @@
     },
     {
       "id": 2,
-      "name": "Ravenrock Ruins",
+      "name": "渡鸦岩废墟",
       "button": "biomes-page/button-ravenrocks-ruins.webp",
       "image": "biomes-page/map-ruins.webp",
       "background": "biomes-page/map-ruins.webp",
-      "desc": "Ancient stone ruins surrounded by rugged cliffs and overgrown vegetation. Though time has worn away much of the old settlement, robot chickens have claimed the area, turning its forgotten pathways into a dangerous obstacle for adventurers.",
+      "desc": "古老的石造废墟，周围环绕着陡峭的悬崖与疯长的植被。 尽管岁月已经磨蚀了这片旧聚落的大部分，机械鸡却占领了这里， 将其被遗忘的小径化作冒险者们难以逾越的危险阻碍。",
       "enemies": [
         {
           "image": "biomes-page/spider-ravenrocks.webp",
@@ -65,11 +65,11 @@
     },
     {
       "id": 3,
-      "name": "Mossveil Temple",
+      "name": "苔纱神殿",
       "button": "biomes-page/button-mossveil-temple.webp",
       "image": "biomes-page/map-temple.webp",
       "background": "biomes-page/map-temple.webp",
-      "desc": "An ancient temple frozen in eternal night, its cracked stone floors etched with glowing runes. Twisted vines crawl between collapsed pillars, and bioluminescent orbs cast a cold teal light across the ruins of a forgotten altar.",
+      "desc": "一座凝固于永恒黑夜中的古老神殿，龟裂的石板上刻着发光符文。 扭曲的藤蔓攀爬在倒塌的石柱之间，生物荧光球将冷冰冰的青绿色光芒洒向一座被遗忘祭坛的废墟。",
       "enemies": [
         {
           "image": "biomes-page/spider-mossveil.webp",

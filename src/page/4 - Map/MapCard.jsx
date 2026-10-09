@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 
 export default function MapCard({ MapJson, selectedMap, setSelectedMap }) {
   const swiperRef = useRef(null);
+  
 
   // Sync swiper position if selectedMap changes from click or external action
   useEffect(() => {

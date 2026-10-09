@@ -1,0 +1,42 @@
+{
+  "title": "See it in action",
+  "subtitle": "Charm and Courage, Hand in Paw",
+  "content": [
+    {
+      "id": 1,
+      "title": "选择你的道路",
+      "description": "在千变万化的程序生成的六边形地图上规划你的路线。 在穿越茂密森林、被遗忘的神殿与荒芜废土时，权衡每一格的冒险与回报。",
+      "image": "/see-it-in-action/choose-your-path.webp"
+    },
+    {
+      "id": 2,
+      "title": "适应与生存",
+      "description": "投身于对抗压倒性敌人数量的快节奏战斗。 每次离开避难所都能发现新的武器，让你在每一局中尽情尝试独特的玩法与极具破坏力的构筑。",
+      "image": "/see-it-in-action/adapt-and-survive.webp"
+    },
+    {
+      "id": 3,
+      "title": "选择你的职业",
+      "description": "通过选择角色的职业来决定你的玩法风格。 每种职业都会彻底改变你的能力， 以及你在每一局中的战斗方式。",
+      "image": "/see-it-in-action/choose-your-class.webp"
+    },
+    {
+      "id": 4,
+      "title": "打造你的构筑",
+      "description": "寻找合适的遗物，构筑强大的战斗流派 挑选适合你构筑的遗物，完成升级、随机应变，攻克所有挑战。",
+      "image": "/see-it-in-action/forge-your-build.webp"
+    },
+    {
+      "id": 5,
+      "title": "无情的敌人",
+      "description": "迎战令人胆寒的机械威胁。 在抵御势不可挡的机械兽群与占满屏幕的巨型首领时，不断调整策略以应对机器兽独特的攻击模式。",
+      "image": "/see-it-in-action/relentless-enemies.webp"
+    },
+    {
+      "id": 6,
+      "title": "探索生物群落",
+      "description": "游历风格各异的生物群落，每一处都蕴藏着专属的挑战，秘密与奖励。 从繁茂的森林到古老的废墟与荒芜的废土，每一片区域都蕴藏着新的发现与亟待克服的危险。",
+      "image": "/see-it-in-action/explore-biomes.webp"
+    }
+  ]
+}

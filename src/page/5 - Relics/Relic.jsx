@@ -1,10 +1,8 @@
 import React from 'react'
 
-function Relic({ key, name, speciality, image }) {
+function Relic({ name, speciality, image }) {
   return (
-    <div
-      className='flex flex-col justify-center items-center gap-5'
-      key={key}>
+    <div className='flex flex-col justify-center items-center gap-5'>
       <img
         src={image}
         alt={`${image} image`}

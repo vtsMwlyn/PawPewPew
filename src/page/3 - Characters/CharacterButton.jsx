@@ -6,7 +6,7 @@ export default function CharacterButton({
   return (
     <div className="flex lg:flex-col gap-5 lg:gap-15 justify-center items-center top-0 z-10">
       {characters.map((char) => {
-        const isSelected = selectedCharacter?.name === char.name;
+        const isSelected = selectedCharacter?.id === char.id;
         return (
           <button
             key={char.id}

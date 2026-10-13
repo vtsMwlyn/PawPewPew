@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import Link from "../../components/Link";
 import Button from "../../components/Button";
 import { useToast } from "../../context/ToastContext";
-import hero from "../../json/en/hero.json";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function Hero() {
+  const { t } = useLanguage();
+  const hero = t.hero;
   const { showToast } = useToast();
   const [isVisible, setIsVisible] = useState(true);
 
@@ -73,7 +75,7 @@ export default function Hero() {
           <div className="relative group">
             <Button
               buttonType="no_background"
-              onClick={() => showToast("Kickstater Soon")}
+              onClick={() => showToast(hero.comingsoon)}
               image={hero.kickstarter}
             />
             <span
@@ -92,7 +94,7 @@ export default function Hero() {
             </span>
           </div>
           <Link
-            image={hero.steam}
+            image={hero.discord}
             link="https://discord.gg/G27dAtVGSS"
           >
           </Link>

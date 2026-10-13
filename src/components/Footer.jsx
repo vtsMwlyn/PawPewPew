@@ -1,4 +1,38 @@
+import { useLanguage } from "../context/LanguageContext";
+import { useNavigate, useLocation } from "react-router-dom";
+
 export default function Footer() {
+  const { t } = useLanguage();
+  const footer = t.footer;
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleHomeClick = () => {
+    if (location.pathname === "/") {
+      const el = document.getElementById("hero-page");
+      el?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/");
+      setTimeout(() => {
+        const el = document.getElementById("hero-page");
+        el?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
+  const handleGalleryClick = () => {
+    if (location.pathname === "/") {
+      const el = document.getElementById("gallery-page");
+      el?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/");
+      setTimeout(() => {
+        const el = document.getElementById("gallery-page");
+        el?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
   return (
     <div className="w-full flex flex-col bg-blueblack py-12 px-6 sm:px-12 lg:px-20 gap-10 text-white relative z-50">
       <div className="flex flex-col lg:flex-row gap-12 lg:gap-0">
@@ -25,17 +59,25 @@ export default function Footer() {
           {/* Page List */}
           <div className="flex-1 flex flex-col gap-6">
             <h2 className="text-2xl uppercase text-shadow-[-2px_3px_0px_#0F1B24]">
-              paw pew pew
+              {footer.p3}
             </h2>
             <nav className="flex flex-col gap-3 poppins-regular">
-              <p className="hover:text-shadow-[-2px_3px_0px_#0F1B24] cursor-pointer">
-                Home
+              <p
+                onClick={handleHomeClick}
+                className="hover:text-shadow-[-2px_3px_0px_#0F1B24] cursor-pointer"
+              >
+                {footer.home}</p>
+              <p
+                onClick={() => navigate("/alcove")}
+                className="hover:text-shadow-[-2px_3px_0px_#0F1B24] cursor-pointer"
+              >
+                {footer.alcove}
               </p>
-              <p className="hover:text-shadow-[-2px_3px_0px_#0F1B24] cursor-pointer">
-                Alcove
-              </p>
-              <p className="hover:text-shadow-[-2px_3px_0px_#0F1B24] cursor-pointer">
-                Gallery
+              <p
+                onClick={handleGalleryClick}
+                className="hover:text-shadow-[-2px_3px_0px_#0F1B24] cursor-pointer"
+              >
+                {footer.gallery}
               </p>
               <a
                 href="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/"
@@ -43,12 +85,12 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 <p className="cursor-pointer hover:underline hover:text-shadow-[-2px_3px_0px_#0F1B24]">
-                  Wishlist on Steam ↗
+                  {footer.wishlist} ↗
                 </p>
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer">
                 <p className="cursor-pointer hover:underline hover:text-shadow-[-2px_3px_0px_#0F1B24]">
-                  Back Us on Kickstarter ↗
+                  {footer.backus} ↗
                 </p>
               </a>
             </nav>
@@ -57,16 +99,16 @@ export default function Footer() {
           {/* Contact */}
           <div className="flex-1 flex flex-col gap-6">
             <h2 className="text-2xl uppercase text-shadow-[-2px_3px_0px_#0F1B24]">
-              contact
+              {footer.contact}
             </h2>
             <div className="flex flex-col gap-3 poppins-regular">
               <a
-                href="mailto:admin@pawpewpew.com"
+                href={`mailto:${footer.mail}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <p className="hover:underline cursor-pointer">
-                  admin@pawpewpew.com
+                  {footer.mail}
                 </p>
               </a>
               <a
@@ -74,19 +116,17 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <p className="hover:underline cursor-pointer">
-                  Paskal Hyper Square B70,
-                  <br /> Jl.Pasir Kaliki No.23,
-                  <br /> Kec. Cicendo, Kota Bandung
-                </p>
+                <p
+                  className="hover:underline cursor-pointer"
+                  dangerouslySetInnerHTML={{ __html: footer.address }}
+                />
               </a>
             </div>
           </div>
         </div>
       </div>
       <p className="text-base poppins-bold uppercase leading-relaxed text-shadow-[-2px_3px_0px_#0F1B24]">
-        ©2026 Sangnila. <br className="block 2xl:hidden" />
-        All rights reserved.
+        {footer.copyright}
       </p>
     </div>
   );

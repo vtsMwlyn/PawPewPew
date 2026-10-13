@@ -2,9 +2,13 @@ import Link from "../../components/Link";
 import Button from "../../components/Button";
 import SocialMedia from "./SocialMedia";
 import { useToast } from "../../context/ToastContext";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function CallToAction() {
   const { showToast } = useToast();
+  const { t } = useLanguage();
+  const cta = t.cta;
+
   return (
     <div
       className="relative w-full h-screen items-center flex justify-end xl:pl-50 px-8"
@@ -18,23 +22,22 @@ export default function CallToAction() {
       <div className="flex flex-col w-full lg:w-1/2 lg:gap-5 relative z-5">
         <div className="flex flex-col gap-5 mb-5 xl:mb-0">
           <h1 className="text-5xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]">
-            join the fight
+            {cta.title}
           </h1>
           <p className="text-lg 2xl:text-2xl text-white w-2/3 xl:w-full 2xl:w-3xl poppins-medium text-shadow-[-2px_3px_0px_#0F1B24]">
-            Add PAWPEWPEW to your Steam Wishlist now and get notified the exact
-            moment the battle begins.
+            {cta.subtitle}
           </p>
         </div>
         <div className="grid grid-cols-2 md:flex gap-5">
           <Link
-            image={`button/button-wishlish-steam.webp`}
+            image={cta.steam}
             link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/"
           />
           <div className="flex justify-center relative group">
             <Button
               buttonType="no_background"
-              onClick={() => showToast("Kickstater Soon")}
-              image={`button/button-kickstater.webp`}
+              onClick={() => showToast(cta.comingsoon)}
+              image={cta.kickstarter}
             />
             <span
               className={`
@@ -48,11 +51,11 @@ export default function CallToAction() {
                 pointer-events-none whitespace-nowrap
               `}
             >
-              Coming Soon
+              {cta.comingsoon}
             </span>
           </div>
           <Link
-            image={`button/button-join-discord.webp`}
+            image={cta.discord}
             link="https://discord.gg/G27dAtVGSS"
           />
         </div>

@@ -3,9 +3,11 @@ import Link from "./Link";
 import { useState, useEffect } from "react";
 import NavButton from "./NavButton";
 import { useNavigate, useLocation } from 'react-router-dom'
-import NavText from "../json/en/navbar.json"
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Navbar() {
+  const { t } = useLanguage();
+  const NavText = t.navbar;
   const [activeSection, setActiveSection] = useState("");
   const [showMobileList, setShowMobileList] = useState(false);
   const [passed100vh, setPassed100vh] = useState(false);

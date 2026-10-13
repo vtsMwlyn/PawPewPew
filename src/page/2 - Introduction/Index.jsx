@@ -3,13 +3,15 @@ import FrameEdge from "../../components/FrameEdge";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { useAudio } from "../../context/AudioContext";
-import highlightData from "../../json/en/highlight.json";
+import { useLanguage } from "../../context/LanguageContext";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export default function Introduction() {
+  const { t } = useLanguage();
+  const highlightData = t.highlight;
   const [playingIndex, setPlayingIndex] = useState(null);
   const { pauseForVideo, resumeAfterVideo } = useAudio();
   const swiperRef = useRef(null);

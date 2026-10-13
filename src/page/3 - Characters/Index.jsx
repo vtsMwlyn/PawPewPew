@@ -1,10 +1,15 @@
-import character from "../../json/en/character.json";
 import { useState } from "react";
 import CharacterButton from "./CharacterButton";
 import CharacterCard from "./CharacterCard";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function Characters() {
-  const [selectedCharacter, setSelectedCharacter] = useState(character.content[0]);
+  const { t } = useLanguage();
+  const character = t.character;
+  const [selectedCharId, setSelectedCharId] = useState(1);
+  const selectedCharacter =
+    character.content.find((c) => c.id === selectedCharId) ||
+    character.content[0];
 
   return (
     <section className="relative flex " id="heroes-page">
@@ -27,7 +32,7 @@ export default function Characters() {
           <CharacterButton
             characters={character.content}
             selectedCharacter={selectedCharacter}
-            setSelectedCharacter={setSelectedCharacter}
+            setSelectedCharacter={(char) => setSelectedCharId(char.id)}
           />
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-xl 2xl:text-2xl w-2/3 text-center text-white outfit-bold tracking-wider text-shadow-[-2px_3px_0px_#0F1B24]">

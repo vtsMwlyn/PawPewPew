@@ -1,7 +1,9 @@
-import buttons from '../../json/en/button.json';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../../context/LanguageContext';
 
-export default function index() {
+export default function Index() {
+  const { t } = useLanguage();
+  const buttons = t.button;
   return (
     <div className='w-full flex flex-col items-center justify-center relative overflow-hidden px-30 xl:px-55 py-20 gap-10'>
 
@@ -106,7 +108,7 @@ export default function index() {
             </p>
           </div>
           <Link
-            to={`/alcove#heroes-page`}
+            to={`/alcove#biomes-page`}
             className="w-50 h-12.5 lg:w-65 lg:h-15 bg-contain bg-no-repeat bg-center flex items-center justify-center cursor-pointer group no-underline"
             style={{ backgroundImage: `url(button/button-discover.webp)` }}
           >

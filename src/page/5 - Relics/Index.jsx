@@ -1,8 +1,10 @@
 import React from 'react'
-import Relics from '../../json/en/relics.json'
 import Relic from './Relic'
+import { useLanguage } from '../../context/LanguageContext'
 
 function Index() {
+  const { t } = useLanguage();
+  const Relics = t.relics;
   return (
     <div
       className="flex flex-col items-center relative gap-10 py-25"

@@ -2,6 +2,7 @@ import "./App.css";
 
 import { Routes, Route } from 'react-router-dom'
 import { AudioProvider } from "./context/AudioContext";
+import { LanguageProvider } from "./context/LanguageContext";
 import Navbar from "./components/Navbar";
 import Hero from "./page/1 - Hero/Index";
 import Footer from "./components/Footer";
@@ -11,6 +12,7 @@ import CTAPage from "./page/6 - Call to Action/Index";
 import SeeItInAction from "./page/5 - Gallery/Index";
 // import ScreenInfo from "./components/ScreenInfo"
 import MuteButton from "./components/MuteButton";
+import LangButton from "./components/LangButton";
 import Separator from "./components/Separator";
 import { ToastProvider } from "./context/ToastContext";
 import CardButton from "./page/4 - OtherPage/Index";
@@ -18,8 +20,9 @@ import ScrollToHashElement from './components/ScrollToHashElement';
 
 export default function App() {
   return (
-    <AudioProvider>
-      <ToastProvider>
+    <LanguageProvider>
+      <AudioProvider>
+        <ToastProvider>
         <main className="w-full flex flex-col items-stretch">
           {/* Navbar */}
           <ScrollToHashElement />
@@ -49,9 +52,11 @@ export default function App() {
 
           {/* Footer */}
           <MuteButton />
+          <LangButton />
           <Footer />
         </main>
       </ToastProvider>
     </AudioProvider>
+  </LanguageProvider>
   );
 }

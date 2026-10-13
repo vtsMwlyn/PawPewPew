@@ -1,12 +1,15 @@
-import MapJson from "../../json/en/map.json";
 import { useState, useEffect, useRef } from "react";
 import MapCard from "./MapCard";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function Map() {
-  const [selectedMap, setSelectedMap] = useState(MapJson.content[0]);
+  const { t } = useLanguage();
+  const MapJson = t.map;
+  const [selectedMapId, setSelectedMapId] = useState(1);
+  const selectedMap =
+    MapJson.content.find((m) => m.id === selectedMapId) ||
+    MapJson.content[0];
   const mapNameRef = useRef(null);
-
-  console.log(MapJson);
 
   useEffect(() => {
     const el = mapNameRef.current;
@@ -88,7 +91,7 @@ export default function Map() {
 
         <MapCard
           selectedMap={selectedMap}
-          setSelectedMap={setSelectedMap}
+          setSelectedMap={(map) => setSelectedMapId(map.id)}
           MapJson={MapJson.content}
         />
       </div>

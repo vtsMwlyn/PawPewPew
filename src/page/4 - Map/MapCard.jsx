@@ -12,7 +12,7 @@ export default function MapCard({ MapJson, selectedMap, setSelectedMap }) {
   // Sync swiper position if selectedMap changes from click or external action
   useEffect(() => {
     if (swiperRef.current && !swiperRef.current.destroyed) {
-      const targetIndex = MapJson.findIndex((m) => m.name === selectedMap?.name);
+      const targetIndex = MapJson.findIndex((m) => m.id === selectedMap?.id);
       if (targetIndex !== -1 && swiperRef.current.realIndex !== targetIndex) {
         swiperRef.current.slideTo(targetIndex);
       }
@@ -24,7 +24,7 @@ export default function MapCard({ MapJson, selectedMap, setSelectedMap }) {
     const isMobile = window.innerWidth < 640 || swiper.params?.slidesPerView === 1;
     if (isMobile) {
       const activeMap = MapJson[swiper.realIndex];
-      if (activeMap && activeMap.name !== selectedMap?.name) {
+      if (activeMap && activeMap.id !== selectedMap?.id) {
         setSelectedMap(activeMap);
       }
     }
@@ -37,7 +37,7 @@ export default function MapCard({ MapJson, selectedMap, setSelectedMap }) {
           swiperRef.current = swiper;
         }}
         onSlideChange={handleSlideChange}
-        initialSlide={MapJson.findIndex((m) => m.name === selectedMap?.name) || 0}
+        initialSlide={MapJson.findIndex((m) => m.id === selectedMap?.id) || 0}
         modules={[Navigation]}
         spaceBetween={20}
         slidesPerView={1}
@@ -55,7 +55,7 @@ export default function MapCard({ MapJson, selectedMap, setSelectedMap }) {
         className="w-full max-w-4xl py-8 overflow-visible!"
       >
         {MapJson.map((location) => {
-          const isSelected = selectedMap?.name === location.name;
+          const isSelected = selectedMap?.id === location.id;
           return (
             <SwiperSlide
               key={location.id}

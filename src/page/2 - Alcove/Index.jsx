@@ -1,6 +1,8 @@
-import alcove from "../../json/en/alcove.json"
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function Index() {
+  const { t } = useLanguage();
+  const alcove = t.alcove;
   return (
     <div className="w-full min-h-screen flex flex-col items-center py-40">
       <div className="w-full h-full flex flex-col justify-between">

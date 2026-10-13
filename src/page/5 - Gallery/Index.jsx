@@ -1,10 +1,12 @@
 import { useState, useRef, useEffect } from "react";
-import features from "../../json/en/features.json";
 import FrameEdge from "../../components/FrameEdge";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function Gallery({
   visibleCount = window.innerWidth > 768 ? 5 : 3,
 }) {
+  const { t } = useLanguage();
+  const features = t.features;
   // visibleCount controls how many cards render on screen (e.g., set to 3 or 5)
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);

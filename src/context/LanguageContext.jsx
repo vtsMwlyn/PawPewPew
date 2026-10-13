@@ -1,5 +1,5 @@
 // src/context/LanguageContext.jsx
-import React, { createContext, useState, useContext } from 'react';
+import { createContext, useState, useContext } from 'react';
 
 // EN translations
 import alcoveEn from '../json/en/alcove.json';

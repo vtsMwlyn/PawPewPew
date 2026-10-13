@@ -5,7 +5,7 @@ export default function LangButton() {
   const { lang, toggleLanguage } = useLanguage();
 
   return (
-    <div className="fixed bottom-2 right-2 z-100 w-20! h-20! flex justify-center items-center">
+    <div className="fixed bottom-20 left-2 z-100 w-20! h-20! flex justify-center items-center">
       <Button
         selected={true}
         frameType="short"

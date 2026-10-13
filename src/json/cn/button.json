@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "认识尾护盟",
+    "desk": "认识尾护盟：皮皮、托托与彼拓！准备好保护家人，抵御机械兽的入侵。",
+    "section": "heroes-page",
+    "image": "splash-art/bg-pito.webp",
+    "buttonText": "Meet The Tailguards"
+  },
+  {
+    "id": 2,
+    "title": "遗物 (index)",
+    "desk": "收集强力遗物、提升属性、解锁足以改变战局的组合效果。",
+    "section": "relics-page",
+    "image": "splash-art/bg-pipi.webp",
+    "buttonText": "View Relic Index"
+  },
+  {
+    "id": 3,
+    "title": "探索生物群系",
+    "desk": "穿越丰富多样的生物群系，征服区域挑战，揭开隐藏秘幸，赢取丰厚奖励。",
+    "section": "biomes-page",
+    "image": "splash-art/bg-toto.webp",
+    "buttonText": "Discover The Biomes"
+  }
+]

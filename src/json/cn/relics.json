@@ -1,182 +1,182 @@
 [
   {
     "id": 1,
-    "name": "Beaver's Denture File",
-    "speciality": "offensive",
+    "name": "河狸的锉齿锉刀",
+    "speciality": "输出",
     "image": "relics/Beaver's Denture File.webp"
   },
   {
     "id": 2,
-    "name": "Fox's Foaming  Mouthwash",
-    "speciality": "offensive",
+    "name": "狐狸的泡沫漱口水",
+    "speciality": "输出",
     "image": "relics/Fox's Foaming Mouthwash.webp"
   },
   {
     "id": 3,
-    "name": "RATTLESNAKE’S METRONOME",
-    "speciality": "DPS",
+    "name": "响尾蛇节拍器",
+    "speciality": "每秒伤害",
     "image": "relics/Rattlesnake's Metronome.webp"
   },
   {
     "id": 4,
-    "name": "POSSUM’S SMELLING SALTS",
-    "speciality": "sustain",
+    "name": "负鼠嗅盐",
+    "speciality": "生存续航",
     "image": "relics/Possum's Smelling Salts.webp"
   },
   {
     "id": 5,
-    "name": "CRUSTACEAN ALLOY",
-    "speciality": "DPS",
+    "name": "甲壳合金",
+    "speciality": "每秒伤害",
     "image": "relics/Crustacean Alloy.webp"
   },
   {
     "id": 6,
-    "name": "LEECH’S TEABAG",
-    "speciality": "sustain",
+    "name": "水蛭茶包",
+    "speciality": "生存续航",
     "image": "relics/Leech's Teabag.webp"
   },
   {
     "id": 7,
-    "name": "JELLYFISH SLIME",
-    "speciality": "crowd control",
+    "name": "水母黏液",
+    "speciality": "群体控制",
     "image": "relics/Jellyfish Slime.webp"
   },
   {
     "id": 8,
-    "name": "FLEA’S COMPRESSED THORAX",
-    "speciality": "mobility",
+    "name": "跳蚤压缩胸腔",
+    "speciality": "机动性",
     "image": "relics/Flea's Compressed Thorax.webp"
   },
   {
     "id": 9,
-    "name": "RAVEN’S DRIED  GULLET",
-    "speciality": "special effects",
+    "name": "乌鸦干嗉囊",
+    "speciality": "特殊效果",
     "image": "relics/Raven's Dried Gullet.webp"
   },
   {
     "id": 10,
-    "name": "WOODPECKER’S  BEAK SHAVINGS",
-    "speciality": "dps",
+    "name": "啄木鸟喙屑",
+    "speciality": "每秒伤害",
     "image": "relics/Woodpecker's Beak Shavings.webp"
   },
   {
     "id": 11,
-    "name": "Grate White Shark",
-    "speciality": "dps",
+    "name": "擦丝白鲨鱼",
+    "speciality": "每秒伤害",
     "image": "relics/Grate White Shark.webp"
   },
   {
     "id": 12,
-    "name": "Marlin Fin Sailcloth",
-    "speciality": "mobility",
+    "name": "旗鱼鳍帆布",
+    "speciality": "机动性",
     "image": "relics/Marlin Fin Sailcloth.webp"
   },
   {
     "id": 13,
-    "name": "Moth's Shattered Bulb",
-    "speciality": "dps",
+    "name": "飞蛾破碎灯泡",
+    "speciality": "每秒伤害",
     "image": "relics/Moth's Shattered Bulb.webp"
   },
   {
     "id": 14,
-    "name": "porcupine's bullseye",
-    "speciality": "offensive",
+    "name": "豪猪靶心",
+    "speciality": "输出",
     "image": "relics/porcupine's bullseye.webp"
   },
   {
     "id": 15,
-    "name": "FROG TONGUE GRIP",
-    "speciality": "offensive",
+    "name": "蛙舌握把",
+    "speciality": "输出",
     "image": "relics/Frog Tongue Grip Tape.webp"
   },
   {
     "id": 16,
-    "name": "HUMMINGBIRD’S ENERGIZING POUCH",
-    "speciality": "mobility, dps",
+    "name": "蜂鸟能量囊",
+    "speciality": "机动性, 每秒伤害",
     "image": "relics/Hummingbird's Energizing Pouch.webp"
   },
   {
     "id": 17,
-    "name": "WASP’S EPIPEN",
-    "speciality": "special effects, dps",
+    "name": "黄蜂肾上腺素笔",
+    "speciality": "特殊效果, 每秒伤害",
     "image": "relics/Wasp's EpiPen.webp"
   },
   {
     "id": 18,
-    "name": "gummy worm hook",
-    "speciality": "mobility",
+    "name": "软糖虫鱼钩",
+    "speciality": "机动性",
     "image": "relics/gummy bait.webp"
   },
   {
     "id": 19,
-    "name": "Pufferfish Morning star",
-    "speciality": "mobility",
+    "name": "河豚晨星锤",
+    "speciality": "机动性",
     "image": "relics/Pufferfish Morning Star.webp"
   },
   {
     "id": 20,
-    "name": "SKUNK’S BATHBOMB",
-    "speciality": "special effects, offensive",
+    "name": "臭鼬浴球",
+    "speciality": "特殊效果, 输",
     "image": "relics/Skunk's Bathbomb.webp"
   },
   {
     "id": 21,
-    "name": "SPIDER WEB’S GACHAPON",
-    "speciality": "crowd control",
+    "name": "蛛网扭蛋",
+    "speciality": "群体控制",
     "image": "relics/Spider web's Gachapon.webp"
   },
   {
     "id": 22,
-    "name": "RHINO’S TROPHY",
-    "speciality": "crowd control",
+    "name": "犀牛战利品",
+    "speciality": "群体控制",
     "image": "relics/Rhino's trophy.webp"
   },
   {
     "id": 23,
-    "name": "ARMADILLO’S SHELL",
-    "speciality": "dps",
+    "name": "犰狳壳",
+    "speciality": "每秒伤害",
     "image": "relics/Armadillo's Shell.webp"
   },
   {
     "id": 24,
-    "name": "Broken Hoof of The Northstar",
-    "speciality": "mobility",
+    "name": "北辰碎蹄",
+    "speciality": "机动性",
     "image": "relics/Broken Hoof of The Northstar.webp"
   },
   {
     "id": 25,
-    "name": "The Ninth Life",
-    "speciality": "sustain",
+    "name": "第九条名",
+    "speciality": "生存续航",
     "image": "relics/The Ninth Life.webp"
   },
   {
     "id": 26,
-    "name": "chipmunks pouch",
-    "speciality": "dps",
+    "name": "花栗鼠颊囊",
+    "speciality": "每秒伤害",
     "image": "relics/chipmunks pouch.webp"
   },
   {
     "id": 27,
-    "name": "Gecko's Toe Pad",
-    "speciality": "offensive",
+    "name": "壁虎脚垫",
+    "speciality": "输出",
     "image": "relics/Gecko's Toe Pad.webp"
   },
   {
     "id": 28,
-    "name": "Blood Bag",
-    "speciality": "sustain",
+    "name": "血袋",
+    "speciality": "生存续航",
     "image": "relics/Blood Bag.webp"
   },
   {
     "id": 29,
-    "name": "Honeycomb",
-    "speciality": "sustain",
+    "name": "蜂巢",
+    "speciality": "生存续航",
     "image": "relics/Honeycomb.webp"
   },
   {
     "id": 30,
-    "name": "Coyote's Extracted Canine",
-    "speciality": "offensive",
+    "name": "郊狼拔出的犬齿",
+    "speciality": "输出",
     "image": "relics/Coyote's Extracted Canine.webp"
   }
 ]

@@ -45,10 +45,10 @@ export default function Map() {
       <div className="w-full flex flex-col items-center gap-5 xl:gap-20 justify-center h-full py-10 xl:py-20">
         <div className="flex flex-col w-full text-4xl lg:text-5xl 2xl:text-6xl text-white">
           <h1 className="flex justify-center text-4xl lg:text-5xl text-center 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]">
-            BIOMES
+            {MapJson.title}
           </h1>
           <h2 className="flex justify-center text-lg 2xl:text-2xl outfit-medium  text-white text-shadow-[-2px_3px_0px_#0F1B24]">
-            A Playful Journey With Heart
+            {MapJson.subtitle}
           </h2>
         </div>
 
@@ -67,7 +67,7 @@ export default function Map() {
 
           <div className="w-full lg:w-1/2 xl:w-2/3 flex flex-col items-center lg:items-end gap-3 xl:gap-6 h-full justify-start">
             <h2 className="text-xl 2xl:text-3xl uppercase tracking-wider text-white text-shadow-[-2px_3px_0px_#0F1B24]">
-              Enemies & Hazard Encountered
+              {MapJson.enemies}
             </h2>
             <div
               key={selectedMap.name}

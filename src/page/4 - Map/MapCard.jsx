@@ -62,10 +62,7 @@ export default function MapCard({ MapJson, selectedMap, setSelectedMap }) {
               className="flex! items-center! justify-center! py-2"
             >
               <div
-                className={`flex rounded-xl relative cursor-pointer items-center justify-center
-                  ${isSelected ? "scale-110 origin-center bg-ungupink" : "bg-blueblack hover:bg-ungupink"}
-                  group w-full min-w-30 max-w-65 h-21 lg:h-30 2xl:h-35 
-                  transition-all ease-out duration-300 hover:scale-105 p-1 xl:p-1.5 drop-shadow-[-1px_3px_0px_#0F1B24] lg:drop-shadow-[-2px_6px_0px_#0F1B24]`}
+                className={`flex rounded-xl relative cursor-pointer items-center justify-center ${isSelected ? "scale-110 origin-center bg-ungupink" : "bg-blueblack hover:bg-ungupink"} group w-full min-w-30 max-w-65 h-21 lg:h-30 2xl:h-35 transition-all ease-out duration-300 hover:scale-105 p-1 xl:p-1.5 drop-shadow-[-1px_3px_0px_#0F1B24] lg:drop-shadow-[-2px_6px_0px_#0F1B24]`}
                 onClick={() => setSelectedMap(location)}
               >
                 <img

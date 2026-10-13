@@ -1,6 +1,4 @@
-import React from 'react';
 import buttons from '../../json/en/button.json';
-import CardButton from './CardButton';
 import { Link } from 'react-router-dom';
 
 export default function index() {

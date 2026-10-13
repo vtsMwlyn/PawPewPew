@@ -11,15 +11,15 @@ function Index() {
 
       <div className="flex flex-col text-4xl lg:text-5xl gap-5 2xl:text-6xl w-1/2 text-white">
         <h1 className="flex justify-center text-center text-4xl lg:text-5xl 2xl:text-6xl uppercase text-shadow-[-4px_4px_0px_#0F1B24]">
-          Relics
+          {Relics.title}
         </h1>
         <p className="flex justify-center text-center text-lg 2xl:text-2xl poppins-medium text-shadow-[-2px_3px_0px_#0F1B24]">
-          Upgrade your Tailguard's abilities and defeat the Robo-Beasts with a variety of combinations
+          {Relics.subtitle}
         </p>
       </div>
 
       <div className='w-9/10 h-150 lg:h-250 overflow-y-auto xl:h-full grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 place-items-center overflow-hidden gap-5 p-10 rounded-4xl bg-black/50 xl:mb-30'>
-        {Relics.map((relic) => {
+        {Relics.content.map((relic) => {
           return (
             <Relic
               key={relic.id}

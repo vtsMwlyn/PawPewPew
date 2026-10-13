@@ -3,6 +3,7 @@ import Link from "./Link";
 import { useState, useEffect } from "react";
 import NavButton from "./NavButton";
 import { useNavigate, useLocation } from 'react-router-dom'
+import NavText from "../json/en/navbar.json"
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
@@ -96,14 +97,14 @@ export default function Navbar() {
             }
             onClick={handleHomeClick}
           >
-            Home
+            {NavText.home}
           </NavButton>
           <NavButton
             frameClassName="h-5"
             selected={activeSection === "heroes-page"}
             to="/alcove"
           >
-            Alcove
+            {NavText.alcove}
           </NavButton>
 
           <NavButton
@@ -111,7 +112,7 @@ export default function Navbar() {
             selected={activeSection === "gallery-page"}
             onClick={() => scrollToSection("gallery-page")}
           >
-            Gallery
+            {NavText.gallery}
           </NavButton>
 
           <div
@@ -133,7 +134,7 @@ export default function Navbar() {
                   className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]"
                 />
                 <p className="leading-tight text-left text-shadow-[-2px_3px_0px_#0F1B24]">
-                  Wishlist
+                  {NavText.wishlist}
                 </p>
               </div>
             </Link>
@@ -176,14 +177,14 @@ export default function Navbar() {
           onClick={() => setShowCharDropdown(!showCharDropdown)}
           to="/alcove"
         >
-          Alcove
+          {NavText.alcove}
         </NavButton>
         <NavButton
           className="w-full!"
           selected={activeSection === "gallery-page"}
           onClick={() => scrollToSection("gallery-page")}
         >
-          Gallery
+          {NavText.gallery}
         </NavButton>
         <Link
           className={`w-full!`}
@@ -196,7 +197,7 @@ export default function Navbar() {
               className="w-8 drop-shadow-[-1px_4px_0px_#0F1B24]"
             />
             <p className="text-xl 2xl:text-lg leading-tight text-left text-shadow-[-2px_3px_0px_#0F1B24]">
-              Wishlist <br className="hidden 2xl:block" /> on Steam
+              {NavText.wishlist}
             </p>
           </div>
         </Link>

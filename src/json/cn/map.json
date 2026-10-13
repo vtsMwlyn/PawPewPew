@@ -1,12 +1,12 @@
 {
   "title": "生物群落",
-  "subtitle": "一场充满童趣与温情的旅程",
+  "subtitle": "一场充满童趣与温情的旅程", 
   "enemies": "遭遇的敌人与危险",
   "content": [
     {
       "id": 1,
       "name": "贪婪木森林",
-      "button": "biomes-page/button-greedwood-forest.webp",
+      "button": "biomes-page/button-greedwood-chinese.webp",
       "image": "biomes-page/map-forest.webp",
       "background": "biomes-page/map-forest.webp",
       "desc": "一片广袤的森林，以高耸的金绿色松树和直插云霄的古树为主。巨石与崎岖的地形散布期间； 机械鸡在林间游荡，守护着森林，威胁每个胆敢经过的人。",
@@ -36,7 +36,7 @@
     {
       "id": 2,
       "name": "渡鸦岩废墟",
-      "button": "biomes-page/button-ravenrocks-ruins.webp",
+      "button": "biomes-page/button-raven-chinese.webp",
       "image": "biomes-page/map-ruins.webp",
       "background": "biomes-page/map-ruins.webp",
       "desc": "古老的石造废墟，周围环绕着陡峭的悬崖与疯长的植被。 尽管岁月已经磨蚀了这片旧聚落的大部分，机械鸡却占领了这里， 将其被遗忘的小径化作冒险者们难以逾越的危险阻碍。",
@@ -66,7 +66,7 @@
     {
       "id": 3,
       "name": "苔纱神殿",
-      "button": "biomes-page/button-mossveil-temple.webp",
+      "button": "biomes-page/button-mossveil-chinese.webp",
       "image": "biomes-page/map-temple.webp",
       "background": "biomes-page/map-temple.webp",
       "desc": "一座凝固于永恒黑夜中的古老神殿，龟裂的石板上刻着发光符文。 扭曲的藤蔓攀爬在倒塌的石柱之间，生物荧光球将冷冰冰的青绿色光芒洒向一座被遗忘祭坛的废墟。",

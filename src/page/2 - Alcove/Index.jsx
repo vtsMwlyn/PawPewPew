@@ -1,4 +1,4 @@
-import React from 'react'
+import alcove from "../../json/en/alcove.json"
 
 export default function Index() {
   return (
@@ -6,26 +6,21 @@ export default function Index() {
       <div className="w-full h-full flex flex-col justify-between">
         <div className='w-full flex flex-col items-center gap-5 px-5 2xl:px-0'>
           <h3 className="text-xl lg:text-2xl 2xl:text-3xl text-white poppins-medium text-shadow-[-2px_3px_0px_#0F1B24]">
-            Welcome to STARLIT ALCOVE
+            {alcove.welcome}
           </h3>
           <h1 className="text-4xl lg:text-5xl 2xl:text-7xl text-white uppercase text-center text-shadow-[-4px_4px_0px_#0F1B24]">
-            A peaceful sanctuary for all.
+            {alcove.title}
           </h1>
           <p className="text-white poppins-medium text-lg lg:text-xl 2xl:text-2xl w-full lg:w-4xl text-center text-shadow-[-2px_3px_0px_#0F1B24]">
-            Step into our hidden refuge, a safe space to gather scattered
-            survivors. Together, you'll rebuild Starlit Alcove
+            {alcove.subtitle}
           </p>
         </div>
         {/* <div className='flex flex-col times-center gap-5'>
           <p className="text-white poppins-medium text-sm lg:text-xl w-full lg:w-4xl text-center text-shadow-[-2px_3px_0px_#0F1B24]">
-            Life in the village of Meadow was peaceful, whimsical, and perfectly
-            happy
+            {alcove.desk1}
           </p>
           <p className="text-white poppins-medium text-sm lg:text-xl w-full lg:w-4xl text-center text-shadow-[-2px_3px_0px_#0F1B24]">
-            But when a relentless Robo-Beast army crashes in and kidnaps the
-            villagers,
-            playtime is officially over, turning a peaceful life into a fast-paced
-            battle for survival.
+            {alcove.desk2}
           </p>
         </div> */}
       </div>

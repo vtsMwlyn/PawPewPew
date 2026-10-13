@@ -1,4 +1,6 @@
-[
+{
+  "title":"选择你的幸存者",
+  "content":[
   {
     "id": 1,
     "name": "PIPI",
@@ -110,4 +112,4 @@
     "icon": "character-page/icon-coming-soon.webp",
     "weaponIcon": "character-page/weapon-icon-coming-soon.webp"
   }
-]
+]}

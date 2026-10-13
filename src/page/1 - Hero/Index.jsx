@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Link from "../../components/Link";
 import Button from "../../components/Button";
 import { useToast } from "../../context/ToastContext";
+import hero from "../../json/en/hero.json";
 
 export default function Hero() {
   const { showToast } = useToast();
@@ -65,7 +66,7 @@ export default function Hero() {
         />
         <div className="flex flex-col lg:flex-row gap-5">
           <Link
-            image={`button/button-wishlish-steam.webp`}
+            image={hero.steam}
             link="https://store.steampowered.com/app/4625080/Paw_Pew_Pew/"
           >
           </Link>
@@ -73,7 +74,7 @@ export default function Hero() {
             <Button
               buttonType="no_background"
               onClick={() => showToast("Kickstater Soon")}
-              image={`button/button-kickstater.webp`}
+              image={hero.kickstarter}
             />
             <span
               className={`
@@ -87,11 +88,11 @@ export default function Hero() {
                 pointer-events-none whitespace-nowrap
               `}
             >
-              Coming Soon
+              {hero.comingsoon}
             </span>
           </div>
           <Link
-            image={`button/button-join-discord.webp`}
+            image={hero.steam}
             link="https://discord.gg/G27dAtVGSS"
           >
           </Link>

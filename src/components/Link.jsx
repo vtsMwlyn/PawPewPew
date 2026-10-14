@@ -30,6 +30,8 @@ export default function Link({
   if (buttonType === "no_background") {
     return (
       <a
+        href={link}
+        target={target}
         className={`
           flex justify-center items-center w-50 min-h-15 text-white uppercase relative group
           ${className}

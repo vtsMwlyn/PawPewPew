@@ -27,7 +27,7 @@ export default function Characters() {
           {character.title}
         </h1>
 
-        <div className="w-full flex flex-col gap-10 lg:px-8 2xl:p-0 lg:gap-0 lg:flex-row items-center justify-center">
+        <div className="w-full flex flex-col gap-10 lg:px-8 2xl:p-0 lg:gap-20 lg:flex-row items-center justify-center">
           {/* Character Selector */}
           <CharacterButton
             characters={character.content}
@@ -35,7 +35,7 @@ export default function Characters() {
             setSelectedCharacter={(char) => setSelectedCharId(char.id)}
           />
           <div className="flex flex-col justify-center items-center">
-            <h1 className="text-xl 2xl:text-2xl w-2/3 text-center text-white outfit-bold tracking-wider text-shadow-[-2px_3px_0px_#0F1B24]">
+            <h1 className="text-xl 2xl:text-2xl w-100 text-center text-white outfit-bold tracking-wider text-shadow-[-2px_3px_0px_#0F1B24]">
               “{selectedCharacter.quotes}”
             </h1>
             <img

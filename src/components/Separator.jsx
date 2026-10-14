@@ -12,7 +12,7 @@ export default function Separator() {
         .map((_, index) => (
           <img
             src="/separator.webp"
-            className="w-[500px]"
+            className="w-125"
             alt="foto separator"
           />
         ))}

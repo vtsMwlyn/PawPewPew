@@ -4,18 +4,13 @@ import { Routes, Route } from 'react-router-dom'
 import { AudioProvider } from "./context/AudioContext";
 import { LanguageProvider } from "./context/LanguageContext";
 import Navbar from "./components/Navbar";
-import Hero from "./page/1 - Hero/Index";
 import Footer from "./components/Footer";
-import WorldMeadow from "./page/2 - Introduction/Index";
-import Tailguards from "./Tailguards";
-import CTAPage from "./page/6 - Call to Action/Index";
-import SeeItInAction from "./page/5 - Gallery/Index";
+import Alcove from "./page/Alcove/Index";
+import Home from "./page/Home/Index";
 // import ScreenInfo from "./components/ScreenInfo"
 import MuteButton from "./components/MuteButton";
 import LangButton from "./components/LangButton";
-import Separator from "./components/Separator";
 import { ToastProvider } from "./context/ToastContext";
-import CardButton from "./page/4 - OtherPage/Index";
 import ScrollToHashElement from './components/ScrollToHashElement';
 
 export default function App() {
@@ -30,22 +25,8 @@ export default function App() {
           <Navbar />
 
           <Routes>
-            <Route path="/" element={<>
-              <Hero />
-              <Separator />
-
-              <WorldMeadow />
-              <Separator />
-
-              <CardButton />
-              <Separator />
-
-              <SeeItInAction />
-              <Separator />
-
-              <CTAPage />
-            </>} />
-            <Route path="/alcove" element={<Tailguards/>} />
+            <Route path="/" element={<Home/>} />
+            <Route path="/alcove" element={<Alcove/>} />
           </Routes>
           {/* Content */}
 

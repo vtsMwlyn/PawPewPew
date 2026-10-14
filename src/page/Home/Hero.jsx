@@ -3,6 +3,7 @@ import Link from "../../components/Link";
 import Button from "../../components/Button";
 import { useToast } from "../../context/ToastContext";
 import { useLanguage } from "../../context/LanguageContext";
+import Section from "../../components/Section";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -41,7 +42,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative w-full" id="hero-page">
+    <Section id={"hero-page"}>
       {/* <img
         src="/splash-art/bg-hero.webp"
         alt="pawpewpew hero background"
@@ -52,14 +53,13 @@ export default function Hero() {
         loop
         muted
         playsInline
-        className={`absolute inset-0 -z-5 h-screen w-full object-cover 2xl:object-fit transition-opacity duration-700 ease-in-out ${isVisible ?'blur-sm':''}`}
+        className={`absolute inset-0 -z-5 h-screen w-full object-cover 2xl:object-fit transition-opacity duration-700 ease-in-out ${isVisible ? 'blur-sm' : ''}`}
       >
         <source src="/videos/trailer.mp4" type="video/mp4" />
       </video>
       <div
-        className={`w-full h-screen px-10 flex flex-col justify-center items-center gap-15 transition-opacity duration-700 ease-in-out ${
-          isVisible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`w-full h-screen px-10 flex flex-col justify-center items-center gap-15 transition-opacity duration-700 ease-in-out ${isVisible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
       >
         <img
           src="/logo-pawpewpew.webp"
@@ -100,6 +100,7 @@ export default function Hero() {
           </Link>
         </div>
       </div>
-    </div>
+
+    </Section>
   );
 }

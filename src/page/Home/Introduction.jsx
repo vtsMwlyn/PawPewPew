@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { useAudio } from "../../context/AudioContext";
 import { useLanguage } from "../../context/LanguageContext";
+import Section from "../../components/Section";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -43,10 +44,9 @@ export default function Introduction() {
   const handleNext = () => swiperRef.current?.slideNext();
 
   return (
-    <section className="w-full relative" id="gallery-page">
-
+    <Section id={"gallery-page"}>
       {/* Village of Meadow */}
-      <div className="w-full flex flex-col items-center justify-center px-8 pt-20 pb-30 relative">
+      <div className="w-full flex flex-col items-center justify-center pt-20 pb-30">
         <h1 className="text-xl lg:text-5xl text-white uppercase w-full lg:w-4xl text-center text-shadow-[-4px_4px_0px_#0F1B24]">
           {highlightData.title}
         </h1>
@@ -165,11 +165,11 @@ export default function Introduction() {
           playtime is officially over, turning a peaceful life into a fast-paced
           battle for survival.
         </p> */}
-        <img
-          src="/bg-shop.webp"
-          className="absolute inset-0 h-full w-full object-cover object-center -z-5"
-        />
       </div>
-    </section>
+      <img
+        src="/bg-shop.webp"
+        className="absolute inset-0 h-full w-full object-cover object-center -z-5"
+      />
+    </Section>
   );
 }

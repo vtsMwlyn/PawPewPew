@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import MapCard from "./MapCard";
 import { useLanguage } from "../../context/LanguageContext";
+import Section from "../../components/Section";
 
 export default function Map() {
   const { t } = useLanguage();
@@ -38,14 +39,14 @@ export default function Map() {
   }, [selectedMap]);
 
   return (
-    <div className="relative w-full h-screen" id="biomes-page">
+    <Section id="biomes-page">
       <img
         src={selectedMap.background}
         alt="Paw Pew Pew - Biomes"
         className="w-full object-cover absolute inset-0 -z-5 h-full"
       />
 
-      <div className="w-full flex flex-col items-center gap-5 xl:gap-20 justify-center h-full py-10 xl:py-20">
+      <div className="w-full flex flex-col items-center gap-5 xl:gap-20 justify-center h-200 py-10 xl:py-20">
         <div className="flex flex-col w-full text-4xl lg:text-5xl 2xl:text-6xl text-white">
           <h1 className="flex justify-center text-4xl lg:text-5xl text-center 2xl:text-6xl text-white uppercase text-shadow-[-4px_4px_0px_#0F1B24]">
             {MapJson.title}
@@ -55,9 +56,9 @@ export default function Map() {
           </h2>
         </div>
 
-        <div className="w-11/12 md:w-3/4 h-full flex flex-col justify-center gap-5 xl:gap-10 lg:flex-row ">
+        <div className="w-full h-full flex flex-col justify-center gap-5 xl:gap-10 lg:flex-row ">
           <div
-            className="w-full lg:w-1/2 xl:w-1/3 flex flex-col justify-start items-center lg:items-start gap-3 xl:gap-6"
+            className="w-full lg:w-1/2 flex flex-col justify-start items-center lg:items-start gap-3 xl:gap-6"
             ref={mapNameRef}
           >
             <h2 className="text-xl 2xl:text-3xl uppercase tracking-wider text-white text-shadow-[-2px_3px_0px_#0F1B24]">
@@ -74,7 +75,7 @@ export default function Map() {
             </h2>
             <div
               key={selectedMap.name}
-              className="w-5/6 lg:w-1/2 grid grid-cols-3 gap-4"
+              className="w-4/6 grid grid-cols-3 gap-4 "
             >
               {selectedMap.enemies.map((enemy, index) => (
                 <div
@@ -95,6 +96,6 @@ export default function Map() {
           MapJson={MapJson.content}
         />
       </div>
-    </div>
+    </Section>
   );
 }

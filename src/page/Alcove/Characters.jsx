@@ -2,6 +2,7 @@ import { useState } from "react";
 import CharacterButton from "./CharacterButton";
 import CharacterCard from "./CharacterCard";
 import { useLanguage } from "../../context/LanguageContext";
+import Section from "../../components/Section";
 
 export default function Characters() {
   const { t } = useLanguage();
@@ -12,7 +13,7 @@ export default function Characters() {
     character.content[0];
 
   return (
-    <section className="relative flex " id="heroes-page">
+    <Section id="heroes-page">
       {/* Background Image */}
       <img
         src={`/${selectedCharacter.background}`}
@@ -60,6 +61,6 @@ export default function Characters() {
           <CharacterCard selectedCharacter={selectedCharacter} />
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

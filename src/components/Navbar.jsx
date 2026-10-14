@@ -117,12 +117,12 @@ export default function Navbar() {
             {NavText.gallery}
           </NavButton>
 
-          <div
-            className={`transition-all duration-500 ease-out ${passed100vh
-              ? "w-60 opacity-100 translate-x-0"
-              : "w-0 opacity-0 -translate-x-8"
-              }`}
-          >
+            <div
+              className={`transition-all duration-500 ease-out ${passed100vh
+                ? "w-60 opacity-100 translate-x-0"
+                : "w-0 opacity-0 -translate-x-8"
+                }`}
+            >
             <Link
               buttonType="no_background"
               selected={activeSection === "cta-page"}

@@ -57,17 +57,15 @@ export default function Introduction() {
             className={`
             w-20 md:w-30 2xl:w-40
             -top-8 md:-top-12 2xl:-top-15
-            -left-7 md:-left-10 2xl:-left-14
-          `}
-          />
+            -left-7 md:-left-10 2xl:-left-14`
+            } />
           <FrameEdge
             position="bottomRight"
             className={`
             w-20 md:w-30 2xl:w-40
             -bottom-8 md:-bottom-12 2xl:-bottom-15
             -right-7 md:-right-10 2xl:-right-14
-          `}
-          />
+          `} />
           <div className="w-full h-full border-6 rounded-xl lg:rounded-4xl overflow-hidden">
             <Swiper
               modules={[Autoplay]}

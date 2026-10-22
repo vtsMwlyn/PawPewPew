@@ -185,7 +185,6 @@ export default function Gallery({
             );
           })}
         </div>
-
       </div>
       <img
         src="see-it-in-action/bg-chest.webp"
